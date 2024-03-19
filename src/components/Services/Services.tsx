@@ -1,9 +1,15 @@
-import { Typography } from '@mui/material';
+import { Box } from '@mui/material';
+import ServicesInfo from './ServivesInfo/ServivesInfo';
 
 export default function Services() {
+  const styles = {
+    container: {
+      margin: '38px 20px 8px'
+    }
+  };
   return (
-    <header className="header">
-      <Typography>dfgrgb</Typography>
-    </header>
+    <Box sx={styles.container}>
+      <ServicesInfo />
+    </Box>
   );
 }
