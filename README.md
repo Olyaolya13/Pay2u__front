@@ -1,1 +1,1 @@
-# Pay2u__front
+# Pay2u
