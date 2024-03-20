@@ -35,6 +35,16 @@ export default function Header() {
     title = HeaderData.subscriptions;
   } else if (location.pathname === '/catalog') {
     title = HeaderData.catalog;
+  } else if (location.pathname === '/manage-subcription') {
+    title = HeaderData.manageSubcription;
+  } else if (location.pathname === '/movie') {
+    title = HeaderData.movie;
+  } else if (location.pathname === '/connect-subcription') {
+    title = HeaderData.connectSubcription;
+  } else if (location.pathname === '/payment') {
+    title = HeaderData.payment;
+  } else if (location.pathname === '/auto-payment') {
+    title = HeaderData.autoPayment;
   }
 
   const handleBackClick = () => {
