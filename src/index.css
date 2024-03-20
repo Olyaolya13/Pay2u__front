@@ -17,4 +17,5 @@
 #root {
   padding: 0;
   max-width: 375px;
+  overflow: hidden;
 }

@@ -11,6 +11,7 @@ interface SubmitButtonProps {
   hoverBackgroundColor?: string;
   focusBackgroundColor?: string;
   disabled?: boolean;
+  onClick?: () => void;
 }
 
 export default function SubmitButton({
@@ -22,7 +23,8 @@ export default function SubmitButton({
   disabled,
   color,
   hoverBackgroundColor,
-  focusBackgroundColor
+  focusBackgroundColor,
+  onClick
 }: SubmitButtonProps) {
   const styles = {
     container: {
@@ -49,7 +51,13 @@ export default function SubmitButton({
     }
   };
   return (
-    <Button variant="contained" disableElevation sx={styles.container} disabled={disabled}>
+    <Button
+      variant="contained"
+      disableElevation
+      sx={styles.container}
+      disabled={disabled}
+      onClick={onClick}
+    >
       <Typography component="h2" sx={styles.title}>
         {title}
       </Typography>
