@@ -1,6 +1,7 @@
 import { Box } from '@mui/material';
 import ServicesInfo from './ServivesInfo/ServivesInfo';
 import ServicesCatalog from './ServicesCatalog/ServicesCatalog';
+import ServicesNew from './ServicesNew/ServicesNew';
 
 export default function Services() {
   const styles = {
@@ -12,6 +13,7 @@ export default function Services() {
     <Box sx={styles.container}>
       <ServicesInfo />
       <ServicesCatalog />
+      <ServicesNew />
     </Box>
   );
 }

@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 import Title from '../../Titile/Titile';
 import { ServicesCatalogData } from '../../../utils/constants';
-import ServicesCatalogCard from '../ServicesCatalogCard/ServicesCatalogCard';
+import ServicesCatalogCard from './ServicesCatalogCard/ServicesCatalogCard';
 import { ServicesCatalogCardData } from '../../../utils/constants';
 
 export default function ServicesCatalog() {
@@ -16,7 +16,7 @@ export default function ServicesCatalog() {
       gridAutoFlow: 'column',
       columnGap: '61px',
       rowGap: '10px',
-      margin: '28px 0'
+      margin: '24px 0 0'
     },
     title: {
       fontFamily: 'Inter',

@@ -1,9 +1,9 @@
-import KIcon from '../../../assets/KIcon.svg?react';
+import KIcon from '../../../../assets/KIcon.svg?react';
 import { Box, Card, CardMedia, Typography } from '@mui/material';
-import { CardServiceData } from '../../../types/types';
+import { CardCatalogData } from '../../../../types/types';
 
 interface ServicesCatalogCardProps {
-  card: CardServiceData;
+  card: CardCatalogData;
 }
 
 export default function ServicesCatalogCard({ card }: ServicesCatalogCardProps) {
