@@ -12,3 +12,8 @@ export interface CardNewData {
   cashBack: string;
   background: string;
 }
+
+export interface ServisesQuestionsSelectata {
+  title: string;
+  subtitle: string;
+}

@@ -3,6 +3,7 @@ import ServicesInfo from './ServivesInfo/ServivesInfo';
 import ServicesCatalog from './ServicesCatalog/ServicesCatalog';
 import ServicesNew from './ServicesNew/ServicesNew';
 import ServicesPopular from './ServicesPopular/ServicesPopular';
+import ServisesQuestions from './ServisesQuestions/ServisesQuestions';
 
 export default function Services() {
   const styles = {
@@ -16,6 +17,7 @@ export default function Services() {
       <ServicesCatalog />
       <ServicesNew />
       <ServicesPopular />
+      <ServisesQuestions />
     </Box>
   );
 }
