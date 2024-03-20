@@ -28,7 +28,7 @@ export default function ServicesCatalog() {
   };
   return (
     <Box sx={styles.container}>
-      <Title title={ServicesCatalogData.title} all={ServicesCatalogData.all} />
+      <Title title={ServicesCatalogData.title} all={ServicesCatalogData.all} link="/catalog" />
       <Box sx={styles.card}>
         {ServicesCatalogCardData.cards.map((card, index) => (
           <ServicesCatalogCard key={index} card={card} />

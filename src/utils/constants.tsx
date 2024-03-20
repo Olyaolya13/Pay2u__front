@@ -7,6 +7,9 @@ import Box from '../assets/Box.svg';
 import YandexPlusIcon from '../assets/YandexPusIcon.svg';
 import LitrecIcon from '../assets/LitrecIcon.svg';
 import IviIcon from '../assets/IviIcon.svg';
+import MyBookIcon from '../assets/MyBookIcon.svg';
+import MovieSearchIcon from '../assets/MovieSearchIcon.svg';
+import OkkoIcon from '../assets/OkkoIcon.svg';
 
 export const HeaderData = {
   services: 'Развлекательные сервисы',
@@ -90,14 +93,45 @@ export const ServicesNewCardData = {
       alt: 'Литрес',
       title: 'Литрес',
       cashBack: '8% кэшбек',
-      background: 'linear-gradient(120deg, #F19EFF 0%, #A323B8 100%)'
+      background: 'linear-gradient(120deg, #F19EFF 10%, #A323B8 100%)'
     },
     {
       image: IviIcon,
       alt: 'Иви',
       title: 'Иви',
       cashBack: '10% кэшбек',
-      background: 'linear-gradient(120deg,#FFC774 0%, #FF720D 100%)'
+      background: 'linear-gradient(120deg,#FFC774 10%, #FF720D 100%)'
+    }
+  ]
+};
+
+export const ServicesPopularData = {
+  title: 'Популярные',
+  all: 'Все'
+};
+
+export const ServicesPopularCardData = {
+  cards: [
+    {
+      image: MyBookIcon,
+      alt: 'My Book',
+      title: 'My Book',
+      cashBack: '15% кэшбек',
+      background: 'linear-gradient(120deg, #76D179 10%, #049C4B 100%)'
+    },
+    {
+      image: MovieSearchIcon,
+      alt: 'Кинопоиск',
+      title: 'Кинопоиск',
+      cashBack: '15% кэшбек',
+      background: 'linear-gradient(120deg, #FD6A4A 10%, #D72700 100%)'
+    },
+    {
+      image: OkkoIcon,
+      alt: 'Okko',
+      title: 'Okko',
+      cashBack: '20% кэшбек',
+      background: 'linear-gradient(120deg,#7378ED 10%, #242AB6 100%)'
     }
   ]
 };

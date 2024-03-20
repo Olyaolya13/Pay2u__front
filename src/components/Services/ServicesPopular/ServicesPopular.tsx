@@ -1,10 +1,10 @@
 import { Box } from '@mui/material';
 import ServicesNewCard from '../ServicesCard/ServiceCard';
 import Title from '../../Titile/Titile';
-import { ServicesNewData } from '../../../utils/constants';
-import { ServicesNewCardData } from '../../../utils/constants';
+import { ServicesPopularData } from '../../../utils/constants';
+import { ServicesPopularCardData } from '../../../utils/constants';
 
-export default function ServicesNew() {
+export default function ServicesPopular() {
   const styles = {
     container: {
       margin: '32px 0 0'
@@ -19,9 +19,9 @@ export default function ServicesNew() {
   };
   return (
     <Box sx={styles.container}>
-      <Title title={ServicesNewData.title} all={ServicesNewData.all} link="/catalog" />
+      <Title title={ServicesPopularData.title} all={ServicesPopularData.all} />
       <Box sx={styles.card}>
-        {ServicesNewCardData.cards.map((card, index) => (
+        {ServicesPopularCardData.cards.map((card, index) => (
           <ServicesNewCard key={index} card={card} />
         ))}
       </Box>

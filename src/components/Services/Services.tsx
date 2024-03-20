@@ -2,6 +2,7 @@ import { Box } from '@mui/material';
 import ServicesInfo from './ServivesInfo/ServivesInfo';
 import ServicesCatalog from './ServicesCatalog/ServicesCatalog';
 import ServicesNew from './ServicesNew/ServicesNew';
+import ServicesPopular from './ServicesPopular/ServicesPopular';
 
 export default function Services() {
   const styles = {
@@ -14,6 +15,7 @@ export default function Services() {
       <ServicesInfo />
       <ServicesCatalog />
       <ServicesNew />
+      <ServicesPopular />
     </Box>
   );
 }

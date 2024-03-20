@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 interface TitleProps {
   title?: string;
   all?: string;
+  link?: string;
 }
 
 const styles = {
@@ -27,13 +28,13 @@ const styles = {
   }
 };
 
-export default function Title({ title, all }: TitleProps) {
+export default function Title({ title, all, link }: TitleProps) {
   return (
     <Box sx={styles.container}>
       <Typography component="h2" sx={styles.title}>
         {title}
       </Typography>
-      <Link to="/catalog" className="title__link">
+      <Link to={link || '/'} className="title__link">
         <Typography component="h2" sx={styles.subtitle}>
           {all}
         </Typography>
