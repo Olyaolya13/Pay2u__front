@@ -1,5 +1,6 @@
 import { Box } from '@mui/material';
-import HistoryContent from './HistoryContent/HistoryContent';
+
+import HistoryProgress from './HistoryProgress/HistoryProgress';
 
 export default function History() {
   const styles = {
@@ -9,7 +10,7 @@ export default function History() {
   };
   return (
     <Box sx={styles.container}>
-      <HistoryContent />
+      <HistoryProgress />
     </Box>
   );
 }

@@ -17,7 +17,7 @@ export const HeaderData = {
   subscriptions: 'Мои подписки',
   manageSubcription: 'Управление подпиской',
   catalog: 'Каталог подписок',
-  movie: 'Кино',
+  categories: 'Кино',
   connectSubcription: 'Подключение подписки',
   payment: 'Оплата подписки',
   autoPayment: 'Подключение автоплатежа'
@@ -188,4 +188,15 @@ export const ServisesQuestionsRegistSelectData = {
 
 export const ServicesInstructionData = {
   title: 'Инструкция по работе с сервисом'
+};
+
+export const HistoryContentData = {
+  history: [
+    {
+      title: 'Выгодные на кино, музыку, шопинг и не только',
+      subtitle:
+        'Оформите подписку на сервисы партнеров напрямую в приложении банка, чтобы получать кешбэк до 30% с каждого платежа.',
+      span: 'скидки'
+    }
+  ]
 };

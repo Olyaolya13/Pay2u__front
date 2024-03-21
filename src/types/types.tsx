@@ -18,3 +18,9 @@ export interface ServisesQuestionsSelectData {
   subtitle: string;
   width?: string;
 }
+
+export interface HistoryContentPage {
+  title: string;
+  subtitle: string;
+  span?: string;
+}
