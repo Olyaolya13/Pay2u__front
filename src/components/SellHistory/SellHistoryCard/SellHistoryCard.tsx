@@ -66,7 +66,7 @@ export default function SellHistoryCard({card}:SellHistoryCardProps) {
     image: { width: '40px', height: '40px' }
   };
   return (
-    <Box sx={{...styles.container, borderBottom: '.4px solid #E1E1E1'}}>
+    <Box sx={{...styles.container, borderBottom: '.4px solid #E2E2E2'}}>
 <Box sx={styles.card}>
         <CardMedia component="img" sx={styles.image} image={card?.image} alt={card?.alt} />
         <Box sx={styles.text}>
