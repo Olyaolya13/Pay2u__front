@@ -14,6 +14,8 @@ import CartIcon from '../assets/CartIcon.svg'
 import CheckIcon from '../assets/CheckIcon.svg'
 import KeyIcon from '../assets/KeyIcon.svg'
 import ContactIcon from '../assets/ContactIcon.svg'
+import LikeeIcon from '../assets/LikeeIcon.svg'
+
 
 export const HeaderData = {
   services: 'Развлекательные сервисы',
@@ -198,7 +200,7 @@ export const HistoryContentData = {
   history: [
     {
       title: 'Выгодные',
-      span: 'скидки',
+      span: 'скидки\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0',
       text:' на кино, музыку, шопинг и не только',
       subtitle:
         'Оформите подписку на сервисы партнеров напрямую в приложении банка, чтобы получать кешбэк до 30% с каждого платежа.',
@@ -230,6 +232,9 @@ export const HistoryContentData = {
       height:'140px',
       paddingContainer:'50px 20px 0',
       heightContainer:'560px',
+      paddingTopSubtitle:'43px',
+      paddingBottomTitle:'40px',
+      padding:'0 0 0  87px',
       faq: [
       {
         question: 'Как подключить подписку на сервис?',
@@ -247,3 +252,47 @@ export const HistoryContentData = {
   }
   ]
 };
+
+
+export const HistoryProgressData ={
+  title:'Далее',
+  transfer:'Перейти в каталог подписок'
+}
+
+export const SellHistoryDelalizationData ={
+  title:'1 197',
+  subtitle:'Потрачено за март',
+  text:'Следующее списание 24 июня — 597 ₽. Напомним об этом за 2 дня.'
+}
+
+export const SellHistoryInfoData ={
+  title:'Кешбэк за расчетный месяц будет начислен до 25 числа следующего месяца'
+}
+
+export const SellHistoryCardData={
+  card:[{
+    image:OkkoIcon,
+    alt:'Okko',
+    title:'Okko',
+    subtitle:'24.03.2024',
+    sum:'-597',
+    cashBack:'начислится +50 '
+  },
+ 
+  {
+    image:LikeeIcon,
+    alt:'Likee',
+    title:'Likee',
+    subtitle:'18.03.2024',
+    sum:'-599',
+    cashBack:'начислится +50 '
+  },
+  {
+    image:YandexPlusIcon,
+    alt:'Яндекс Плюс',
+    title:'Яндекс Плюс',
+    subtitle:'15.03.2024',
+    sum:'-1',
+    period:'пробный период'
+  },]
+}
