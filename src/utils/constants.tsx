@@ -269,14 +269,14 @@ export const SellHistoryInfoData ={
   title:'Кешбэк за расчетный месяц будет начислен до 25 числа следующего месяца'
 }
 
-export const SellHistoryCardData={
+export const SellHistoryCardMartData={
   card:[{
     image:OkkoIcon,
     alt:'Okko',
     title:'Okko',
     subtitle:'24.03.2024',
     sum:'-597',
-    cashBack:'начислится +50 '
+    cashBack:'начислится + 50 '
   },
  
   {
@@ -285,7 +285,7 @@ export const SellHistoryCardData={
     title:'Likee',
     subtitle:'18.03.2024',
     sum:'-599',
-    cashBack:'начислится +50 '
+    cashBack:'начислится + 50 '
   },
   {
     image:YandexPlusIcon,
@@ -295,4 +295,40 @@ export const SellHistoryCardData={
     sum:'-1',
     period:'пробный период'
   },]
+}
+
+export const SellHistoryContentMartData ={
+  title:'Март',
+}
+
+export const SellHistoryCardFebruaryData={
+  card:[{
+    image:MyBookIcon,
+    alt:'My book',
+    title:'My book',
+    subtitle:'14.032.2024',
+    sum:'-560',
+    cashBack:' + 23 '
+  },
+]
+}
+
+export const SellHistoryContentFebruaryData ={
+  title:'Февраль',
+}
+
+export const SellHistoryCardJanuaryData={
+  card:[{
+    image:OkkoIcon,
+    alt:'Okko',
+    title:'Okko',
+    subtitle:'24.01.2024',
+    sum:'-597',
+    cashBack:'начислится + 50 '
+  },
+]
+}
+
+export const SellHistoryContentJanuaryData ={
+  title:'Январь',
 }
