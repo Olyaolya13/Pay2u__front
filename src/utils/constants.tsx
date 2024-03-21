@@ -250,3 +250,9 @@ export const HistoryContentData = {
   }
   ]
 };
+
+
+export const HistoryProgressData ={
+  title:'Далее',
+  transfer:'Перейти в каталог подписок'
+}
