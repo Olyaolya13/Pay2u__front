@@ -10,6 +10,10 @@ import IviIcon from '../assets/IviIcon.svg';
 import MyBookIcon from '../assets/MyBookIcon.svg';
 import MovieSearchIcon from '../assets/MovieSearchIcon.svg';
 import OkkoIcon from '../assets/OkkoIcon.svg';
+import CartIcon from '../assets/CartIcon.svg'
+import CheckIcon from '../assets/CheckIcon.svg'
+import KeyIcon from '../assets/KeyIcon.svg'
+import ContactIcon from '../assets/ContactIcon.svg'
 
 export const HeaderData = {
   services: 'Развлекательные сервисы',
@@ -193,10 +197,53 @@ export const ServicesInstructionData = {
 export const HistoryContentData = {
   history: [
     {
-      title: 'Выгодные на кино, музыку, шопинг и не только',
+      title: 'Выгодные',
+      span: 'скидки',
+      text:' на кино, музыку, шопинг и не только',
       subtitle:
         'Оформите подписку на сервисы партнеров напрямую в приложении банка, чтобы получать кешбэк до 30% с каждого платежа.',
-      span: 'скидки'
-    }
+      image: CartIcon,
+      width:'250px',
+
+      widthText:'290px',
+      padding:'0 0 0  87px'
+    },
+    {
+      title: 'Ваши подписки всегда под рукой - управляйте ими',
+      span: 'легко',
+      text:', в один клик',
+      subtitle:'Все подписки теперь в одном месте. Изменяйте и отменяйте их в любое время. Легко переходите на новые условия, даже если подписка уже есть.',
+      image: CheckIcon,
+      widthText:'310px',
+      widthsubTitle:'335px'
+    },
+    {
+      span: 'Безопасное ',
+      text: 'управление без ввода данных на сторонних ресурсах',
+      subtitle:'Больше не нужно вводить свои персональные данные и привязывать карты на разных сайтах. Платежные данные остаются в банке.',
+      image: KeyIcon,
+
+    },
+    {
+      image: ContactIcon,
+      width:'172px',
+      height:'140px',
+      paddingContainer:'50px 20px 0',
+      heightContainer:'560px',
+      faq: [
+      {
+        question: 'Как подключить подписку на сервис?',
+        answer: 'Выберите период действия → привяжите карту → оплатите. Для автоплатежа активируйте функцию «привязать счет» после покупки.'
+      },
+      {
+        question: 'Где найти мои оформленные подписки? Как отключить подписку на сервис?',
+        answer: 'В разделе «Оформленные подписки» на главной странице.'
+      },
+      {
+        question: 'Если уже есть подписка на сервис?',
+        answer: 'Действующая подписка сохранится, к ней добавится новая, период действия увеличится. '
+      },
+    ]
+  }
   ]
 };

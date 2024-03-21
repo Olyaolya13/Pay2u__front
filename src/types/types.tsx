@@ -19,8 +19,24 @@ export interface ServisesQuestionsSelectData {
   width?: string;
 }
 
+export interface FAQItem {
+  question?: string;
+  answer?: string;
+}
+
 export interface HistoryContentPage {
-  title: string;
-  subtitle: string;
+  image: string;
+  width?:string;
+  height?:string;
+  title?: string;
+  text?: string;
+  widthText?:string;
+  widthsubTitle?:string;
+  subtitle?: string;
   span?: string;
+  faq?: FAQItem[]; 
+  padding?:string;
+  paddingContainer?:string;
+  heightContainer?:string;
+
 }

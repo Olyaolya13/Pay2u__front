@@ -5,7 +5,8 @@ import HistoryProgress from './HistoryProgress/HistoryProgress';
 export default function History() {
   const styles = {
     container: {
-      backgroundColor: '#2B2D32'
+      backgroundColor: '#2B2D32',
+      height:'812px'
     }
   };
   return (
