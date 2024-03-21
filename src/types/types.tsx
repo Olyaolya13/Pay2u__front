@@ -38,5 +38,7 @@ export interface HistoryContentPage {
   padding?:string;
   paddingContainer?:string;
   heightContainer?:string;
+  paddingTopSubtitle?:string;
+  paddingBottomTitle?:string
 
 }

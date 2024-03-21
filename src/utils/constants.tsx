@@ -198,7 +198,7 @@ export const HistoryContentData = {
   history: [
     {
       title: 'Выгодные',
-      span: 'скидки',
+      span: 'скидки\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0',
       text:' на кино, музыку, шопинг и не только',
       subtitle:
         'Оформите подписку на сервисы партнеров напрямую в приложении банка, чтобы получать кешбэк до 30% с каждого платежа.',
@@ -230,6 +230,9 @@ export const HistoryContentData = {
       height:'140px',
       paddingContainer:'50px 20px 0',
       heightContainer:'560px',
+      paddingTopSubtitle:'43px',
+      paddingBottomTitle:'40px',
+      padding:'0 0 0  87px',
       faq: [
       {
         question: 'Как подключить подписку на сервис?',

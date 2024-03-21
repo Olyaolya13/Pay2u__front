@@ -17,7 +17,7 @@ export default function HistoryProgress() {
     },
     stepper:{
       backgroundColor: '#2B2D32',
-      padding:'104px 154px 0'
+      padding:'104px 150px 0'
     }
   };
 
