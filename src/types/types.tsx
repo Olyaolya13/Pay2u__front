@@ -40,5 +40,14 @@ export interface HistoryContentPage {
   heightContainer?:string;
   paddingTopSubtitle?:string;
   paddingBottomTitle?:string
+}
 
+export interface CardSellHistoryData {
+  image: string;
+  alt:string
+  title: string;
+  subtitle: string;
+  sum: string;
+  cashBack?: string;
+  period?:string
 }
