@@ -17,8 +17,8 @@ export const HeaderData = {
   subscriptions: 'Мои подписки',
   manageSubcription: 'Управление подпиской',
   catalog: 'Каталог подписок',
-  movie: 'Кино',
-  connetcSubcription: 'Подключение подписки',
+  categories: 'Кино',
+  connectSubcription: 'Подключение подписки',
   payment: 'Оплата подписки',
   autoPayment: 'Подключение автоплатежа'
 };
@@ -141,25 +141,62 @@ export const ServisesQuestionsData = {
 };
 
 export const ServisesQuestionsTitleData = {
-  title: 'Управление подпиской'
+  title: 'Управление подпиской',
+  subtitle: 'Оформление подписки'
 };
 
-export const ServisesQuestionsSelectData = {
+export const ServisesQuestionsManageSelectData = {
   select: [
     {
       title: 'Как перенести активную подписку на платформу банка?',
       subtitle:
-        'Как перенести активную подписку на платформу банка?Как перенести активную подписку на платформу банка?Как перенести активную подписку на платформу банка?Как перенести активную подписку на платформу банка?Как перенести активную подписку на платформу банка?'
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
     },
     {
       title: 'Когда начисляется кешбэк за текущий месяц?',
       subtitle:
-        'Как перенести активную подписку на платформу банка?Как перенести активную подписку на платформу банка?Как перенести активную подписку на платформу банка?Как перенести активную подписку на платформу банка?Как перенести активную подписку на платформу банка?'
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      width: '200px'
     },
     {
       title: 'Что делать, если подписка уже оформлена и я хочу ее сменить?',
       subtitle:
-        'Как перенести активную подписку на платформу банка?Как перенести активную подписку на платформу банка?Как перенести активную подписку на платформу банка?Как перенести активную подписку на платформу банка?Как перенести активную подписку на платформу банка?'
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    }
+  ]
+};
+
+export const ServisesQuestionsRegistSelectData = {
+  select: [
+    {
+      title: 'Что входит в мою подписку?',
+      subtitle:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    },
+    {
+      title: 'Какую выгоду я получу?',
+      subtitle:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    },
+    {
+      title: 'Можно ли отменить автопродление?',
+      subtitle:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    }
+  ]
+};
+
+export const ServicesInstructionData = {
+  title: 'Инструкция по работе с сервисом'
+};
+
+export const HistoryContentData = {
+  history: [
+    {
+      title: 'Выгодные на кино, музыку, шопинг и не только',
+      subtitle:
+        'Оформите подписку на сервисы партнеров напрямую в приложении банка, чтобы получать кешбэк до 30% с каждого платежа.',
+      span: 'скидки'
     }
   ]
 };

@@ -4,11 +4,12 @@ import ServicesCatalog from './ServicesCatalog/ServicesCatalog';
 import ServicesNew from './ServicesNew/ServicesNew';
 import ServicesPopular from './ServicesPopular/ServicesPopular';
 import ServisesQuestions from './ServisesQuestions/ServisesQuestions';
+import ServicesInstruction from './ServicesInstruction/ServicesInstruction';
 
 export default function Services() {
   const styles = {
     container: {
-      margin: '38px 20px 0'
+      margin: '38px 20px 78px'
     }
   };
   return (
@@ -18,6 +19,7 @@ export default function Services() {
       <ServicesNew />
       <ServicesPopular />
       <ServisesQuestions />
+      <ServicesInstruction />
     </Box>
   );
 }

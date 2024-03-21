@@ -1,42 +1,36 @@
-import { useState, useEffect } from 'react';
-import LinearProgress from '@mui/material/LinearProgress';
-import Box from '@mui/material/Box';
+import { useState } from 'react';
+import { MobileStepper, Box } from '@mui/material';
+import SubmitButton from '../../SubmitBtn/SubmitBtn';
+import HistoryContent from '../HistoryContent/HistoryContent';
+import { HistoryContentData } from '../../../utils/constants';
 
 export default function HistoryProgress() {
-  const [progress, setProgress] = useState(0);
+  const [activeStep, setActiveStep] = useState(0);
 
   const styles = {
     container: {
-      position: 'relative',
-      width: '100%',
-      height: '4px',
-      display: 'flex'
-    },
-    line: {
-      backgroundColor: '#D9D9D9',
-      borderRadius: '4px',
-      flexGrow: 1,
-      marginRight: '16px'
+      textAlign: 'center',
+      backgroundColor: '#2B2D32'
     }
   };
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setProgress(prevProgress => (prevProgress >= 100 ? 0 : prevProgress + 25));
-    }, 2000);
-    return () => clearInterval(timer);
-  }, []);
+  const handleNext = () => {
+    setActiveStep(prevActiveStep => prevActiveStep + 1);
+  };
 
   return (
-    <Box sx={styles.container}>
-      <LinearProgress
-        sx={styles.line}
-        variant="determinate"
-        value={progress >= 25 ? 100 : progress}
+    <Box>
+      <MobileStepper
+        sx={styles.container}
+        variant="dots"
+        steps={4}
+        position="static"
+        activeStep={activeStep}
+        backButton={''}
+        nextButton={''}
       />
-      <LinearProgress sx={styles.line} variant="determinate" value={progress >= 50 ? 100 : 0} />
-      <LinearProgress sx={styles.line} variant="determinate" value={progress >= 75 ? 100 : 0} />
-      <LinearProgress sx={styles.line} variant="determinate" value={progress >= 100 ? 100 : 0} />
+      <HistoryContent activeStep={activeStep + 1} />
+      <SubmitButton onClick={handleNext} title="Далее" />
     </Box>
   );
 }

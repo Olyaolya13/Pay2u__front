@@ -1,9 +1,9 @@
 import { Accordion, AccordionSummary, AccordionDetails, Typography, Box } from '@mui/material';
 import ArrowSelectIcon from '../../../../assets/ArrowSelectIcon.svg?react';
-import { ServisesQuestionsSelectata } from '../../../../types/types';
+import { ServisesQuestionsSelectData } from '../../../../types/types';
 
 interface ServisesQuestionsSelectProps {
-  select?: ServisesQuestionsSelectata;
+  select?: ServisesQuestionsSelectData;
 }
 
 export default function ServisesQuestionsSelect({ select }: ServisesQuestionsSelectProps) {
@@ -11,19 +11,21 @@ export default function ServisesQuestionsSelect({ select }: ServisesQuestionsSel
     container: {
       backgroundColor: '#F9F9F9',
       boxShadow: 'none',
-      borderBottom: '.4px solid #E2E2E2'
+      margin: '0',
+      borderBottom: '.4px solid #E2E2E2',
+      minHight: '60px'
     },
     title: {
-      width: '275px',
+      display: 'flex',
+      alignItems: 'center',
       fontWeight: '400',
       fontFamily: 'Inter',
-      FontSize: '14px',
+      fontSize: '14px',
       textAlign: 'start',
-      letterSpacing: 0,
       height: '60px'
     },
     subtitle: {
-      width: '275px',
+      width: '287px',
       fontWeight: '400',
       fontFamily: 'Inter',
       fontSize: '12px',
@@ -31,7 +33,8 @@ export default function ServisesQuestionsSelect({ select }: ServisesQuestionsSel
       color: '#676879'
     },
     text: {
-      paddingTop: '0'
+      paddingTop: '0',
+      margin: '0'
     }
   };
   return (
@@ -41,8 +44,11 @@ export default function ServisesQuestionsSelect({ select }: ServisesQuestionsSel
           expandIcon={<ArrowSelectIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
+          sx={{ height: '64px', margin: '0' }}
         >
-          <Typography sx={styles.title}>{select?.title}</Typography>
+          <Typography sx={{ ...styles.title, width: select?.width ? select?.width : '263px' }}>
+            {select?.title}
+          </Typography>
         </AccordionSummary>
         <AccordionDetails sx={styles.text}>
           <Typography sx={styles.subtitle}>{select?.subtitle}</Typography>
