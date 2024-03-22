@@ -4,16 +4,18 @@ import { CardCatalogData } from '../../../../types/types';
 
 interface ServicesCatalogCardProps {
   card: CardCatalogData;
+  onClick?: () => void;
 }
 
-export default function ServicesCatalogCard({ card }: ServicesCatalogCardProps) {
+export default function ServicesCatalogCard({ card, onClick }: ServicesCatalogCardProps) {
   const styles = {
     container: {
       maxWidth: '202px',
       height: '82px',
       boxShadow: 'none',
       display: 'flex',
-      alignItems: 'center'
+      alignItems: 'center',
+      cursor: 'pointer'
     },
     text: {
       display: 'flex'
@@ -53,7 +55,7 @@ export default function ServicesCatalogCard({ card }: ServicesCatalogCardProps) 
   };
 
   return (
-    <Card sx={styles.container}>
+    <Card sx={styles.container} onClick={onClick}>
       <Box sx={styles.Imagecontainer}>
         <CardMedia component="img" sx={styles.image} image={card.image} alt={card.alt} />
       </Box>

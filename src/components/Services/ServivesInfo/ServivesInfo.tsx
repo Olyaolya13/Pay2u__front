@@ -1,8 +1,10 @@
 import { Box, Typography } from '@mui/material';
 import SubmitButton from '../../SubmitBtn/SubmitBtn';
 import { ServicesData } from '../../../utils/constants';
+import { useNavigate } from 'react-router-dom';
 
 export default function ServicesInfo() {
+  const navigate = useNavigate();
   const styles = {
     container: {
       background: 'linear-gradient(to right, #28C22E 0%, #197225 100%)',
@@ -19,6 +21,11 @@ export default function ServicesInfo() {
       textAlign: 'start'
     }
   };
+
+  const handleOpen = () => {
+    navigate('/history');
+  };
+
   return (
     <Box sx={styles.container}>
       <Typography component="p" sx={styles.title}>
@@ -30,6 +37,7 @@ export default function ServicesInfo() {
         hoverBackgroundColor="#F9F9F9"
         focusBackgroundColor="#F9F9F9"
         color="#489865"
+        onClick={handleOpen}
       />
     </Box>
   );
