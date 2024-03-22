@@ -5,10 +5,10 @@ import Header from '../Header/Header';
 import Services from '../Services/Services';
 import History from '../History/History';
 import SellHistory from '../SellHistory/SellHistory';
+import CatalogSubscriptions from '../CatalogSubscriptions/CatalogSubscriptions';
 
 const AppRouter: React.FC = () => {
   const location = useLocation();
-
 
   if (location.pathname === '/') {
     return <Navigate to="/history" replace />;
@@ -16,13 +16,14 @@ const AppRouter: React.FC = () => {
 
   return (
     <main>
-     {location.pathname !== '/history' && <Header />}
-    <Routes>
-      <Route path="/services" element={<Services />} />
-      <Route path="/history" element={<History />} /> 
-      <Route path='/sell-history' element={<SellHistory/>}/>
-    </Routes>
-  </main>
+      {location.pathname !== '/history' && <Header />}
+      <Routes>
+        <Route path="/services" element={<Services />} />
+        <Route path="/history" element={<History />} />
+        <Route path="/sell-history" element={<SellHistory />} />
+        <Route path="/catalog" element={<CatalogSubscriptions />} />
+      </Routes>
+    </main>
   );
 };
 
