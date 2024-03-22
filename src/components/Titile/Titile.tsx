@@ -6,8 +6,8 @@ interface TitleProps {
   title?: string;
   all?: string;
   link?: string;
-  padding?:string
-  fontSize?:string
+  padding?: string;
+  fontSize?: string;
 }
 
 const styles = {
@@ -30,13 +30,13 @@ const styles = {
   }
 };
 
-export default function Title({ title, all, link,padding,fontSize }: TitleProps) {
+export default function Title({ title, all, link, padding, fontSize }: TitleProps) {
   return (
-    <Box sx={{...styles.container, padding:padding?padding:'0',}}>
-      <Typography component="h2" sx={{...styles.title,fontSize:fontSize?fontSize:'18px'}}>
+    <Box sx={{ ...styles.container, padding: padding ? padding : '0' }}>
+      <Typography component="h2" sx={{ ...styles.title, fontSize: fontSize ? fontSize : '18px' }}>
         {title}
       </Typography>
-      <Link to={link || '/'} className="title__link">
+      <Link to={link || ''} className="title__link">
         <Typography component="h2" sx={styles.subtitle}>
           {all}
         </Typography>

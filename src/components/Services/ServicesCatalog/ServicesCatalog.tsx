@@ -3,8 +3,11 @@ import Title from '../../Titile/Titile';
 import { ServicesCatalogData } from '../../../utils/constants';
 import ServicesCatalogCard from './ServicesCatalogCard/ServicesCatalogCard';
 import { ServicesCatalogCardData } from '../../../utils/constants';
+import { useNavigate } from 'react-router-dom';
 
 export default function ServicesCatalog() {
+  const navigate = useNavigate();
+
   const styles = {
     container: {
       margin: '32px 0 0'
@@ -26,12 +29,20 @@ export default function ServicesCatalog() {
       lineHeight: '1.25'
     }
   };
+
+  const handleClick = () => {
+    navigate('/categories');
+  };
   return (
     <Box sx={styles.container}>
       <Title title={ServicesCatalogData.title} all={ServicesCatalogData.all} link="/catalog" />
       <Box sx={styles.card}>
         {ServicesCatalogCardData.cards.map((card, index) => (
-          <ServicesCatalogCard key={index} card={card} />
+          <ServicesCatalogCard
+            key={index}
+            card={card}
+            onClick={card.title === 'Кино' ? handleClick : undefined}
+          />
         ))}
       </Box>
     </Box>
