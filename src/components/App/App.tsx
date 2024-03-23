@@ -20,7 +20,7 @@ const AppRouter: React.FC = () => {
       <Routes>
         <Route path="/services" element={<Services />} />
         <Route path="/history" element={<History />} />
-        <Route path="/sell-history" element={<SellHistory />} />
+        <Route path="/sell_history" element={<SellHistory />} />
         <Route path="/catalog" element={<CatalogSubscriptions />} />
       </Routes>
     </main>

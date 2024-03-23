@@ -26,28 +26,39 @@ export interface FAQItem {
 
 export interface HistoryContentPage {
   image: string;
-  width?:string;
-  height?:string;
+  width?: string;
+  height?: string;
   title?: string;
   text?: string;
-  widthText?:string;
-  widthsubTitle?:string;
+  widthText?: string;
+  widthsubTitle?: string;
   subtitle?: string;
   span?: string;
-  faq?: FAQItem[]; 
-  padding?:string;
-  paddingContainer?:string;
-  heightContainer?:string;
-  paddingTopSubtitle?:string;
-  paddingBottomTitle?:string
+  faq?: FAQItem[];
+  padding?: string;
+  paddingContainer?: string;
+  heightContainer?: string;
+  paddingTopSubtitle?: string;
+  paddingBottomTitle?: string;
 }
 
 export interface CardSellHistoryData {
   image: string;
-  alt:string
+  alt: string;
   title: string;
   subtitle: string;
   sum: string;
   cashBack?: string;
-  period?:string
+  period?: string;
+}
+
+export interface CardCatalogSubscriptionsData {
+  image: string;
+  alt: string;
+  title: string;
+  subtitle: string;
+  sum: string;
+  cashback: string;
+  raiting: number;
+  per: string;
 }
