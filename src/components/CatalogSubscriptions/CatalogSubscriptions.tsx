@@ -4,7 +4,7 @@ import SearchCatalogSubscriptions from '../Search/Search';
 
 export default function CatalogSubscriptions() {
   const styles = {
-    container: { margin: '38px 20px 0', height: '100vh' }
+    container: { margin: '38px 20px 78px' }
   };
   return (
     <Box sx={styles.container}>

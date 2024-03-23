@@ -10,7 +10,7 @@ interface CardCatalogSubscriptionsProps {
 export default function CardCatalogSubscriptions({ card }: CardCatalogSubscriptionsProps) {
   const styles = {
     container: {
-      marginTop: '20px',
+      marginTop: '19px',
       display: 'flex',
       justifyContent: 'space-between',
       padding: '16px 16px 16px 20px',
@@ -18,10 +18,10 @@ export default function CardCatalogSubscriptions({ card }: CardCatalogSubscripti
       borderRadius: '16px'
     },
     containerIcon: { display: 'flex', flexDirection: 'column', alignItems: 'start' },
-    containerRaiting: { display: 'flex', alignItems: 'center', marginTop: '11px' },
+    containerRaiting: { display: 'flex', alignItems: 'center', marginTop: '6px' },
     containerCard: { display: 'flex', flexDirection: 'column' },
     containerTitle: { display: 'flex', justifyContent: 'space-between' },
-    image: { width: '40px', height: '40px' },
+    image: { width: '49px', height: '49px' },
     title: {
       fontFamily: 'Inter',
       fontSize: '18px',

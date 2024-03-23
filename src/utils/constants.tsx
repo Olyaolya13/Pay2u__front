@@ -338,7 +338,7 @@ export const SellHistoryContentJanuaryData = {
   title: 'Январь'
 };
 
-export const ContentCatalogSubscriptionsData = {
+export const ContentCatalogSubscriptionsMovieData = {
   title: 'Кино',
   all: 'Все'
 };
@@ -373,6 +373,46 @@ export const SubscriptionsCardCatalogMovieData = {
       raiting: 4.6,
       cashback: '5%',
       sum: 'От 199',
+      per: '/месяц'
+    }
+  ]
+};
+
+export const ContentCatalogSubscriptionsReadData = {
+  title: 'Чтение',
+  all: 'Все'
+};
+
+export const SubscriptionsCardCatalogReadData = {
+  card: [
+    {
+      image: LitrecIcon,
+      alt: 'Литрес',
+      title: 'Литрес',
+      subtitle: 'Цифровой сервис электронных, аудиокниг, и другого контента',
+      raiting: 4.8,
+      cashback: '5%',
+      sum: 'От 199',
+      per: '/месяц'
+    }
+  ]
+};
+
+export const ContentCatalogSubscriptionsComboData = {
+  title: 'Комбо-подписки',
+  all: 'Все'
+};
+
+export const SubscriptionsCardCatalogComboData = {
+  card: [
+    {
+      image: MovieSearchIcon,
+      alt: 'Кинопоиск',
+      title: 'Кинопоиск',
+      subtitle: 'Онлайн-кинотеатр ',
+      raiting: 4.6,
+      cashback: '5%',
+      sum: 'От 299',
       per: '/месяц'
     }
   ]
