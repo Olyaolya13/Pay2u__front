@@ -337,3 +337,43 @@ export const SellHistoryCardJanuaryData = {
 export const SellHistoryContentJanuaryData = {
   title: 'Январь'
 };
+
+export const ContentCatalogSubscriptionsData = {
+  title: 'Кино',
+  all: 'Все'
+};
+
+export const SubscriptionsCardCatalogMovieData = {
+  card: [
+    {
+      image: OkkoIcon,
+      alt: 'Okko',
+      title: 'Okko',
+      subtitle: 'Фильмы напрямую от голливудских студий',
+      raiting: 4.2,
+      cashback: '5%',
+      sum: 'От 199',
+      per: '/месяц'
+    },
+    {
+      image: IviIcon,
+      alt: 'Иви',
+      title: 'Иви',
+      subtitle: 'Фильмы онлайн в HD-качестве',
+      raiting: 4.4,
+      cashback: '5%',
+      sum: 'От 199',
+      per: '/месяц'
+    },
+    {
+      image: MovieSearchIcon,
+      alt: 'Кинопоиск',
+      title: 'Кинопоиск',
+      subtitle: 'Онлайн-кинотеатр ',
+      raiting: 4.6,
+      cashback: '5%',
+      sum: 'От 199',
+      per: '/месяц'
+    }
+  ]
+};

@@ -34,7 +34,7 @@ export default function Search({ margin }: SearchProps) {
   };
 
   return (
-    <Box sx={{ ...styles.container, margin: margin ? margin : '32px 0 0 0' }}>
+    <Box sx={{ ...styles.container, margin: margin ? margin : '38px 0 32px 0' }}>
       <IconButton disableRipple sx={styles.iconButton} onClick={handleIconClick}>
         <Icon src={SearchIcon} alt="Search Icon" />
       </IconButton>

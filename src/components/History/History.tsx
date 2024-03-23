@@ -6,7 +6,7 @@ export default function History() {
   const styles = {
     container: {
       backgroundColor: '#2B2D32',
-      height:'100vh'
+      height: '812px'
     }
   };
   return (
