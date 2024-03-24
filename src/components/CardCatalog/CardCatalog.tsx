@@ -1,7 +1,7 @@
-import { Box, CardMedia, Typography } from '@mui/material';
-import KIcon from '../../../assets/KIcon.svg?react';
-import RaitingIcon from '../../../assets/RaitingIcon.svg?react';
-import { CardCatalogSubscriptionsData } from '../../../types/types';
+import { Box, Card, CardMedia, Typography } from '@mui/material';
+import KIcon from '../../assets/KIcon.svg?react';
+import RaitingIcon from '../../assets/RaitingIcon.svg?react';
+import { CardCatalogSubscriptionsData } from '../../types/types';
 
 interface CardCatalogSubscriptionsProps {
   card?: CardCatalogSubscriptionsData;
@@ -15,7 +15,8 @@ export default function CardCatalogSubscriptions({ card }: CardCatalogSubscripti
       justifyContent: 'space-between',
       padding: '16px 16px 16px 20px',
       border: '.4px solid #E2E2E2',
-      borderRadius: '16px'
+      borderRadius: '16px',
+      boxShadow: '2px 2px 6px 2px rgba(0, 0, 0, 0.08)'
     },
     containerIcon: { display: 'flex', flexDirection: 'column', alignItems: 'start' },
     containerRaiting: { display: 'flex', alignItems: 'center', marginTop: '6px' },
@@ -64,7 +65,7 @@ export default function CardCatalogSubscriptions({ card }: CardCatalogSubscripti
     }
   };
   return (
-    <Box sx={styles.container}>
+    <Card sx={styles.container}>
       <Box sx={styles.containerIcon}>
         <CardMedia component="img" sx={styles.image} image={card?.image} alt={card?.alt} />
         <Box sx={styles.containerRaiting}>
@@ -95,6 +96,6 @@ export default function CardCatalogSubscriptions({ card }: CardCatalogSubscripti
           </Typography>
         </Box>
       </Box>
-    </Box>
+    </Card>
   );
 }

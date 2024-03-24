@@ -1,6 +1,7 @@
 import { Box } from '@mui/material';
-import Title from '../../Titile/Titile';
-import CardCatalogSubscriptions from '../CardCatalogSubscriptions/CardCatalogSubscriptions';
+import Title from '../../Titile/Titile.tsx';
+import { useNavigate } from 'react-router-dom';
+import CardCatalogSubscriptions from '../../CardCatalog/CardCatalog.tsx';
 import {
   ContentCatalogSubscriptionsMovieData,
   SubscriptionsCardCatalogMovieData,
@@ -11,14 +12,20 @@ import {
 } from '../../../utils/constants.tsx';
 
 export default function ContentCatalogSubscriptions() {
+  const navigate = useNavigate();
   const styles = {
     container: { margin: '24px 0 0' }
+  };
+
+  const handleClick = () => {
+    navigate('/categories');
   };
   return (
     <Box sx={styles.container}>
       <Title
         title={ContentCatalogSubscriptionsMovieData.title}
         all={ContentCatalogSubscriptionsMovieData.all}
+        onClick={ContentCatalogSubscriptionsMovieData.title === 'Кино' ? handleClick : undefined}
         padding="10px 0 4px"
       />
       {SubscriptionsCardCatalogMovieData.card.map((card, index) => (
