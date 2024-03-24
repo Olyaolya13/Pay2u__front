@@ -4,6 +4,10 @@
   cursor: pointer;
   position: absolute;
   top: 50%;
-  right: 8px;
+  right: 17px;
   transform: translateY(-50%);
+}
+
+.rotated {
+  transform: translateY(-50%) rotate(180deg);
 }

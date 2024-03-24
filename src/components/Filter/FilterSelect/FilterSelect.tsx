@@ -11,6 +11,7 @@ interface FilterSelectProps {
 export default function FilterSelect({ onChange }: FilterSelectProps) {
   const [isOpenSelect, setIsOpenSelect] = useState(false);
   const [selectedFilter, setSelectedFilter] = useState('');
+  const [isIconRotated, setIsIconRotated] = useState(false);
 
   const handleChange = (evt: SelectChangeEvent<string>) => {
     const value = evt.target.value;
@@ -24,6 +25,7 @@ export default function FilterSelect({ onChange }: FilterSelectProps) {
 
   const toggleSelect = () => {
     setIsOpenSelect(!isOpenSelect);
+    setIsIconRotated(!isIconRotated);
   };
 
   const handleSelectClick = () => {
@@ -46,22 +48,15 @@ export default function FilterSelect({ onChange }: FilterSelectProps) {
       fontFamily: 'Inter',
       fontSize: '14px',
       fontWeight: '400',
-      overflow: 'visible'
+      textAlign: 'start',
+      paddingLeft: '12px'
     },
-    image: {
-      width: '14px',
-      height: '7px',
-      cursor: 'pointer',
-      position: 'absolute',
-      top: '50%',
-      right: '8px',
-      transform: 'translateY(-50%)'
-    },
+
     title: {
       fontFamily: 'Inter',
       fontSize: '14px',
       fontWeight: '400',
-      textAlign: 'center'
+      textAlign: 'start'
     }
   };
 
@@ -101,7 +96,7 @@ export default function FilterSelect({ onChange }: FilterSelectProps) {
               src={FilterArrow}
               alt="Arrow icon"
               onClick={toggleSelect}
-              className="filter__icon"
+              className={isIconRotated ? 'filter__icon rotated' : 'filter__icon'}
             />
           }
         >
