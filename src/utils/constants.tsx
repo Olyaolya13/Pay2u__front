@@ -417,3 +417,11 @@ export const SubscriptionsCardCatalogComboData = {
     }
   ]
 };
+
+export const FilterSelectOptionsData = [
+  'По популярности',
+  'По названию',
+  'Новинки',
+  'Сначала дешевые',
+  'Сначала дорогие'
+];

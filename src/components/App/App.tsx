@@ -6,6 +6,7 @@ import Services from '../Services/Services';
 import History from '../History/History';
 import SellHistory from '../SellHistory/SellHistory';
 import CatalogSubscriptions from '../CatalogSubscriptions/CatalogSubscriptions';
+import CategoriesMovie from '../CategoriesMovie/CategoriesMovie';
 
 const AppRouter: React.FC = () => {
   const location = useLocation();
@@ -22,6 +23,7 @@ const AppRouter: React.FC = () => {
         <Route path="/history" element={<History />} />
         <Route path="/sell_history" element={<SellHistory />} />
         <Route path="/catalog" element={<CatalogSubscriptions />} />
+        <Route path="/categories" element={<CategoriesMovie />} />
       </Routes>
     </main>
   );
