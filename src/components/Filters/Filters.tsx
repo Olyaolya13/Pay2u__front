@@ -1,7 +1,8 @@
 import { Box } from '@mui/material';
 import FilterSelect from './FilterSelect/FilterSelect';
+import FilterSlide from './FilterSlide/FilterSlide';
 
-export default function Filter() {
+export default function Filters() {
   const styles = {
     container: {}
   };
@@ -9,6 +10,7 @@ export default function Filter() {
   return (
     <Box sx={styles.container}>
       <FilterSelect />
+      <FilterSlide />
     </Box>
   );
 }

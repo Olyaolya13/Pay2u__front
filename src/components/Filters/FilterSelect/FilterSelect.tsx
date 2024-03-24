@@ -1,6 +1,6 @@
 import './FilterSelect.css';
 import { useState } from 'react';
-import { MenuItem, FormControl, Select, SelectChangeEvent } from '@mui/material';
+import { MenuItem, FormControl, Select, SelectChangeEvent, Box } from '@mui/material';
 import FilterArrow from '../../../assets/FilterArrow.svg';
 import { FilterSelectOptionsData } from '../../../utils/constants';
 
@@ -61,7 +61,7 @@ export default function FilterSelect({ onChange }: FilterSelectProps) {
   };
 
   return (
-    <div>
+    <Box>
       <FormControl
         sx={{
           ...styles.container,
@@ -107,6 +107,6 @@ export default function FilterSelect({ onChange }: FilterSelectProps) {
           ))}
         </Select>
       </FormControl>
-    </div>
+    </Box>
   );
 }

@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import ContentCatalogSubscriptions from './ContentCatalogSubscriptions/ContentCatalogSubscriptions';
+import ContentCatalogSubscriptions from './CatalogContentSubscriptions/CatalogContentSubscriptions';
 import SearchCatalogSubscriptions from '../Search/Search';
 
 export default function CatalogSubscriptions() {

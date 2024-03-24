@@ -2,7 +2,7 @@ import { Box } from '@mui/material';
 import Search from '../Search/Search';
 import { SubscriptionsCardCatalogMovieData } from '../../utils/constants.tsx';
 import CardCatalog from '../CardCatalog/CardCatalog.tsx';
-import Filter from '../Filter/FilterSelect/FilterSelect.tsx';
+import Filters from '../Filters/Filters.tsx';
 
 export default function CategoriesMovie() {
   const styles = {
@@ -11,7 +11,7 @@ export default function CategoriesMovie() {
   return (
     <Box sx={styles.container}>
       <Search />
-      <Filter />
+      <Filters />
       {SubscriptionsCardCatalogMovieData.card.map((card, index) => (
         <CardCatalog key={index} card={card} />
       ))}

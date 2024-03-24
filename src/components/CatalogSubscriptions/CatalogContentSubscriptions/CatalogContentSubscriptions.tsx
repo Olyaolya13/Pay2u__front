@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import Title from '../../Titile/Titile';
+import Title from '../../Titile/Titile.tsx';
 import { useNavigate } from 'react-router-dom';
 import CardCatalogSubscriptions from '../../CardCatalog/CardCatalog.tsx';
 import {
