@@ -425,3 +425,34 @@ export const FilterSelectOptionsData = [
   'Сначала дешевые',
   'Сначала дорогие'
 ];
+
+export const ServicesSubscriptionImageData = {
+  card: [
+    {
+      image: OkkoIcon,
+      alt: 'Okko'
+    },
+    {
+      image: LikeeIcon,
+      alt: 'Likee'
+    },
+    {
+      image: YandexPlusIcon,
+      alt: 'Яндекс Плюс'
+    }
+  ]
+};
+
+export const ServicesSubscriptionData = {
+  title: 'Мои подписки',
+  writeOff: '26 марта ближайшее списание –',
+  sum: '520'
+};
+
+export const ServicesSubscriptionHistoryData = {
+  title: 'История покупок в марте',
+  subtitlePlus: 'Накоплено',
+  sumPlus: '+ 565,33',
+  subtitleMinus: 'Потрачено',
+  sumMinus: '- 1200'
+};

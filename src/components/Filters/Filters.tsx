@@ -4,7 +4,7 @@ import FilterSlide from './FilterSlide/FilterSlide';
 
 export default function Filters() {
   const styles = {
-    container: {}
+    container: { display: 'flex', justifyContent: 'space-between', margin: '32px 0 0' }
   };
 
   return (
