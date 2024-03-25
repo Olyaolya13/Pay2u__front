@@ -27,18 +27,18 @@ export default function FiltersPopupSelect({ open, onClose, onClick }: FiltersPo
       borderRadius: '16px',
       display: 'flex',
       flexDirection: 'column',
+      alignItems: 'center',
       position: 'fixed',
       top: '200px',
       left: 0,
       width: '335px',
       height: '100%'
-    },
-
-    list: {
-      width: '100%',
-      padding: '0'
     }
   };
+
+  function handleClose() {
+    onClose();
+  }
 
   return (
     <Modal sx={styles.container} open={open} onClose={onClose}>
@@ -47,12 +47,12 @@ export default function FiltersPopupSelect({ open, onClose, onClick }: FiltersPo
           <FilterPopupBtn />
           <Box>
             <Typography sx={styles.title}>Сортировка</Typography>
-            <CloseIcon className="filter-popup__icon" />
+            <CloseIcon className="filter-popup__icon" onClick={handleClose} />
           </Box>
         </Box>
         <List
           sx={{
-            '&.MuiList-root': { padding: '0 0 66px' },
+            '&.MuiList-root': { padding: '0 0 66px', width: '100%', textAlign: 'start' },
             '& .MuiButtonBase-root': { padding: '0' }
           }}
         >

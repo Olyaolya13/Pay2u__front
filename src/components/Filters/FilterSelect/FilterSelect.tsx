@@ -43,6 +43,7 @@ export default function FilterSelect({ onClick }: FilterSelectProps) {
   const handleMenuItemClick = (option: string) => {
     onClick(option);
     handleClose();
+    console.log('Selected option:', option);
   };
 
   return (
