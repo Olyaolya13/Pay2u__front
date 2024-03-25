@@ -1,112 +1,67 @@
 import './FilterSelect.css';
+import FilterArrow from '../../../assets/FilterArrow.svg?react';
+import Button from '@mui/material/Button';
+import { Box, Typography } from '@mui/material';
+import FiltersPopupSelect from '../FiltersPopupSelect/FiltersPopupSelect';
 import { useState } from 'react';
-import { MenuItem, FormControl, Select, SelectChangeEvent, Box } from '@mui/material';
-import FilterArrow from '../../../assets/FilterArrow.svg';
-import { FilterSelectOptionsData } from '../../../utils/constants';
 
 interface FilterSelectProps {
-  onChange?: (value: string) => void;
+  onClick: (selectedOption: string) => void;
 }
 
-export default function FilterSelect({ onChange }: FilterSelectProps) {
-  const [isOpenSelect, setIsOpenSelect] = useState(false);
-  const [selectedFilter, setSelectedFilter] = useState('');
-  const [isIconRotated, setIsIconRotated] = useState(false);
-
-  const handleChange = (evt: SelectChangeEvent<string>) => {
-    const value = evt.target.value;
-    if (onChange) {
-      onChange(value);
-    }
-    if (setSelectedFilter) {
-      setSelectedFilter(value);
-    }
-  };
-
-  const toggleSelect = () => {
-    setIsOpenSelect(!isOpenSelect);
-    setIsIconRotated(!isIconRotated);
-  };
-
-  const handleSelectClick = () => {
-    toggleSelect();
-  };
-
-  const handleMenuClose = () => {
-    setIsOpenSelect(false);
-  };
+export default function FilterSelect({ onClick }: FilterSelectProps) {
+  const [open, setOpen] = useState<boolean>(false);
 
   const styles = {
-    container: {
+    container: { position: 'relative', width: '175px' },
+    button: {
       backgroundColor: '#F9F9F9',
-      borderRadius: '16px'
-    },
-    select: {
-      width: '175px',
+      borderRadius: '16px',
       height: '36px',
-      border: 'none',
-      fontFamily: 'Inter',
-      fontSize: '14px',
-      fontWeight: '400',
+      padding: '0',
       textAlign: 'start',
-      paddingLeft: '12px'
+      width: '175px'
     },
-
     title: {
       fontFamily: 'Inter',
       fontSize: '14px',
       fontWeight: '400',
-      textAlign: 'start'
+      color: '#131313',
+      textTransform: 'none',
+      paddingRight: '20px'
     }
+  };
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const handleMenuItemClick = (option: string) => {
+    onClick(option);
+    handleClose();
   };
 
   return (
     <Box>
-      <FormControl
+      <Button
+        disableElevation
         sx={{
-          ...styles.container,
-          '& .MuiOutlinedInput-notchedOutline': {
-            outline: 'none',
-            border: 'none'
+          ...styles.button,
+          '&:hover': {
+            backgroundColor: '#F9F9F9'
           }
         }}
+        variant="contained"
+        endIcon={<FilterArrow className="filter__icon" />}
+        onClick={handleOpen}
       >
-        <Select
-          sx={{
-            ...styles.select,
-            '& .MuiSelect-select.MuiSelect-outlined.MuiInputBase-input.MuiOutlinedInput-input': {
-              padding: '0'
-            }
-          }}
-          displayEmpty
-          value={selectedFilter || ''}
-          onChange={handleChange}
-          IconComponent={() => null}
-          open={isOpenSelect}
-          onClose={handleMenuClose}
-          onClick={handleSelectClick}
-          renderValue={selected => {
-            if (!selected) {
-              return 'Выберите фильтр';
-            }
-            return selected;
-          }}
-          endAdornment={
-            <img
-              src={FilterArrow}
-              alt="Arrow icon"
-              onClick={toggleSelect}
-              className={isIconRotated ? 'filter__icon rotated' : 'filter__icon'}
-            />
-          }
-        >
-          {FilterSelectOptionsData.map((option, index) => (
-            <MenuItem key={index} value={option}>
-              {option}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
+        <Typography sx={styles.title}>По популярности</Typography>
+      </Button>
+      <FiltersPopupSelect open={open} onClose={handleClose} onClick={handleMenuItemClick} />
     </Box>
   );
 }

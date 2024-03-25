@@ -6,7 +6,7 @@ import Filters from '../Filters/Filters.tsx';
 
 export default function CategoriesMovie() {
   const styles = {
-    container: { margin: '24px 20px 0' }
+    container: { margin: '24px 20px 0', position: 'relative' }
   };
   return (
     <Box sx={styles.container}>
