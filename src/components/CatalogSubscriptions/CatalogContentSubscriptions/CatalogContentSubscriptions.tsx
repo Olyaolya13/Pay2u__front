@@ -19,6 +19,7 @@ export default function ContentCatalogSubscriptions() {
 
   const handleClick = () => {
     navigate('/categories');
+    window.scrollTo(0, 0);
   };
   return (
     <Box sx={styles.container}>

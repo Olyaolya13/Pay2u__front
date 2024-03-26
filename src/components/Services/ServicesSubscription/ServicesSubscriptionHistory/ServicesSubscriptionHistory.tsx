@@ -53,6 +53,7 @@ export default function ServicesSubscriptionHistory() {
 
   const handleClick = () => {
     navigate('/sell_history');
+    window.scrollTo(0, 0);
   };
   return (
     <Card sx={styles.container} onClick={handleClick}>

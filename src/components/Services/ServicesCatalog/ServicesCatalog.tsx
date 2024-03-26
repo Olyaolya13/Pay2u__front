@@ -4,6 +4,7 @@ import { ServicesCatalogData } from '../../../utils/constants';
 import ServicesCatalogCard from './ServicesCatalogCard/ServicesCatalogCard';
 import { ServicesCatalogCardData } from '../../../utils/constants';
 import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export default function ServicesCatalog() {
   const navigate = useNavigate();
@@ -32,7 +33,18 @@ export default function ServicesCatalog() {
 
   const handleClick = () => {
     navigate('/categories');
+    window.scrollTo(0, 0);
   };
+
+  useEffect(() => {
+    const unlisten = () => {
+      window.scrollTo(0, 0);
+    };
+    return () => {
+      unlisten();
+    };
+  }, []);
+
   return (
     <Box sx={styles.container}>
       <Title title={ServicesCatalogData.title} all={ServicesCatalogData.all} link="/catalog" />

@@ -50,6 +50,7 @@ export default function ServicesSubscriptionCard() {
 
   const handleClick = () => {
     navigate('/subscriptions');
+    window.scrollTo(0, 0);
   };
   return (
     <Card sx={styles.container} onClick={handleClick}>

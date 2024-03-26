@@ -24,6 +24,7 @@ export default function ServicesInfo() {
 
   const handleOpen = () => {
     navigate('/history');
+    window.scrollTo(0, 0);
   };
 
   return (
