@@ -62,3 +62,10 @@ export interface CardCatalogSubscriptionsData {
   raiting: number;
   per: string;
 }
+
+export interface CardMySubscriptionsWaitActiveyData {
+  image: string;
+  alt: string;
+  title: string;
+  period: number;
+}

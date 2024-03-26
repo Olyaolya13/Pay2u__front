@@ -462,3 +462,19 @@ export const ServicesSubscriptionInfoData = {
     '  Оформите подписки на любимые сервисы с выгодным кешбэком\u00A0\u00A0 и управляйте ими в одном месте',
   subtitle: 'Подробнее о сервисе'
 };
+
+export const MySubscriptionsWaitActiveData = {
+  title: ' Промокод необходимо активировать до окончания действия подписки - ',
+  period: '18.05.2024'
+};
+
+export const MySubscriptionsWaitActiveCardData = {
+  card: [
+    {
+      image: LikeeIcon,
+      alt: 'Likee',
+      title: 'Likee',
+      period: 2
+    }
+  ]
+};
