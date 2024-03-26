@@ -52,7 +52,7 @@ export default function ServicesSubscriptionCard() {
     navigate('/subscriptions');
   };
   return (
-    <Card sx={styles.container}>
+    <Card sx={styles.container} onClick={handleClick}>
       <Box sx={styles.containerTitle}>
         <Typography component="p" sx={styles.title}>
           {ServicesSubscriptionData.title}

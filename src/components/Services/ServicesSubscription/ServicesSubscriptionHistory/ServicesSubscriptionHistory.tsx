@@ -55,7 +55,7 @@ export default function ServicesSubscriptionHistory() {
     navigate('/sell_history');
   };
   return (
-    <Card sx={styles.container}>
+    <Card sx={styles.container} onClick={handleClick}>
       <Box sx={styles.containerTitle}>
         <Typography component="p" sx={styles.title}>
           {ServicesSubscriptionHistoryData.title}

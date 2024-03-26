@@ -3,9 +3,13 @@ import { Box, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import TransitionIWhitecon from '../../../../assets/TransitionIWhitecon.svg?react';
 import CloseIcon from '../../../../assets/CloseIcon.svg?react';
-import { useState } from 'react';
+import { ServicesSubscriptionInfoData } from '../../../../utils/constants';
 
-export default function ServicesSubscriptionInfo() {
+interface ServicesSubscriptionInfoProps {
+  onClose: () => void;
+}
+
+export default function ServicesSubscriptionInfo({ onClose }: ServicesSubscriptionInfoProps) {
   const navigate = useNavigate();
   const styles = {
     container: {
@@ -24,29 +28,23 @@ export default function ServicesSubscriptionInfo() {
       textAlign: 'start',
       paddingRight: '10px'
     },
-    text: { display: 'flex', alignItems: 'center', marginTop: '10px' }
+    text: { display: 'flex', alignItems: 'center', marginTop: '10px', width: '194px' }
   };
 
   const handleOpen = () => {
     navigate('/history');
   };
 
-  const [containerVisible, setContainerVisible] = useState(true);
-
-  const handleClose = () => {
-    setContainerVisible(false);
-  };
-
   return (
     <Box sx={styles.container}>
       <Box>
         <Typography component="p" sx={styles.title}>
-          Оформите подписки на любимые сервисы с выгодным кешбэком и управляйте ими в одном месте
+          {ServicesSubscriptionInfoData.title}
         </Typography>
-        <CloseIcon onClick={handleClose} className="service-subscription__close-icon" />
+        <CloseIcon className="service-subscription__close-icon" onClick={onClose} />
       </Box>
-      <Box sx={styles.text}>
-        <Typography sx={styles.title}>Подробнее о сервисе</Typography>
+      <Box sx={styles.text} onClick={handleOpen}>
+        <Typography sx={styles.title}>{ServicesSubscriptionInfoData.subtitle}</Typography>
         <TransitionIWhitecon onClick={handleOpen} />
       </Box>
     </Box>
