@@ -538,3 +538,15 @@ export const InfoTooltipData = {
   titleSubscription:
     'Вы не можете пользоваться сервисом, пока не завершите активацию подписки. Скопируйте код в разделе управления подпиской и перейдите на сайт партнера'
 };
+
+export const ManageSubscriptionCardData = {
+  card: [
+    {
+      image: OkkoIcon,
+      alt: 'Okko',
+      title: 'Okko',
+      description: 'Подписка на 3 месяца',
+      period: ' 05.04.2024'
+    }
+  ]
+};

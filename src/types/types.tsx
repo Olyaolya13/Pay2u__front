@@ -79,3 +79,11 @@ export interface CardMySubscriptionsActiveData {
   sum: string;
   activeUntill: string;
 }
+
+export interface CardManageSubscriptionData {
+  image: string;
+  alt: string;
+  title: string;
+  description: string;
+  period: string;
+}

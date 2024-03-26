@@ -3,9 +3,13 @@ import { CardMySubscriptionsActiveData } from '../../../../types/types';
 
 interface MySubscriptionsActiveCardProps {
   card: CardMySubscriptionsActiveData;
+  onClick?: () => void;
 }
 
-export default function MySubscriptionsActiveCard({ card }: MySubscriptionsActiveCardProps) {
+export default function MySubscriptionsActiveCard({
+  card,
+  onClick
+}: MySubscriptionsActiveCardProps) {
   const styles = {
     main: {
       padding: '19px 19px 13px 20px',
@@ -63,7 +67,7 @@ export default function MySubscriptionsActiveCard({ card }: MySubscriptionsActiv
     image: { width: '40px', height: '40px', marginRight: '12px' }
   };
   return (
-    <Box sx={styles.main}>
+    <Box sx={styles.main} onClick={onClick}>
       <Box sx={styles.container}>
         <Box sx={styles.icon}>
           <CardMedia component="img" sx={styles.image} image={card.image} alt={card.alt} />
