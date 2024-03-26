@@ -1,3 +1,4 @@
+import './ServicesSubscriptionCard.css';
 import { Box, Card, CardMedia, Typography } from '@mui/material';
 import TransitionIcon from '../../../../assets/TransitionIcon.svg?react';
 import { useNavigate } from 'react-router-dom';
@@ -10,7 +11,8 @@ export default function ServicesSubscriptionCard() {
   const navigate = useNavigate();
   const styles = {
     container: {
-      padding: '16px 12px 16px 20px',
+      position: 'relative',
+      padding: '18px 16px 16px 20px',
       marginTop: '19px',
       display: 'flex',
       flexDirection: 'column',
@@ -20,7 +22,7 @@ export default function ServicesSubscriptionCard() {
     },
     containerImage: { display: 'flex', marginTop: '12px' },
     containerTitle: { display: 'flex', justifyContent: 'space-between' },
-    containerSum: { display: 'flex', marginTop: '8px' },
+    containerSum: { display: 'flex', marginTop: '10px' },
     image: { width: '40px', height: '40px' },
     title: {
       fontFamily: 'Inter',
@@ -58,7 +60,7 @@ export default function ServicesSubscriptionCard() {
         <Typography component="p" sx={styles.title}>
           {ServicesSubscriptionData.title}
         </Typography>
-        <TransitionIcon onClick={handleClick} />
+        <TransitionIcon onClick={handleClick} className="service-subscription__icon" />
       </Box>
       <Box sx={styles.containerImage}>
         {ServicesSubscriptionImageData.card.map((data, index) => (

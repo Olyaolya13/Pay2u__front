@@ -21,6 +21,8 @@ export default function ServicesSubscriptionInfo({ onClose }: ServicesSubscripti
       padding: '16px'
     },
     title: {
+      width: '270px',
+      fontSize: '16px',
       fontFamily: 'Inter',
       color: '#F5F5F5',
       lineHeight: '1.25',
@@ -28,7 +30,16 @@ export default function ServicesSubscriptionInfo({ onClose }: ServicesSubscripti
       textAlign: 'start',
       paddingRight: '10px'
     },
-    text: { display: 'flex', alignItems: 'center', marginTop: '10px', width: '194px' }
+    subtitle: {
+      fontSize: '14px',
+      fontFamily: 'Inter',
+      color: '#F5F5F5',
+      lineHeight: '1.25',
+      fontWeight: '400',
+      textAlign: 'start',
+      paddingRight: '8px'
+    },
+    text: { display: 'flex', alignItems: 'center', marginTop: '15px', width: '194px' }
   };
 
   const handleOpen = () => {
@@ -44,7 +55,7 @@ export default function ServicesSubscriptionInfo({ onClose }: ServicesSubscripti
         <CloseIcon className="service-subscription__close-icon" onClick={onClose} />
       </Box>
       <Box sx={styles.text} onClick={handleOpen}>
-        <Typography sx={styles.title}>{ServicesSubscriptionInfoData.subtitle}</Typography>
+        <Typography sx={styles.subtitle}>{ServicesSubscriptionInfoData.subtitle}</Typography>
         <TransitionIWhitecon onClick={handleOpen} />
       </Box>
     </Box>

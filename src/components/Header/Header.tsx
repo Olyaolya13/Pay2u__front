@@ -15,7 +15,7 @@ export default function Header() {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      margin: '58px 16px 0 20px'
+      margin: '58px 22px 0'
     },
     title: {
       fontFamily: 'Inter',
