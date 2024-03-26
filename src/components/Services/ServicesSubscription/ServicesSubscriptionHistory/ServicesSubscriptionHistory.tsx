@@ -1,3 +1,4 @@
+import './ServicesSubscriptionHistory.css';
 import { Box, Card, Typography } from '@mui/material';
 import TransitionIcon from '../../../../assets/TransitionIcon.svg?react';
 import { useNavigate } from 'react-router-dom';
@@ -7,7 +8,8 @@ export default function ServicesSubscriptionHistory() {
   const navigate = useNavigate();
   const styles = {
     container: {
-      padding: '16px 12px 16px 20px',
+      position: 'relative',
+      padding: '18px 22px 16px 20px',
       marginTop: '32px',
       display: 'flex',
       flexDirection: 'column',
@@ -53,14 +55,15 @@ export default function ServicesSubscriptionHistory() {
 
   const handleClick = () => {
     navigate('/sell_history');
+    window.scrollTo(0, 0);
   };
   return (
-    <Card sx={styles.container}>
+    <Card sx={styles.container} onClick={handleClick}>
       <Box sx={styles.containerTitle}>
         <Typography component="p" sx={styles.title}>
           {ServicesSubscriptionHistoryData.title}
         </Typography>
-        <TransitionIcon onClick={handleClick} />
+        <TransitionIcon onClick={handleClick} className="service-subscription-history__icon" />
       </Box>
       <Box sx={styles.containerSum}>
         <Typography component="p" sx={styles.subtitle}>

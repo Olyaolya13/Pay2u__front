@@ -21,12 +21,13 @@ export default function ServisesQuestionsContent() {
       fontFamily: 'Inter',
       fontSize: '14px',
       fontWeight: '700',
-      paddingLeft: '16px'
+      paddingLeft: '16px',
+      paddingBottom: '10px'
     },
     subtitle: {
       textAlign: 'start',
       paddingLeft: '16px',
-      paddingTop: '16px',
+      paddingTop: '28px',
       color: '#489865',
       fontFamily: 'Inter',
       fontSize: '14px',

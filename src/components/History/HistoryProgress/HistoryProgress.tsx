@@ -30,6 +30,7 @@ export default function HistoryProgress() {
   const handleNext = () => {
     if (activeStep === HistoryContentData.history.length - 1) {
       navigate('/services');
+      window.scrollTo(0, 0);
     } else {
       setActiveStep(prevActiveStep => prevActiveStep + 1);
     }

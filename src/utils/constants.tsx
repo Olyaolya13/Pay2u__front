@@ -456,3 +456,9 @@ export const ServicesSubscriptionHistoryData = {
   subtitleMinus: 'Потрачено',
   sumMinus: '- 1200'
 };
+
+export const ServicesSubscriptionInfoData = {
+  title:
+    '  Оформите подписки на любимые сервисы с выгодным кешбэком\u00A0\u00A0 и управляйте ими в одном месте',
+  subtitle: 'Подробнее о сервисе'
+};
