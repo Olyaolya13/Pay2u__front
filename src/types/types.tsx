@@ -87,3 +87,10 @@ export interface CardManageSubscriptionData {
   description: string;
   period: string;
 }
+
+export interface BtnManageSubscriptionData {
+  image: string;
+  alt: string;
+  title: string;
+  borderColor?: string;
+}

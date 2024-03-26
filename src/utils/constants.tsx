@@ -15,6 +15,9 @@ import CheckIcon from '../assets/CheckIcon.svg';
 import KeyIcon from '../assets/KeyIcon.svg';
 import ContactIcon from '../assets/ContactIcon.svg';
 import LikeeIcon from '../assets/LikeeIcon.svg';
+import ChangeIcon from '../assets/ChangeIcon.svg';
+import AutoPayIcon from '../assets/AutoPayIcon.svg';
+import RejectIcon from '../assets/RejectIcon.svg';
 
 export const HeaderData = {
   services: 'Развлекательные сервисы',
@@ -547,6 +550,29 @@ export const ManageSubscriptionCardData = {
       title: 'Okko',
       description: 'Подписка на 3 месяца',
       period: ' 05.04.2024'
+    }
+  ]
+};
+
+export const ManageSubscriptionBtnData = {
+  card: [
+    {
+      image: AutoPayIcon,
+      alt: 'Стрелки меняющиеся',
+      title: 'Автоплатеж',
+      borderColor: '#76D179'
+    },
+    {
+      image: RejectIcon,
+      alt: 'Крестик',
+      title: 'Отключить',
+      borderColor: '#FD6A4A'
+    },
+    {
+      image: ChangeIcon,
+      alt: 'Стрелки меняющиеся с рублем',
+      title: 'Сменить тариф',
+      borderColor: '#FFC774'
     }
   ]
 };
