@@ -6,8 +6,10 @@ interface SubmitButtonProps {
   width?: string;
   height?: string;
   fontSize?: string;
+  fontWeigth?: string;
   backgroundColor?: string;
   color?: string;
+  borderRadius?: string;
   hoverBackgroundColor?: string;
   focusBackgroundColor?: string;
   disabled?: boolean;
@@ -19,8 +21,10 @@ export default function SubmitButton({
   width,
   height,
   fontSize,
+  fontWeigth,
   backgroundColor,
   disabled,
+  borderRadius,
   color,
   hoverBackgroundColor,
   focusBackgroundColor,
@@ -32,7 +36,7 @@ export default function SubmitButton({
       backgroundColor: backgroundColor ? backgroundColor : '#168E2C',
       width: width ? width : '299px',
       height: height ? height : '44px',
-      borderRadius: '16px',
+      borderRadius: borderRadius ? borderRadius : '16px',
       '&:hover': {
         backgroundColor: hoverBackgroundColor ? hoverBackgroundColor : '#0A771E'
       },
@@ -43,7 +47,7 @@ export default function SubmitButton({
     title: {
       fontFamily: 'Inter',
       fontSize: fontSize ? fontSize : '16px',
-      fontWeight: '500',
+      fontWeight: fontWeigth ? fontWeigth : '500',
       color: color ? color : '#fff'
     },
     h2: {

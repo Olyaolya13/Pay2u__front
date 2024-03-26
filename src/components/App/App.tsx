@@ -7,6 +7,8 @@ import History from '../History/History';
 import SellHistory from '../SellHistory/SellHistory';
 import CatalogSubscriptions from '../CatalogSubscriptions/CatalogSubscriptions';
 import CategoriesMovie from '../CategoriesMovie/CategoriesMovie';
+import MySubscriptions from '../MySubscriptions/MySubscriptions';
+import ManageSubscription from '../ManageSubscription/ManageSubscription';
 
 const AppRouter: React.FC = () => {
   const location = useLocation();
@@ -24,6 +26,8 @@ const AppRouter: React.FC = () => {
         <Route path="/sell_history" element={<SellHistory />} />
         <Route path="/catalog" element={<CatalogSubscriptions />} />
         <Route path="/categories" element={<CategoriesMovie />} />
+        <Route path="/subscriptions" element={<MySubscriptions />} />
+        <Route path="/manage_subcription" element={<ManageSubscription />} />
       </Routes>
     </main>
   );

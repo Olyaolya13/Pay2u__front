@@ -1,0 +1,20 @@
+.MuiTooltip-popper[data-popper-placement*='bottom'] .css-1hjrgzd-MuiTooltip-tooltip {
+  background-color: #e86513;
+  color: #f5f5f5;
+  padding: 12px;
+  margin: 0 20px 0 !important;
+}
+
+.css-kudwh-MuiTooltip-arrow {
+  margin-right: 20px !important;
+  color: #e86513 !important;
+}
+
+.MuiTooltip-popper {
+  width: 311px;
+  height: 96px;
+}
+
+.css-1d3ml05-MuiPopper-root-MuiTooltip-popper {
+  margin: 0;
+}

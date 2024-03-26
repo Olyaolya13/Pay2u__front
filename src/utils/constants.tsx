@@ -15,6 +15,9 @@ import CheckIcon from '../assets/CheckIcon.svg';
 import KeyIcon from '../assets/KeyIcon.svg';
 import ContactIcon from '../assets/ContactIcon.svg';
 import LikeeIcon from '../assets/LikeeIcon.svg';
+import ChangeIcon from '../assets/ChangeIcon.svg';
+import AutoPayIcon from '../assets/AutoPayIcon.svg';
+import RejectIcon from '../assets/RejectIcon.svg';
 
 export const HeaderData = {
   services: 'Развлекательные сервисы',
@@ -461,4 +464,115 @@ export const ServicesSubscriptionInfoData = {
   title:
     '  Оформите подписки на любимые сервисы с выгодным кешбэком\u00A0\u00A0 и управляйте ими в одном месте',
   subtitle: 'Подробнее о сервисе'
+};
+
+export const MySubscriptionsWaitActiveData = {
+  title: 'Ожидают активанции',
+  subtitle:
+    ' Промокод необходимо активировать\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 до окончания действия подписки - ',
+  period: '18.05.2024'
+};
+
+export const MySubscriptionsWaitActiveCardData = {
+  card: [
+    {
+      image: LikeeIcon,
+      alt: 'Likee',
+      title: 'Likee',
+      period: '2'
+    }
+  ]
+};
+
+export const MySubscriptionsActiveData = {
+  title: 'Активные'
+};
+
+export const MySubscriptionsActiveCardData = {
+  card: [
+    {
+      image: OkkoIcon,
+      alt: 'Okko',
+      title: 'Okko',
+      period: 'Подписка на 3 месяца',
+      description: ' за 1 месяц',
+      sum: '199',
+      activeUntill: '24.06.2024'
+    },
+    {
+      image: YandexPlusIcon,
+      alt: 'Яндекс Плюс',
+      title: 'Яндекс Плюс',
+      period: 'Пробная подписка на 10 дней',
+      sum: '1',
+      activeUntill: '23.04.2024'
+    }
+  ]
+};
+
+export const MySubscriptionsInvalidData = {
+  title: 'Недействительные'
+};
+
+export const MySubscriptionsInvalidCardData = {
+  card: [
+    {
+      image: MyBookIcon,
+      alt: 'My Book',
+      title: 'My Book',
+      period: 'Подписка на 2 месяца',
+      description: ' за 1 месяц',
+      sum: '130',
+      activeUntill: '14.03.2023'
+    },
+    {
+      image: IviIcon,
+      alt: 'Иви',
+      title: 'Иви',
+      period: 'Подписка на 2 месяца',
+      description: ' за 1 месяц',
+      sum: '399',
+      activeUntill: '23.12.2024'
+    }
+  ]
+};
+
+export const InfoTooltipData = {
+  titleSubscription:
+    'Вы не можете пользоваться сервисом, пока не завершите активацию подписки. Скопируйте код в разделе управления подпиской и перейдите на сайт партнера'
+};
+
+export const ManageSubscriptionCardData = {
+  card: [
+    {
+      image: OkkoIcon,
+      alt: 'Okko',
+      title: 'Okko',
+      description: 'Подписка на 3 месяца',
+      period: ' 05.04.2024'
+    }
+  ]
+};
+
+export const ManageSubscriptionBtnData = {
+  card: [
+    {
+      image: AutoPayIcon,
+      alt: 'Стрелки меняющиеся',
+      title: 'Автоплатеж',
+      borderColor: '#76D179'
+    },
+    {
+      image: RejectIcon,
+      alt: 'Крестик',
+      title: 'Отключить',
+      borderColor: '#FD6A4A'
+    },
+    {
+      image: ChangeIcon,
+      alt: 'Стрелки меняющиеся с рублем',
+      title: 'Сменить тариф',
+      borderColor: '#FFC774'
+    }
+  ]
 };

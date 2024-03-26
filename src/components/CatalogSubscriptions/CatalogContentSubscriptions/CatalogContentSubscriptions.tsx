@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 import Title from '../../Titile/Titile.tsx';
 import { useNavigate } from 'react-router-dom';
-import CardCatalogSubscriptions from '../../CardCatalog/CardCatalog.tsx';
+import CardCatalog from '../../CardCatalog/CardCatalog.tsx';
 import {
   ContentCatalogSubscriptionsMovieData,
   SubscriptionsCardCatalogMovieData,
@@ -21,6 +21,12 @@ export default function ContentCatalogSubscriptions() {
     navigate('/categories');
     window.scrollTo(0, 0);
   };
+
+  const handleOpen = () => {
+    navigate('/manage_subcription ');
+    window.scrollTo(0, 0);
+  };
+
   return (
     <Box sx={styles.container}>
       <Title
@@ -30,7 +36,7 @@ export default function ContentCatalogSubscriptions() {
         padding="10px 0 4px"
       />
       {SubscriptionsCardCatalogMovieData.card.map((card, index) => (
-        <CardCatalogSubscriptions key={index} card={card} />
+        <CardCatalog key={index} card={card} onClick={handleOpen} />
       ))}
       <Title
         title={ContentCatalogSubscriptionsReadData.title}
@@ -38,7 +44,7 @@ export default function ContentCatalogSubscriptions() {
         padding="24px 0 4px"
       />
       {SubscriptionsCardCatalogReadData.card.map((card, index) => (
-        <CardCatalogSubscriptions key={index} card={card} />
+        <CardCatalog key={index} card={card} onClick={handleOpen} />
       ))}
       <Title
         title={ContentCatalogSubscriptionsComboData.title}
@@ -46,7 +52,7 @@ export default function ContentCatalogSubscriptions() {
         padding="28px 0 4px "
       />
       {SubscriptionsCardCatalogComboData.card.map((card, index) => (
-        <CardCatalogSubscriptions key={index} card={card} />
+        <CardCatalog key={index} card={card} onClick={handleOpen} />
       ))}
     </Box>
   );

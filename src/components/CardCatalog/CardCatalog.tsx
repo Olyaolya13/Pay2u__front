@@ -5,9 +5,10 @@ import { CardCatalogSubscriptionsData } from '../../types/types';
 
 interface CardCatalogSubscriptionsProps {
   card?: CardCatalogSubscriptionsData;
+  onClick?: () => void;
 }
 
-export default function CardCatalogSubscriptions({ card }: CardCatalogSubscriptionsProps) {
+export default function CardCatalogSubscriptions({ card, onClick }: CardCatalogSubscriptionsProps) {
   const styles = {
     container: {
       marginTop: '19px',
@@ -65,7 +66,7 @@ export default function CardCatalogSubscriptions({ card }: CardCatalogSubscripti
     }
   };
   return (
-    <Card sx={styles.container}>
+    <Card sx={styles.container} onClick={onClick}>
       <Box sx={styles.containerIcon}>
         <CardMedia component="img" sx={styles.image} image={card?.image} alt={card?.alt} />
         <Box sx={styles.containerRaiting}>
