@@ -480,6 +480,10 @@ export const MySubscriptionsWaitActiveCardData = {
   ]
 };
 
+export const MySubscriptionsActiveData = {
+  title: 'Активные'
+};
+
 export const MySubscriptionsActiveCardData = {
   card: [
     {
@@ -498,6 +502,32 @@ export const MySubscriptionsActiveCardData = {
       period: 'Пробная подписка на 10 дней',
       sum: '1',
       activeUntill: '23.04.2024'
+    }
+  ]
+};
+
+export const MySubscriptionsInvalidData = {
+  title: 'Недействительные'
+};
+
+export const MySubscriptionsInvalidCardData = {
+  card: [
+    {
+      image: MyBookIcon,
+      alt: 'My Book',
+      title: 'My Book',
+      period: 'Подписка на 2 месяца',
+      description: ' за 1 месяц',
+      sum: '130',
+      activeUntill: '14.03.2023'
+    },
+    {
+      image: IviIcon,
+      alt: 'Иви',
+      title: 'Иви',
+      period: 'Подписка на 2 месяца',
+      sum: '399',
+      activeUntill: '23.12.2024'
     }
   ]
 };

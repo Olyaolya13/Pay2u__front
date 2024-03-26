@@ -1,9 +1,12 @@
 import { Box } from '@mui/material';
 import Title from '../../Titile/Titile';
-import MySubscriptionsActiveCard from './MySubscriptionsActiveCard/MySubscriptionsActiveCard';
-import { MySubscriptionsActiveCardData, MySubscriptionsActiveData } from '../../../utils/constants';
+import MySubscriptionsInvalidCard from './MySubscriptionsInvalidCard/MySubscriptionsInvalidCard';
+import {
+  MySubscriptionsInvalidCardData,
+  MySubscriptionsInvalidData
+} from '../../../utils/constants';
 
-export default function MySubscriptionsActive() {
+export default function MySubscriptionsInvalid() {
   const styles = {
     container: { margin: '16px 0  0  ' },
     text: { display: 'flex', margin: '0 20px' },
@@ -21,12 +24,12 @@ export default function MySubscriptionsActive() {
     <>
       <Box sx={styles.container}>
         <Box sx={styles.text}>
-          <Title title={MySubscriptionsActiveData.title}></Title>
+          <Title title={MySubscriptionsInvalidData.title}></Title>
         </Box>
       </Box>
 
-      {MySubscriptionsActiveCardData.card.map((card, index) => (
-        <MySubscriptionsActiveCard key={index} card={card} />
+      {MySubscriptionsInvalidCardData.card.map((card, index) => (
+        <MySubscriptionsInvalidCard key={index} card={card} />
       ))}
     </>
   );
