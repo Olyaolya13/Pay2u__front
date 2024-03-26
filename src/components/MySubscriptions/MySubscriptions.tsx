@@ -5,7 +5,7 @@ import MySubscriptionsInvalid from './MySubscriptionsInvalid/MySubscriptionsInva
 
 export default function MySubscriptions() {
   const styles = {
-    container: { margin: '32px 0 140px' }
+    container: { margin: '38px 0 140px' }
   };
   return (
     <Box sx={styles.container}>

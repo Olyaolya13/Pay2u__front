@@ -465,7 +465,8 @@ export const ServicesSubscriptionInfoData = {
 
 export const MySubscriptionsWaitActiveData = {
   title: 'Ожидают активанции',
-  subtitle: ' Промокод необходимо активировать до окончания действия подписки - ',
+  subtitle:
+    ' Промокод необходимо активировать\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 до окончания действия подписки - ',
   period: '18.05.2024'
 };
 
@@ -526,8 +527,14 @@ export const MySubscriptionsInvalidCardData = {
       alt: 'Иви',
       title: 'Иви',
       period: 'Подписка на 2 месяца',
+      description: ' за 1 месяц',
       sum: '399',
       activeUntill: '23.12.2024'
     }
   ]
+};
+
+export const InfoTooltipData = {
+  titleSubscription:
+    'Вы не можете пользоваться сервисом, пока не завершите активацию подписки. Скопируйте код в разделе управления подпиской и перейдите на сайт партнера'
 };

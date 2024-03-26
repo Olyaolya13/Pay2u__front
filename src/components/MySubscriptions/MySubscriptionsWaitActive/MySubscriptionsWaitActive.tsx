@@ -1,10 +1,11 @@
 import { Box, Typography } from '@mui/material';
 import Title from '../../Titile/Titile';
-import InfoIcon from '../../../assets/InfoIcon.svg?react';
+import InfoTooltip from '../../InfoTooltip/InfoTooltip';
 import MySubscriptionsWaitActiveCard from './MySubscriptionsWaitActiveCard/MySubscriptionsWaitActiveCard';
 import {
   MySubscriptionsWaitActiveCardData,
-  MySubscriptionsWaitActiveData
+  MySubscriptionsWaitActiveData,
+  InfoTooltipData
 } from '../../../utils/constants';
 
 export default function MySubscriptionsWaitActive() {
@@ -18,17 +19,19 @@ export default function MySubscriptionsWaitActive() {
       fontWeight: '400',
       textAlign: 'start',
       lineHeight: '1.25',
-      marginTop: '24px'
+      marginTop: '22px',
+      marginBottom: '8px'
     }
   };
   return (
     <>
       <Box sx={styles.container}>
         <Box sx={styles.text}>
-          <Title title={MySubscriptionsWaitActiveData.title}></Title> <InfoIcon />
+          <Title title={MySubscriptionsWaitActiveData.title}></Title>
+          <InfoTooltip tooltip={InfoTooltipData.titleSubscription} />
         </Box>
         <Typography component="p" sx={styles.subtitle}>
-          {MySubscriptionsWaitActiveData.subtitle} {MySubscriptionsWaitActiveData.period} г.
+          {MySubscriptionsWaitActiveData.subtitle} {MySubscriptionsWaitActiveData.period}г.
         </Typography>
       </Box>
       {MySubscriptionsWaitActiveCardData.card.map((card, index) => (
