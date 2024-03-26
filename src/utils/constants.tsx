@@ -464,7 +464,8 @@ export const ServicesSubscriptionInfoData = {
 };
 
 export const MySubscriptionsWaitActiveData = {
-  title: ' Промокод необходимо активировать до окончания действия подписки - ',
+  title: 'Ожидают активанции',
+  subtitle: ' Промокод необходимо активировать до окончания действия подписки - ',
   period: '18.05.2024'
 };
 
@@ -474,7 +475,29 @@ export const MySubscriptionsWaitActiveCardData = {
       image: LikeeIcon,
       alt: 'Likee',
       title: 'Likee',
-      period: 2
+      period: '2'
+    }
+  ]
+};
+
+export const MySubscriptionsActiveCardData = {
+  card: [
+    {
+      image: OkkoIcon,
+      alt: 'Okko',
+      title: 'Okko',
+      period: 'Подписка на 3 месяца',
+      description: ' за 1 месяц',
+      sum: '199',
+      activeUntill: '24.06.2024'
+    },
+    {
+      image: YandexPlusIcon,
+      alt: 'Яндекс Плюс',
+      title: 'Яндекс Плюс',
+      period: 'Пробная подписка на 10 дней',
+      sum: '1',
+      activeUntill: '23.04.2024'
     }
   ]
 };

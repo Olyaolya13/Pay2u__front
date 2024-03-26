@@ -25,10 +25,10 @@ export default function MySubscriptionsWaitActive() {
     <>
       <Box sx={styles.container}>
         <Box sx={styles.text}>
-          <Title title="Ожидают активации"></Title> <InfoIcon />
+          <Title title={MySubscriptionsWaitActiveData.title}></Title> <InfoIcon />
         </Box>
         <Typography component="p" sx={styles.subtitle}>
-          {MySubscriptionsWaitActiveData.title} {MySubscriptionsWaitActiveData.period} г.
+          {MySubscriptionsWaitActiveData.subtitle} {MySubscriptionsWaitActiveData.period} г.
         </Typography>
       </Box>
       {MySubscriptionsWaitActiveCardData.card.map((card, index) => (

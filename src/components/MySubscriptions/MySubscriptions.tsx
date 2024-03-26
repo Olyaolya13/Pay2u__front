@@ -1,5 +1,6 @@
 import { Box } from '@mui/material';
 import MySubscriptionsWaitActive from './MySubscriptionsWaitActive/MySubscriptionsWaitActive';
+import MySubscriptionsActive from './MySubscriptionsActive/MySubscriptionsActive';
 
 export default function MySubscriptions() {
   const styles = {
@@ -8,6 +9,7 @@ export default function MySubscriptions() {
   return (
     <Box sx={styles.container}>
       <MySubscriptionsWaitActive />
+      <MySubscriptionsActive />
     </Box>
   );
 }

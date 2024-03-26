@@ -67,5 +67,15 @@ export interface CardMySubscriptionsWaitActiveyData {
   image: string;
   alt: string;
   title: string;
-  period: number;
+  period: string;
+}
+
+export interface CardMySubscriptionsActiveData {
+  image: string;
+  alt: string;
+  title: string;
+  description?: string;
+  period: string;
+  sum: string;
+  activeUntill: string;
 }
