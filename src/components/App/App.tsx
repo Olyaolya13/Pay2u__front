@@ -20,16 +20,16 @@ const AppRouter: React.FC = () => {
     return <Navigate to="/history" replace />;
   }
 
-  useEffect(() => {
-    Api.getServices()
-      .then(data => {
-        setService(data);
-        console.log('Services', data);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  }, []);
+  // useEffect(() => {
+  //   Api.getServices()
+  //     .then(data => {
+  //       setService(data);
+  //       console.log('Services', data);
+  //     })
+  //     .catch(err => {
+  //       console.log(err);
+  //     });
+  // }, []);
 
   return (
     <main>

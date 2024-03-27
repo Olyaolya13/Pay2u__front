@@ -65,7 +65,7 @@ export default function ServicesCatalogCard({ card, onClick }: ServicesCatalogCa
         </Typography>
         <Box sx={styles.text}>
           <Typography component="p" sx={styles.subtitle}>
-            {card.discount}
+            до {card.discount}
           </Typography>
           <KIcon />
         </Box>

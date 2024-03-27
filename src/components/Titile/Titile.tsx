@@ -13,6 +13,7 @@ interface TitleProps {
 
 const styles = {
   container: {
+    width: '335px',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center'

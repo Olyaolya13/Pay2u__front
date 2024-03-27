@@ -93,7 +93,7 @@ export default function CardCatalogSubscriptions({ card, onClick }: CardCatalogS
         </Typography>
         <Box>
           <Typography component="p" sx={styles.sum}>
-            {card?.sum}&#8381;{card?.per}
+            От {card?.sum}&#8381;{card?.per}
           </Typography>
         </Box>
       </Box>
