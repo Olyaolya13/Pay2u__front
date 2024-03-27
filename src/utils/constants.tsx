@@ -18,6 +18,7 @@ import LikeeIcon from '../assets/LikeeIcon.svg';
 import ChangeIcon from '../assets/ChangeIcon.svg';
 import AutoPayIcon from '../assets/AutoPayIcon.svg';
 import RejectIcon from '../assets/RejectIcon.svg';
+import SBPPay from '../assets/SBPPay.svg';
 
 export const HeaderData = {
   services: 'Развлекательные сервисы',
@@ -194,8 +195,9 @@ export const ServisesQuestionsRegistSelectData = {
   ]
 };
 
-export const ServicesInstructionData = {
-  title: 'Инструкция по работе с сервисом'
+export const InstructionData = {
+  titleServise: 'Инструкция по работе с сервисом',
+  titleParnter: 'Сайт партнера'
 };
 
 export const HistoryContentData = {
@@ -575,4 +577,23 @@ export const ManageSubscriptionBtnData = {
       borderColor: '#FFC774'
     }
   ]
+};
+
+export const ManageSubscriptionAboutData = {
+  titleSubscription: 'О подписке',
+  titlePartner: 'О партнере'
+};
+
+export const ManageSubscriptionAboutPartnerData = {
+  text: 'Окко – онлайн-кинотеатр для просмотра кино, сериалов, мультфильмов, лекций, концертов, спектаклей и ТВ-каналов. Каждую неделю появляются новинки. Для детей есть профиль с фильтрами по возрастам. Для болельщиков - Okko Спорт» с трансляциями футбольных матчей, теннисных турниров и боёв MMA.'
+};
+
+export const ManageSubscriptionAboutContentData = {
+  isConeccted: 'Не подключен',
+  sum: '597',
+  paySystem: SBPPay,
+  alt: 'СБП',
+  phoneNumber: '+ 7 (900) 000-07-07',
+  cashback: '5%',
+  profit: '150'
 };

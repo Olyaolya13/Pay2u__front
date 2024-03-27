@@ -1,9 +1,9 @@
-import { Box, Typography } from '@mui/material';
-import SBPPay from '../../../../assets/SBPPay.svg?react';
+import { Box, CardMedia, Typography } from '@mui/material';
 import InfoIcon from '../../../../assets/InfoIcon.svg?react';
+import { ManageSubscriptionAboutContentData } from '../../../../utils/constants';
 
 const styles = {
-  container: {},
+  container: { marginTop: '8px' },
   text: {
     display: 'flex',
     justifyContent: 'space-between',
@@ -15,38 +15,66 @@ const styles = {
     color: '#676879',
     fontWeight: '500',
     fontFamily: 'Inter'
-  }
+  },
+  subtitle: {
+    fontSize: '14px',
+    fontWeight: '400',
+    fontFamily: 'Inter'
+  },
+  info: {
+    display: 'flex',
+    alignItems: 'center'
+  },
+  icon: {
+    width: '18px',
+    height: '18px',
+    marginLeft: '7px'
+  },
+  pay: { width: '32px', height: '18px' }
 };
 
 export default function ManageSubscriptionAboutContent() {
   return (
     <Box sx={styles.container}>
       <Box sx={styles.text}>
-        <Typography>Автоплатеж</Typography>
-        <Typography>Не подключен</Typography>
-      </Box>
-      <Box sx={styles.text}>
-        <Typography>Стоимость</Typography>
-        <Typography>597 &#8381;</Typography>
-      </Box>
-      <Box sx={styles.text}>
-        <Typography>Счет списания</Typography>
-        <SBPPay />
-      </Box>
-      <Box sx={styles.text}>
-        <Typography>Номер телефона</Typography>
-        <Typography>+ 7 (900) 000-07-07</Typography>
-      </Box>
-      <Box sx={styles.text}>
-        <Typography>Кешбэк </Typography>
-        <Typography>5 %</Typography>
-      </Box>
-      <Box sx={styles.text}>
-        <Typography>
-          Ваша выгода <InfoIcon />
+        <Typography sx={styles.title}>Автоплатеж</Typography>
+        <Typography sx={{ ...styles.subtitle, color: '#C2C2C2' }}>
+          {ManageSubscriptionAboutContentData.isConeccted}
         </Typography>
-
-        <Typography>~ 150 &#8381;</Typography>
+      </Box>
+      <Box sx={styles.text}>
+        <Typography sx={styles.title}>Стоимость</Typography>
+        <Typography sx={styles.subtitle}>
+          {ManageSubscriptionAboutContentData.sum} &#8381;
+        </Typography>
+      </Box>
+      <Box sx={styles.text}>
+        <Typography sx={styles.title}>Счет списания</Typography>
+        <CardMedia
+          sx={styles.pay}
+          component="img"
+          image={ManageSubscriptionAboutContentData.paySystem}
+          alt={ManageSubscriptionAboutContentData.alt}
+        />
+      </Box>
+      <Box sx={styles.text}>
+        <Typography sx={styles.title}>Номер телефона</Typography>
+        <Typography sx={styles.subtitle}>
+          {ManageSubscriptionAboutContentData.phoneNumber}
+        </Typography>
+      </Box>
+      <Box sx={styles.text}>
+        <Typography sx={styles.title}>Кешбэк </Typography>
+        <Typography sx={styles.subtitle}>{ManageSubscriptionAboutContentData.cashback}</Typography>
+      </Box>
+      <Box sx={styles.text}>
+        <Box sx={styles.info}>
+          <Typography sx={{ ...styles.title, color: '#489865' }}>Ваша выгода</Typography>
+          <InfoIcon style={styles.icon} />
+        </Box>
+        <Typography sx={{ ...styles.subtitle, color: '#489865' }}>
+          ~ {ManageSubscriptionAboutContentData.profit}&#8381;
+        </Typography>
       </Box>
     </Box>
   );
