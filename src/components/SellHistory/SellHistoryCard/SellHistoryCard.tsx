@@ -85,7 +85,7 @@ export default function SellHistoryCard({ card }: SellHistoryCardProps) {
           <Box sx={styles.textIcon}>
             {card?.cashBack ? (
               <Typography component="p" sx={styles.cashback}>
-                {card?.cashBack}
+                начислится {card?.cashBack}
               </Typography>
             ) : (
               <Typography component="p" sx={styles.period}>

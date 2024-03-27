@@ -47,37 +47,37 @@ export const ServicesCatalogCardData = {
       image: Burger,
       alt: 'Продукты',
       title: 'Продукты',
-      discount: 'до 15%'
+      discount: '15%'
     },
     {
       image: Movie,
       alt: 'Кино',
       title: 'Кино',
-      discount: 'до 15%'
+      discount: '15%'
     },
     {
       image: Music,
       alt: 'Музыка',
       title: 'Музыка',
-      discount: 'до 10%'
+      discount: '10%'
     },
     {
       image: Note,
       alt: 'Образование',
       title: 'Образование',
-      discount: 'до 7%'
+      discount: '7%'
     },
     {
       image: TV,
       alt: 'Маркетплейсы',
       title: 'Маркетплейсы',
-      discount: 'до 35%'
+      discount: '35%'
     },
     {
       image: Box,
       alt: 'Прочее',
       title: 'Прочее',
-      discount: 'до 10%'
+      discount: '10%'
     }
   ]
 };
@@ -93,21 +93,21 @@ export const ServicesNewCardData = {
       image: YandexPlusIcon,
       alt: 'Яндекс Плюс',
       title: 'Яндекс Плюс',
-      cashBack: '15% кэшбек',
+      cashBack: '15%',
       background: 'linear-gradient(120deg, #49B2FE 10%, #0047FF 100%)'
     },
     {
       image: LitrecIcon,
       alt: 'Литрес',
       title: 'Литрес',
-      cashBack: '8% кэшбек',
+      cashBack: '8%',
       background: 'linear-gradient(120deg, #F19EFF 10%, #A323B8 100%)'
     },
     {
       image: IviIcon,
       alt: 'Иви',
       title: 'Иви',
-      cashBack: '10% кэшбек',
+      cashBack: '10%',
       background: 'linear-gradient(120deg,#FFC774 10%, #FF720D 100%)'
     }
   ]
@@ -124,21 +124,21 @@ export const ServicesPopularCardData = {
       image: MyBookIcon,
       alt: 'My Book',
       title: 'My Book',
-      cashBack: '15% кэшбек',
+      cashBack: '15%',
       background: 'linear-gradient(120deg, #76D179 10%, #049C4B 100%)'
     },
     {
       image: MovieSearchIcon,
       alt: 'Кинопоиск',
       title: 'Кинопоиск',
-      cashBack: '15% кэшбек',
+      cashBack: '15%',
       background: 'linear-gradient(120deg, #FD6A4A 10%, #D72700 100%)'
     },
     {
       image: OkkoIcon,
       alt: 'Okko',
       title: 'Okko',
-      cashBack: '20% кэшбек',
+      cashBack: '20%',
       background: 'linear-gradient(120deg,#7378ED 10%, #242AB6 100%)'
     }
   ]
@@ -281,7 +281,7 @@ export const SellHistoryCardMartData = {
       title: 'Okko',
       subtitle: '24.03.2024',
       sum: '-597',
-      cashBack: 'начислится + 50 '
+      cashBack: '+ 50 '
     },
 
     {
@@ -290,7 +290,7 @@ export const SellHistoryCardMartData = {
       title: 'Likee',
       subtitle: '18.03.2024',
       sum: '-599',
-      cashBack: 'начислится + 50 '
+      cashBack: '+ 50 '
     },
     {
       image: YandexPlusIcon,
@@ -332,7 +332,7 @@ export const SellHistoryCardJanuaryData = {
       title: 'Okko',
       subtitle: '24.01.2024',
       sum: '-597',
-      cashBack: 'начислится + 50 '
+      cashBack: '+ 50 '
     }
   ]
 };
@@ -355,7 +355,7 @@ export const SubscriptionsCardCatalogMovieData = {
       subtitle: 'Фильмы напрямую от голливудских студий',
       raiting: 4.2,
       cashback: '5%',
-      sum: 'От 199',
+      sum: '199',
       per: '/месяц'
     },
     {
@@ -365,7 +365,7 @@ export const SubscriptionsCardCatalogMovieData = {
       subtitle: 'Фильмы онлайн в HD-качестве',
       raiting: 4.4,
       cashback: '5%',
-      sum: 'От 199',
+      sum: '199',
       per: '/месяц'
     },
     {
@@ -375,7 +375,7 @@ export const SubscriptionsCardCatalogMovieData = {
       subtitle: 'Онлайн-кинотеатр ',
       raiting: 4.6,
       cashback: '5%',
-      sum: 'От 199',
+      sum: '199',
       per: '/месяц'
     }
   ]
@@ -395,7 +395,7 @@ export const SubscriptionsCardCatalogReadData = {
       subtitle: 'Цифровой сервис электронных, аудиокниг, и другого контента',
       raiting: 4.8,
       cashback: '5%',
-      sum: 'От 199',
+      sum: '199',
       per: '/месяц'
     }
   ]
@@ -415,7 +415,7 @@ export const SubscriptionsCardCatalogComboData = {
       subtitle: 'Онлайн-кинотеатр ',
       raiting: 4.6,
       cashback: '5%',
-      sum: 'От 299',
+      sum: '299',
       per: '/месяц'
     }
   ]

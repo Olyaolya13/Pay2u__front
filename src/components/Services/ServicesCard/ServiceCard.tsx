@@ -48,7 +48,7 @@ export default function ServicesNewCard({ card }: ServicesNewCardProps) {
             {card.title}
           </Typography>
           <Typography component="p" sx={styles.subtitle}>
-            {card.cashBack}
+            {card.cashBack} кэшбек
           </Typography>
         </Box>
       </Box>

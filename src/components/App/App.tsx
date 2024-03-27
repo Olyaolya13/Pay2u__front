@@ -9,13 +9,27 @@ import CatalogSubscriptions from '../CatalogSubscriptions/CatalogSubscriptions';
 import CategoriesMovie from '../CategoriesMovie/CategoriesMovie';
 import MySubscriptions from '../MySubscriptions/MySubscriptions';
 import ManageSubscription from '../ManageSubscription/ManageSubscription';
+import { useEffect, useState } from 'react';
+import * as Api from '../../utils/utils';
 
 const AppRouter: React.FC = () => {
   const location = useLocation();
+  const [service, setService] = useState('');
 
   if (location.pathname === '/') {
     return <Navigate to="/history" replace />;
   }
+
+  // useEffect(() => {
+  //   Api.getServices()
+  //     .then(data => {
+  //       setService(data);
+  //       console.log('Services', data);
+  //     })
+  //     .catch(err => {
+  //       console.log(err);
+  //     });
+  // }, []);
 
   return (
     <main>
