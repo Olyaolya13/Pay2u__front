@@ -8,7 +8,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between',
     borderBottom: '.4px solid #E2E2E2',
-    padding: '16px 0'
+    padding: '13px 0'
   },
   title: {
     fontSize: '14px',
@@ -44,7 +44,7 @@ export default function ManageSubscriptionAboutContent() {
             color: ManageSubscriptionAboutContentData.isConeccted ? '#2A9B67' : '#C2C2C2'
           }}
         >
-          {ManageSubscriptionAboutContentData.isConeccted ? 'Подключено' : 'Не подключено'}
+          {ManageSubscriptionAboutContentData.isConeccted ? 'Подключен' : 'Не подключено'}
         </Typography>
       </Box>
       {ManageSubscriptionAboutContentData.isConeccted === true && (

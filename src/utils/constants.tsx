@@ -553,7 +553,8 @@ export const ManageSubscriptionCardData = {
       alt: 'Okko',
       title: 'Okko',
       description: 'Подписка на 3 месяца',
-      period: ' 05.04.2024'
+      period: ' 05.04.2024',
+      isActive: true
     }
   ]
 };
