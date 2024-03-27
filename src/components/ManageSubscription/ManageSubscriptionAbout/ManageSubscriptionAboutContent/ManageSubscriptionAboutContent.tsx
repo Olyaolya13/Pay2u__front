@@ -9,6 +9,12 @@ const styles = {
     justifyContent: 'space-between',
     borderBottom: '.4px solid #E2E2E2',
     padding: '16px 0'
+  },
+  title: {
+    fontSize: '14px',
+    color: '#676879',
+    fontWeight: '500',
+    fontFamily: 'Inter'
   }
 };
 
