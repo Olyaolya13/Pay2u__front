@@ -29,7 +29,8 @@ export default function ManageSubscriptionBtn({ card }: ManageSubscriptionBtnPro
       color: '#131313',
       fontSize: '10px',
       fontFamily: 'Inter',
-      fontWeight: '400'
+      fontWeight: '400',
+      width: '100px'
     },
     image: {
       width: '24px',
