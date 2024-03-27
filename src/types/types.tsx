@@ -78,6 +78,7 @@ export interface CardMySubscriptionsActiveData {
   period: string;
   sum: string;
   activeUntill: string;
+  isActive?: boolean;
 }
 
 export interface CardManageSubscriptionData {
@@ -86,6 +87,7 @@ export interface CardManageSubscriptionData {
   title: string;
   description: string;
   period: string;
+  isActive?: boolean;
 }
 
 export interface BtnManageSubscriptionData {

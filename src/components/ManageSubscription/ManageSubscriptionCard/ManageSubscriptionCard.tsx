@@ -50,7 +50,7 @@ export default function ManageSubscriptionCard({ card }: ManageSubscriptionCardP
         </Typography>
 
         <Typography component="p" sx={styles.period}>
-          {card.period}
+          {card.isActive ? 'Активна' : card.period}
         </Typography>
       </Box>
     </Box>

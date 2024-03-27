@@ -67,33 +67,37 @@ export default function MySubscriptionsActiveCard({
     image: { width: '40px', height: '40px', marginRight: '12px' }
   };
   return (
-    <Box sx={styles.main} onClick={onClick}>
-      <Box sx={styles.container}>
-        <Box sx={styles.icon}>
-          <CardMedia component="img" sx={styles.image} image={card.image} alt={card.alt} />
-          <Box sx={styles.text}>
-            <Typography component="p" sx={styles.title}>
-              {card.title}
-            </Typography>
-            <Typography component="p" sx={styles.subtitle}>
-              {card.period}
-            </Typography>
+    <>
+      {card.isActive && (
+        <Box sx={styles.main} onClick={onClick}>
+          <Box sx={styles.container}>
+            <Box sx={styles.icon}>
+              <CardMedia component="img" sx={styles.image} image={card.image} alt={card.alt} />
+              <Box sx={styles.text}>
+                <Typography component="p" sx={styles.title}>
+                  {card.title}
+                </Typography>
+                <Typography component="p" sx={styles.subtitle}>
+                  {card.period}
+                </Typography>
+              </Box>
+            </Box>
+            <Box sx={styles.card}>
+              <Box sx={styles.count}>
+                <Typography component="p" sx={styles.sum}>
+                  {card.sum} &#8381;
+                </Typography>
+                <Typography component="p" sx={styles.description}>
+                  {card.description}
+                </Typography>
+              </Box>
+            </Box>
           </Box>
+          <Typography component="p" sx={styles.period}>
+            До {card.activeUntill}
+          </Typography>
         </Box>
-        <Box sx={styles.card}>
-          <Box sx={styles.count}>
-            <Typography component="p" sx={styles.sum}>
-              {card.sum} &#8381;
-            </Typography>
-            <Typography component="p" sx={styles.description}>
-              {card.description}
-            </Typography>
-          </Box>
-        </Box>
-      </Box>
-      <Typography component="p" sx={styles.period}>
-        До {card.activeUntill}
-      </Typography>
-    </Box>
+      )}
+    </>
   );
 }

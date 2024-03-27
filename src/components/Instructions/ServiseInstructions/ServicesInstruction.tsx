@@ -1,13 +1,16 @@
 import './ServicesInstruction.css';
 import { Box, Typography } from '@mui/material';
 import InstructionIcon from '../../../assets/InstructionIcon.svg?react';
-import { ServicesInstructionData } from '../../../utils/constants';
+import { InstructionData } from '../../../utils/constants';
 import { Link } from 'react-router-dom';
 
-export default function ServicesInstruction() {
+interface ServicesInstructionProps {
+  marginTop?: string;
+}
+
+export default function ServicesInstruction({ marginTop }: ServicesInstructionProps) {
   const styles = {
     container: {
-      margin: '24px 0 0',
       display: 'flex'
     },
     title: {
@@ -18,11 +21,11 @@ export default function ServicesInstruction() {
     }
   };
   return (
-    <Box sx={styles.container}>
+    <Box sx={{ ...styles.container, marginTop: marginTop ? marginTop : '24px' }}>
       <InstructionIcon className="instruction__icon" />
       <Link to="" className="instruction__link">
         <Typography sx={styles.title} component="h3">
-          {ServicesInstructionData.title}
+          {InstructionData.titleServise}
         </Typography>
       </Link>
     </Box>

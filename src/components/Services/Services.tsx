@@ -4,7 +4,7 @@ import ServicesCatalog from './ServicesCatalog/ServicesCatalog';
 import ServicesNew from './ServicesNew/ServicesNew';
 import ServicesPopular from './ServicesPopular/ServicesPopular';
 import ServisesQuestions from './ServisesQuestions/ServisesQuestions';
-import ServicesInstruction from './ServicesInstruction/ServicesInstruction';
+import ServicesInstruction from '../Instructions/ServiseInstructions/ServicesInstruction';
 import ServicesSubscription from './ServicesSubscription/ServicesSubscription';
 
 export default function Services() {
