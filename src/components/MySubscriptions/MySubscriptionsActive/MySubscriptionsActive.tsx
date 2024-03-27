@@ -2,6 +2,7 @@ import { Box } from '@mui/material';
 import Title from '../../Titile/Titile';
 import MySubscriptionsActiveCard from './MySubscriptionsActiveCard/MySubscriptionsActiveCard';
 import { MySubscriptionsActiveCardData, MySubscriptionsActiveData } from '../../../utils/constants';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export default function MySubscriptionsActive() {
@@ -19,6 +20,7 @@ export default function MySubscriptionsActive() {
       marginTop: '24px'
     }
   };
+
   const handleOpen = () => {
     navigate('/manage_subcription ');
     window.scrollTo(0, 0);
@@ -33,7 +35,9 @@ export default function MySubscriptionsActive() {
       </Box>
 
       {MySubscriptionsActiveCardData.card.map((card, index) => (
-        <MySubscriptionsActiveCard key={index} card={card} onClick={handleOpen} />
+        <React.Fragment key={index}>
+          <MySubscriptionsActiveCard card={card} onClick={card.isActive ? handleOpen : undefined} />
+        </React.Fragment>
       ))}
     </>
   );

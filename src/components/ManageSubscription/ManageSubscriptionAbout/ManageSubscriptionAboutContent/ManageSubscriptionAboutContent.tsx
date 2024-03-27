@@ -38,10 +38,21 @@ export default function ManageSubscriptionAboutContent() {
     <Box sx={styles.container}>
       <Box sx={styles.text}>
         <Typography sx={styles.title}>Автоплатеж</Typography>
-        <Typography sx={{ ...styles.subtitle, color: '#C2C2C2' }}>
-          {ManageSubscriptionAboutContentData.isConeccted}
+        <Typography
+          sx={{
+            ...styles.subtitle,
+            color: ManageSubscriptionAboutContentData.isConeccted ? '#2A9B67' : '#C2C2C2'
+          }}
+        >
+          {ManageSubscriptionAboutContentData.isConeccted ? 'Подключено' : 'Не подключено'}
         </Typography>
       </Box>
+      {ManageSubscriptionAboutContentData.isConeccted === true && (
+        <Box sx={styles.text}>
+          <Typography sx={styles.title}>Следующее списание</Typography>
+          <Typography sx={styles.subtitle}>{ManageSubscriptionAboutContentData.date}</Typography>
+        </Box>
+      )}
       <Box sx={styles.text}>
         <Typography sx={styles.title}>Стоимость</Typography>
         <Typography sx={styles.subtitle}>

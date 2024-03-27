@@ -499,7 +499,8 @@ export const MySubscriptionsActiveCardData = {
       period: 'Подписка на 3 месяца',
       description: ' за 1 месяц',
       sum: '199',
-      activeUntill: '24.06.2024'
+      activeUntill: '24.06.2024',
+      isActive: true
     },
     {
       image: YandexPlusIcon,
@@ -507,7 +508,8 @@ export const MySubscriptionsActiveCardData = {
       title: 'Яндекс Плюс',
       period: 'Пробная подписка на 10 дней',
       sum: '1',
-      activeUntill: '23.04.2024'
+      activeUntill: '23.04.2024',
+      isActive: true
     }
   ]
 };
@@ -589,11 +591,12 @@ export const ManageSubscriptionAboutPartnerData = {
 };
 
 export const ManageSubscriptionAboutContentData = {
-  isConeccted: 'Не подключен',
+  isConeccted: true,
   sum: '597',
   paySystem: SBPPay,
   alt: 'СБП',
   phoneNumber: '+ 7 (900) 000-07-07',
   cashback: '5%',
-  profit: '150'
+  profit: '150',
+  date: '24.06.2024'
 };
