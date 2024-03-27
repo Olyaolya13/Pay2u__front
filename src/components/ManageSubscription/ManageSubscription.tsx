@@ -2,6 +2,7 @@ import { Box } from '@mui/material';
 import ManageSubscriptionCard from './ManageSubscriptionCard/ManageSubscriptionCard';
 import ManageSubscriptionChooseBtn from './ManageSubscriptionChooseBtns/ManageSubscriptionChooseBtns';
 import { ManageSubscriptionCardData } from '../../utils/constants';
+import ManageSubscriptionAbout from './ManageSubscriptionAbout/ManageSubscriptionAbout';
 
 const styles = {
   container: {
@@ -16,6 +17,7 @@ export default function ManageSubscription() {
         <ManageSubscriptionCard key={index} card={card} />
       ))}
       <ManageSubscriptionChooseBtn />
+      <ManageSubscriptionAbout />
     </Box>
   );
 }

@@ -14,7 +14,12 @@ export default function ServicesNew() {
       gridTemplateRows: 'repeat(1, 140px)',
       gridTemplateColumns: 'repeat(3, 140px)',
       columnGap: '20px',
-      marginTop: '24px'
+      marginTop: '24px',
+      overflowX: 'auto',
+      whiteSpace: 'nowrap',
+      '&::-webkit-scrollbar': {
+        display: 'none'
+      }
     }
   };
   return (
