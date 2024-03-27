@@ -12,8 +12,8 @@
 
 ## Инструкции по установке и запуску
 
-1. Клонируйте репозиторий: `git clone git@github.com:LynnG3/Pay2U_back_4.git`
-2. Перейдите в директорию проекта: `cd frontend`
+1. Клонируйте репозиторий: `git clone git@github.com:Olyaolya13/Pay2u__front.git`
+2. Перейдите в директорию проекта: `cd Pay2u__front`
 3. Установите зависимости: `npm install`
 4. Запустите проект: `npm run dev`
 
