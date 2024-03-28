@@ -23,10 +23,7 @@ export default function ServicesCatalog() {
       margin: '24px 0 0',
       overflowX: 'auto',
       whiteSpace: 'nowrap',
-      scrollbarWidth: 'none',
-      '&::-webkit-scrollbar': {
-        display: 'none'
-      }
+      scrollbarWidth: 'none'
     },
 
     title: {

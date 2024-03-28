@@ -16,10 +16,7 @@ export default function ServicesNew() {
       columnGap: '20px',
       marginTop: '24px',
       overflowX: 'auto',
-      whiteSpace: 'nowrap',
-      '&::-webkit-scrollbar': {
-        display: 'none'
-      }
+      whiteSpace: 'nowrap'
     }
   };
   return (

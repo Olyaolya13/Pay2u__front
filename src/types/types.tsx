@@ -96,3 +96,10 @@ export interface BtnManageSubscriptionData {
   title: string;
   borderColor?: string;
 }
+
+export interface CardAutopaymentData {
+  image: string;
+  alt: string;
+  number?: string;
+  title: string;
+}

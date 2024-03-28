@@ -44,8 +44,8 @@ export default function Header() {
     title = HeaderData.connectSubcription;
   } else if (location.pathname === '/payment') {
     title = HeaderData.payment;
-  } else if (location.pathname === '/auto-payment') {
-    title = HeaderData.autoPayment;
+  } else if (location.pathname === '/autopayment') {
+    title = HeaderData.autopayment;
   }
 
   const handleBackClick = () => {

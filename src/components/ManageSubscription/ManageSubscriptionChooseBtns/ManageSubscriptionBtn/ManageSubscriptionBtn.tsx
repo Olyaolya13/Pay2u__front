@@ -3,9 +3,10 @@ import { BtnManageSubscriptionData } from '../../../../types/types';
 
 interface ManageSubscriptionBtnProps {
   card: BtnManageSubscriptionData;
+  onClick?: () => void;
 }
 
-export default function ManageSubscriptionBtn({ card }: ManageSubscriptionBtnProps) {
+export default function ManageSubscriptionBtn({ card, onClick }: ManageSubscriptionBtnProps) {
   const styles = {
     container: {
       display: 'flex',
@@ -40,6 +41,7 @@ export default function ManageSubscriptionBtn({ card }: ManageSubscriptionBtnPro
 
   return (
     <Button
+      onClick={onClick}
       disableElevation
       variant="contained"
       sx={{ ...styles.container, borderColor: card.borderColor || ' ' }}

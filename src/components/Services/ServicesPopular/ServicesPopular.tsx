@@ -17,10 +17,7 @@ export default function ServicesPopular() {
       marginTop: '24px',
       overflowX: 'auto',
       whiteSpace: 'nowrap',
-      scrollbarWidth: 'none',
-      '&::-webkit-scrollbar': {
-        display: 'none'
-      }
+      scrollbarWidth: 'none'
     }
   };
   return (
