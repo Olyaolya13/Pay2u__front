@@ -2,6 +2,8 @@ import './AutopaymentContent.css';
 import { Box, FormControlLabel, Switch, SwitchProps, Typography, styled } from '@mui/material';
 import SubmitButton from '../../SubmitBtn/SubmitBtn';
 import { AutopaymentContentData } from '../../../utils/constants';
+import AutopaymentPopup from '../AutopaymentPopup/AutopaymentPopup';
+import { useState } from 'react';
 
 const IOSSwitch = styled((props: SwitchProps) => (
   <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
@@ -43,6 +45,8 @@ const IOSSwitch = styled((props: SwitchProps) => (
 }));
 
 export default function AutopaymentContent() {
+  const [open, setOpen] = useState(false);
+
   const styles = {
     container: { margin: '25px 0 0' },
     text: {
@@ -80,6 +84,14 @@ export default function AutopaymentContent() {
       lineHeight: '1.25'
     }
   };
+  const handleOpenPopup = () => {
+    setOpen(true);
+  };
+
+  const handleClosePopup = () => {
+    setOpen(false);
+  };
+
   return (
     <Box sx={styles.container}>
       <Box sx={styles.text}>
@@ -133,7 +145,8 @@ export default function AutopaymentContent() {
           }}
         />
       </Box>
-      <SubmitButton title="Подключить" width="335px" height="56px" />
+      <SubmitButton title="Подключить" width="335px" height="56px" onClick={handleOpenPopup} />
+      <AutopaymentPopup open={open} onClose={handleClosePopup} />
     </Box>
   );
 }
