@@ -25,10 +25,16 @@ export default function AutopaymentCard({ card, onClick }: ManageSubscriptionBtn
         backgroundColor: '#fff'
       }
     },
-    text: { display: 'flex', width: '100px', alignItems: 'center', justifyContent: 'center' },
+    text: {
+      display: 'flex',
+      width: '100px',
+      alignItems: 'center',
+      justifyContent: 'center',
+      paddingTop: '12px'
+    },
     title: {
       color: '#676879',
-      fontSize: '10px',
+      fontSize: '14px',
       fontFamily: 'Inter',
       fontWeight: '400'
     },
@@ -38,7 +44,7 @@ export default function AutopaymentCard({ card, onClick }: ManageSubscriptionBtn
     },
     number: {
       color: '#131313',
-      fontSize: '10px',
+      fontSize: '14px',
       fontFamily: 'Inter',
       fontWeight: '400',
       width: '100px'

@@ -151,7 +151,7 @@ export const ServisesQuestionsData = {
   title: 'Часто задаваемые вопросы '
 };
 
-export const ServisesQuestionsTitleData = {
+export const QuestionsTitleData = {
   title: 'Управление подпиской',
   subtitle: 'Оформление подписки'
 };
@@ -624,4 +624,27 @@ export const AutopaymentCardData = {
       number: '**5545'
     }
   ]
+};
+
+export const AutopaymentQuestionsContentData = {
+  select: [
+    {
+      title: 'Как это работает',
+      subtitle:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    },
+    {
+      title: 'Как отменить автоплатёж?',
+      subtitle:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    }
+  ]
+};
+
+export const AutopaymentContentData = {
+  title: 'Изи Иви',
+  sum: 199,
+  date: '10.04.2024',
+  long: 'Раз в месяц',
+  text: 'За 2 дня до списания отправим СМС или Push'
 };

@@ -13,7 +13,7 @@ export interface CardNewData {
   background: string;
 }
 
-export interface ServisesQuestionsSelectData {
+export interface QuestionsSelectData {
   title: string;
   subtitle: string;
   width?: string;

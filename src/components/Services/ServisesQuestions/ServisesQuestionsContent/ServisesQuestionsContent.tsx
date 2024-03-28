@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material';
-import ServisesQuestionsSelect from '../ServisesQuestionsSelect/ServisesQuestionsSelect';
-import { ServisesQuestionsTitleData } from '../../../../utils/constants';
+import ServisesQuestionsSelect from '../../../QuestionsSelect/QuestionsSelect';
+import { QuestionsTitleData } from '../../../../utils/constants';
 import {
   ServisesQuestionsManageSelectData,
   ServisesQuestionsRegistSelectData
@@ -36,11 +36,11 @@ export default function ServisesQuestionsContent() {
   };
   return (
     <Box sx={styles.container}>
-      <Typography sx={styles.title}>{ServisesQuestionsTitleData.title}</Typography>
+      <Typography sx={styles.title}>{QuestionsTitleData.title}</Typography>
       {ServisesQuestionsManageSelectData.select.map((select, index) => (
         <ServisesQuestionsSelect key={index} select={select} />
       ))}
-      <Typography sx={styles.subtitle}>{ServisesQuestionsTitleData.subtitle}</Typography>
+      <Typography sx={styles.subtitle}>{QuestionsTitleData.subtitle}</Typography>
       {ServisesQuestionsRegistSelectData.select.map((select, index) => (
         <ServisesQuestionsSelect key={index} select={select} />
       ))}

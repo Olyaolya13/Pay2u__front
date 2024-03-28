@@ -9,7 +9,7 @@ export default function Filters() {
 
   return (
     <Box sx={styles.container}>
-      <FilterSelect />
+      {/* <FilterSelect /> */}
       <FilterSlide />
     </Box>
   );
