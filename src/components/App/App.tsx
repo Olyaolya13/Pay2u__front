@@ -11,6 +11,7 @@ import MySubscriptions from '../MySubscriptions/MySubscriptions';
 import ManageSubscription from '../ManageSubscription/ManageSubscription';
 import { useEffect, useState } from 'react';
 import * as Api from '../../utils/utils';
+import Autopayment from '../Autopayment/Autopayment';
 
 const AppRouter: React.FC = () => {
   const location = useLocation();
@@ -42,6 +43,7 @@ const AppRouter: React.FC = () => {
         <Route path="/categories" element={<CategoriesMovie />} />
         <Route path="/subscriptions" element={<MySubscriptions />} />
         <Route path="/manage_subcription" element={<ManageSubscription />} />
+        <Route path="/autopayment" element={<Autopayment />} />
       </Routes>
     </main>
   );

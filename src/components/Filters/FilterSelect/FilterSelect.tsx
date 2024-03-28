@@ -11,6 +11,7 @@ interface FilterSelectProps {
 
 export default function FilterSelect({ onClick }: FilterSelectProps) {
   const [open, setOpen] = useState<boolean>(false);
+  const [selectedOption, setSelectedOption] = useState('');
 
   const styles = {
     container: { position: 'relative', width: '175px' },
@@ -32,18 +33,16 @@ export default function FilterSelect({ onClick }: FilterSelectProps) {
     }
   };
 
+  const handleSelectOption = option => {
+    setSelectedOption(option);
+  };
+
   const handleOpen = () => {
     setOpen(true);
   };
 
   const handleClose = () => {
     setOpen(false);
-  };
-
-  const handleMenuItemClick = (option: string) => {
-    onClick(option);
-    handleClose();
-    console.log('Selected option:', option);
   };
 
   return (
@@ -62,7 +61,7 @@ export default function FilterSelect({ onClick }: FilterSelectProps) {
       >
         <Typography sx={styles.title}>По популярности</Typography>
       </Button>
-      <FiltersPopupSelect open={open} onClose={handleClose} onClick={handleMenuItemClick} />
+      <FiltersPopupSelect open={open} onClose={handleClose} onSelectOption={handleSelectOption} />
     </Box>
   );
 }

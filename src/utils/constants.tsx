@@ -19,6 +19,8 @@ import ChangeIcon from '../assets/ChangeIcon.svg';
 import AutoPayIcon from '../assets/AutoPayIcon.svg';
 import RejectIcon from '../assets/RejectIcon.svg';
 import SBPPay from '../assets/SBPPay.svg';
+import MirPay from '../assets/MIRPay.svg';
+import SBPAutopay from '../assets/SBPAutopay.svg';
 
 export const HeaderData = {
   services: 'Развлекательные сервисы',
@@ -29,7 +31,7 @@ export const HeaderData = {
   categories: 'Кино',
   connectSubcription: 'Подключение подписки',
   payment: 'Оплата подписки',
-  autoPayment: 'Подключение автоплатежа'
+  autopayment: 'Подключение автоплатежа'
 };
 
 export const ServicesData = {
@@ -592,7 +594,7 @@ export const ManageSubscriptionAboutPartnerData = {
 };
 
 export const ManageSubscriptionAboutContentData = {
-  isConeccted: true,
+  isConeccted: false,
   sum: '597',
   paySystem: SBPPay,
   alt: 'СБП',
@@ -600,4 +602,26 @@ export const ManageSubscriptionAboutContentData = {
   cashback: '5%',
   profit: '150',
   date: '24.06.2024'
+};
+
+export const AutopaymentCardData = {
+  card: [
+    {
+      image: SBPAutopay,
+      alt: 'СБП',
+      title: 'СБП'
+    },
+    {
+      image: MirPay,
+      alt: 'Мир',
+      title: 'Мир',
+      number: '**3345'
+    },
+    {
+      image: MirPay,
+      alt: 'Мир',
+      title: 'Мир',
+      number: '**5545'
+    }
+  ]
 };
