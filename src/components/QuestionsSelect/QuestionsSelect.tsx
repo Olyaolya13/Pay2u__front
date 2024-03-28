@@ -1,24 +1,29 @@
 import { Accordion, AccordionSummary, AccordionDetails, Typography, Box } from '@mui/material';
-import ArrowSelectIcon from '../../../../assets/ArrowSelectIcon.svg?react';
-import { ServisesQuestionsSelectData } from '../../../../types/types';
+import ArrowSelectIcon from '../../assets/ArrowSelectIcon.svg?react';
+import { QuestionsSelectData } from '../../types/types';
 
-interface ServisesQuestionsSelectProps {
-  select?: ServisesQuestionsSelectData;
+interface QuestionsSelectProps {
+  select?: QuestionsSelectData;
+  backgroundColor?: string;
+  fontWeight?: string;
+  fontSize?: string;
 }
 
-export default function ServisesQuestionsSelect({ select }: ServisesQuestionsSelectProps) {
+export default function QuestionsSelect({
+  select,
+  backgroundColor,
+  fontWeight,
+  fontSize
+}: QuestionsSelectProps) {
   const styles = {
     container: {
-      backgroundColor: '#F9F9F9',
       boxShadow: 'none',
       borderBottom: '.4px solid #E2E2E2'
     },
     title: {
       display: 'flex',
       alignItems: 'center',
-      fontWeight: '400',
       fontFamily: 'Inter',
-      fontSize: '14px',
       textAlign: 'start',
       height: '50px'
     },
@@ -40,6 +45,7 @@ export default function ServisesQuestionsSelect({ select }: ServisesQuestionsSel
       <Accordion
         sx={{
           ...styles.container,
+          backgroundColor: backgroundColor ? backgroundColor : '#F9F9F9',
           '& .MuiButtonBase-root ': {
             minHeight: '50px'
           },
@@ -61,7 +67,14 @@ export default function ServisesQuestionsSelect({ select }: ServisesQuestionsSel
             }
           }}
         >
-          <Typography sx={{ ...styles.title, width: select?.width ? select?.width : '263px' }}>
+          <Typography
+            sx={{
+              ...styles.title,
+              width: select?.width ? select?.width : '263px',
+              fontWeight: fontWeight ? fontWeight : '400',
+              fontSize: fontSize ? fontSize : '14px'
+            }}
+          >
             {select?.title}
           </Typography>
         </AccordionSummary>
