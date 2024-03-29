@@ -1,4 +1,3 @@
-import './SellHistoryCard.css';
 import { Box, CardMedia, Typography } from '@mui/material';
 import { CardSellHistoryData } from '../../../types/types';
 import KIcon from '../../../assets/KIcon.svg?react';
@@ -62,7 +61,11 @@ export default function SellHistoryCard({ card }: SellHistoryCardProps) {
     textIcon: {
       display: 'flex'
     },
-    image: { width: '40px', height: '40px' }
+    image: { width: '40px', height: '40px' },
+    kicon: {
+      width: '20px',
+      height: '20px'
+    }
   };
   return (
     <Box sx={{ ...styles.container, borderBottom: '.4px solid #E2E2E2' }}>
@@ -92,7 +95,7 @@ export default function SellHistoryCard({ card }: SellHistoryCardProps) {
                 {card?.period}
               </Typography>
             )}
-            {!card?.period && <KIcon className="sell-history__icon" />}
+            {!card?.period && <KIcon style={styles.kicon} />}
           </Box>
         </Box>
       </Box>

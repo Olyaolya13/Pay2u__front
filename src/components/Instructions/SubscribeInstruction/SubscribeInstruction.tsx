@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material';
-import InstructionIcon from '../../../assets/InstructionIcon.svg?react';
+import QuestionIcon from '../../../assets/QuestionIcon.svg?react';
 import { InstructionData } from '../../../utils/constants';
 import { Link } from 'react-router-dom';
 
@@ -8,7 +8,7 @@ export default function SubscribtionInstruction() {
     container: {
       display: 'flex',
       alignItems: 'center',
-      marginTop: '32px'
+      margin: '16px 0 20px'
     },
     title: {
       color: '#489865',
@@ -17,8 +17,8 @@ export default function SubscribtionInstruction() {
       fontWeight: '500'
     },
     icon: {
-      width: '15px',
-      height: '20px',
+      width: '24px',
+      height: '24px',
       marginRight: '9px'
     },
     link: {
@@ -27,10 +27,10 @@ export default function SubscribtionInstruction() {
   };
   return (
     <Box sx={styles.container}>
-      <InstructionIcon style={styles.icon} />
+      <QuestionIcon style={styles.icon} />
       <Link to="" style={styles.link}>
         <Typography sx={styles.title} component="h3">
-          {InstructionData.titleSubscribtion}
+          {InstructionData.titleSubscribe}
         </Typography>
       </Link>
     </Box>
