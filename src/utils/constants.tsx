@@ -649,3 +649,11 @@ export const AutopaymentContentData = {
   long: 'Раз в месяц',
   text: 'За 2 дня до списания отправим СМС или Push'
 };
+
+export const AutopaymentPopupData = {
+  title: 'Автоплатеж подключен',
+  sum: 199,
+  date: '10.04.2024',
+  nextPay: 'Следующий платеж',
+  text: 'Напомним за 2 дня до списания'
+};
