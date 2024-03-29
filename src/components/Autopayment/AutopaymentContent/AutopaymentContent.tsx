@@ -44,46 +44,47 @@ const IOSSwitch = styled((props: SwitchProps) => (
   }
 }));
 
+const styles = {
+  container: { margin: '25px 0 0' },
+  text: {
+    padding: '16px 20px',
+    textAlign: 'start',
+    borderBottom: '.4px solid #E2E2E2'
+  },
+  push: {
+    display: 'flex',
+    alignItems: 'start',
+    justifyContent: 'space-between',
+    padding: '16px 20px 0',
+    marginBottom: '32px'
+  },
+  textPush: {
+    textAlign: 'start',
+    width: '270px',
+    paddingBottom: '16px'
+  },
+  title: {
+    paddingBottom: '4px',
+    fontFamily: 'Inter',
+    fontSize: '16px',
+    fontWeight: '400',
+    color: '#676879'
+  },
+  subtitle: { fontFamily: 'Inter', fontSize: '16px', fontWeight: '400' },
+  subtitlePush: {
+    fontFamily: 'Inter',
+    fontSize: '14px',
+    fontWeight: '400',
+    color: '#676879',
+    width: '175px',
+    paddingTop: '4px',
+    lineHeight: '1.25'
+  }
+};
+
 export default function AutopaymentContent() {
   const [open, setOpen] = useState(false);
 
-  const styles = {
-    container: { margin: '25px 0 0' },
-    text: {
-      padding: '16px 20px',
-      textAlign: 'start',
-      borderBottom: '.4px solid #E2E2E2'
-    },
-    push: {
-      display: 'flex',
-      alignItems: 'start',
-      justifyContent: 'space-between',
-      padding: '16px 20px 0',
-      marginBottom: '32px'
-    },
-    textPush: {
-      textAlign: 'start',
-      width: '270px',
-      paddingBottom: '16px'
-    },
-    title: {
-      paddingBottom: '4px',
-      fontFamily: 'Inter',
-      fontSize: '16px',
-      fontWeight: '400',
-      color: '#676879'
-    },
-    subtitle: { fontFamily: 'Inter', fontSize: '16px', fontWeight: '400' },
-    subtitlePush: {
-      fontFamily: 'Inter',
-      fontSize: '14px',
-      fontWeight: '400',
-      color: '#676879',
-      width: '175px',
-      paddingTop: '4px',
-      lineHeight: '1.25'
-    }
-  };
   const handleOpenPopup = () => {
     setOpen(true);
   };

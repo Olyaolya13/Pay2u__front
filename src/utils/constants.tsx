@@ -29,7 +29,7 @@ export const HeaderData = {
   manageSubcription: 'Управление подпиской',
   catalog: 'Каталог подписок',
   categories: 'Кино',
-  connectSubcription: 'Подключение подписки',
+  subscribe: 'Подключение подписки',
   payment: 'Оплата подписки',
   autopayment: 'Подключение автоплатежа'
 };
@@ -199,7 +199,8 @@ export const ServisesQuestionsRegistSelectData = {
 
 export const InstructionData = {
   titleServise: 'Инструкция по работе с платформой',
-  titleSubscribe: 'Инструкция по работе с сервисом',
+  titleSubscribtion: 'Инструкция по работе с сервисом',
+  titleSubscribe: 'У меня уже есть подписка',
   titleParnter: 'Сайт партнера'
 };
 
@@ -656,4 +657,31 @@ export const AutopaymentPopupData = {
   date: '10.04.2024',
   nextPay: 'Следующий платеж',
   text: 'Напомним за 2 дня до списания'
+};
+
+export const SubscribeCardData = {
+  image: IviIcon,
+  alt: 'ИВи',
+  title: 'Иви',
+  about: 'Онлайн-кинотеатр'
+};
+
+export const SubscribeCardInfoData = {
+  title: 'Подключите пробную подписку на 1 месяц за 1 ₽!',
+  text: 'Как это работает'
+};
+
+export const SubscribeContentTitleData = {
+  'Подписка Иви': {
+    description: 'Все фильмы и сериалы основного каталога + ТВ-каналы.',
+    cashback: '5'
+  },
+  'Изи Иви': {
+    description: 'Наполнение такое же, но смотреть можно только со смартфона.',
+    cashback: '5'
+  },
+  'Иви + Amediateka': {
+    description: 'К основному каталогу добавляется кино от Амедиатеки― кинотеатра-партнёра.',
+    cashback: '5'
+  }
 };

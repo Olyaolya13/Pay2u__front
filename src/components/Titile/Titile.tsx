@@ -1,4 +1,3 @@
-import './Title.css';
 import { Box, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 
@@ -28,6 +27,9 @@ const styles = {
     fontWeight: '400',
     fontSize: '18px',
     color: '#489865'
+  },
+  link: {
+    textDecoration: 'none'
   }
 };
 
@@ -46,7 +48,7 @@ export default function Title({ title, all, link, padding, fontSize, onClick }: 
         {title}
       </Typography>
       <Box sx={{ display: 'inline-block' }}>
-        <Link to={link || ''} className="title__link">
+        <Link to={link || ''} style={styles.link}>
           <Typography component="h2" sx={styles.subtitle}>
             {all}
           </Typography>

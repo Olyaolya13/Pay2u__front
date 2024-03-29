@@ -22,10 +22,10 @@ export default function ContentCatalogSubscriptions() {
     window.scrollTo(0, 0);
   };
 
-  // const handleOpen = () => {
-  //   navigate('/manage_subcription ');
-  //   window.scrollTo(0, 0);
-  // };
+  const handleOpen = () => {
+    navigate('/subscribe');
+    window.scrollTo(0, 0);
+  };
 
   return (
     <Box sx={styles.container}>
@@ -36,7 +36,7 @@ export default function ContentCatalogSubscriptions() {
         padding="10px 0 4px"
       />
       {SubscriptionsCardCatalogMovieData.card.map((card, index) => (
-        <CardCatalog key={index} card={card} />
+        <CardCatalog key={index} card={card} onClick={handleOpen} />
       ))}
       <Title
         title={ContentCatalogSubscriptionsReadData.title}
@@ -44,7 +44,7 @@ export default function ContentCatalogSubscriptions() {
         padding="24px 0 4px"
       />
       {SubscriptionsCardCatalogReadData.card.map((card, index) => (
-        <CardCatalog key={index} card={card} />
+        <CardCatalog key={index} card={card} onClick={handleOpen} />
       ))}
       <Title
         title={ContentCatalogSubscriptionsComboData.title}
@@ -52,7 +52,7 @@ export default function ContentCatalogSubscriptions() {
         padding="28px 0 4px "
       />
       {SubscriptionsCardCatalogComboData.card.map((card, index) => (
-        <CardCatalog key={index} card={card} />
+        <CardCatalog key={index} card={card} onClick={handleOpen} />
       ))}
     </Box>
   );

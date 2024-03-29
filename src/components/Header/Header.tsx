@@ -40,8 +40,8 @@ export default function Header() {
     title = HeaderData.manageSubcription;
   } else if (location.pathname === '/categories') {
     title = HeaderData.categories;
-  } else if (location.pathname === '/connect-subcription') {
-    title = HeaderData.connectSubcription;
+  } else if (location.pathname === '/subscribe') {
+    title = HeaderData.subscribe;
   } else if (location.pathname === '/payment') {
     title = HeaderData.payment;
   } else if (location.pathname === '/autopayment') {
@@ -50,6 +50,7 @@ export default function Header() {
 
   const handleBackClick = () => {
     navigate(-1);
+    window.scroll(0, 0);
   };
 
   return (

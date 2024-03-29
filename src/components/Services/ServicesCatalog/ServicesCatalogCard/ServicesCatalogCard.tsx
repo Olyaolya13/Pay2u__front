@@ -18,7 +18,8 @@ export default function ServicesCatalogCard({ card, onClick }: ServicesCatalogCa
       cursor: 'pointer'
     },
     text: {
-      display: 'flex'
+      display: 'flex',
+      alignItems: 'center'
     },
     image: {
       width: '65px',
