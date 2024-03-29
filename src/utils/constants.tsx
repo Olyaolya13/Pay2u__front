@@ -198,7 +198,8 @@ export const ServisesQuestionsRegistSelectData = {
 };
 
 export const InstructionData = {
-  titleServise: 'Инструкция по работе с сервисом',
+  titleServise: 'Инструкция по работе с платформой',
+  titleSubscribe: 'Инструкция по работе с сервисом',
   titleParnter: 'Сайт партнера'
 };
 
@@ -467,11 +468,11 @@ export const ServicesSubscriptionHistoryData = {
 export const ServicesSubscriptionInfoData = {
   title:
     '  Оформите подписки на любимые сервисы с выгодным кешбэком\u00A0\u00A0 и управляйте ими в одном месте',
-  subtitle: 'Подробнее о сервисе'
+  subtitle: 'Подробнее о платформе'
 };
 
 export const MySubscriptionsWaitActiveData = {
-  title: 'Ожидают активанции',
+  title: 'Ожидают активации',
   subtitle:
     ' Промокод необходимо активировать\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 до окончания действия подписки - ',
   period: '18.05.2024'

@@ -1,6 +1,4 @@
 import { Box, Typography } from '@mui/material';
-import ServicesInstruction from '../../../Instructions/ServiseInstructions/ServicesInstruction';
-import PartnerSite from '../../../Instructions/PartnerSite/PartnerSite';
 import { ManageSubscriptionAboutPartnerData } from '../../../../utils/constants';
 
 const styles = {
@@ -20,8 +18,6 @@ export default function ManageSubscriptionAboutPartner() {
   return (
     <Box sx={styles.container}>
       <Typography sx={styles.text}>{ManageSubscriptionAboutPartnerData.text}</Typography>
-      <PartnerSite />
-      <ServicesInstruction marginTop="32px" />
     </Box>
   );
 }

@@ -5,7 +5,7 @@ import { ManageSubscriptionAboutData } from '../../../utils/constants';
 import ManageSubscriptionAboutPartner from './ManageSubscriptionAboutPartner/ManageSubscriptionAboutPartner';
 
 const styles = {
-  container: { margin: '48px 0 78px ' },
+  container: { margin: '48px 0 0  ' },
   partner: { margin: '20px 0 0 ' }
 };
 
