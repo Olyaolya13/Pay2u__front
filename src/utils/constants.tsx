@@ -198,7 +198,8 @@ export const ServisesQuestionsRegistSelectData = {
 };
 
 export const InstructionData = {
-  titleServise: 'Инструкция по работе с сервисом',
+  titleServise: 'Инструкция по работе с платформой',
+  titleSubscribe: 'Инструкция по работе с сервисом',
   titleParnter: 'Сайт партнера'
 };
 
@@ -467,11 +468,11 @@ export const ServicesSubscriptionHistoryData = {
 export const ServicesSubscriptionInfoData = {
   title:
     '  Оформите подписки на любимые сервисы с выгодным кешбэком\u00A0\u00A0 и управляйте ими в одном месте',
-  subtitle: 'Подробнее о сервисе'
+  subtitle: 'Подробнее о платформе'
 };
 
 export const MySubscriptionsWaitActiveData = {
-  title: 'Ожидают активанции',
+  title: 'Ожидают активации',
   subtitle:
     ' Промокод необходимо активировать\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 до окончания действия подписки - ',
   period: '18.05.2024'
@@ -647,4 +648,12 @@ export const AutopaymentContentData = {
   date: '10.04.2024',
   long: 'Раз в месяц',
   text: 'За 2 дня до списания отправим СМС или Push'
+};
+
+export const AutopaymentPopupData = {
+  title: 'Автоплатеж подключен',
+  sum: 199,
+  date: '10.04.2024',
+  nextPay: 'Следующий платеж',
+  text: 'Напомним за 2 дня до списания'
 };

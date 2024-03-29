@@ -1,14 +1,13 @@
-import './ServicesInstruction.css';
 import { Box, Typography } from '@mui/material';
 import InstructionIcon from '../../../assets/InstructionIcon.svg?react';
 import { InstructionData } from '../../../utils/constants';
 import { Link } from 'react-router-dom';
 
-interface ServicesInstructionProps {
+interface SubscribtionInstructionProps {
   marginTop?: string;
 }
 
-export default function ServicesInstruction({ marginTop }: ServicesInstructionProps) {
+export default function SubscribtionInstruction({ marginTop }: SubscribtionInstructionProps) {
   const styles = {
     container: {
       display: 'flex'
@@ -23,9 +22,9 @@ export default function ServicesInstruction({ marginTop }: ServicesInstructionPr
   return (
     <Box sx={{ ...styles.container, marginTop: marginTop ? marginTop : '24px' }}>
       <InstructionIcon className="instruction__icon" />
-      <Link to="/history" className="instruction__link">
+      <Link to="" className="instruction__link">
         <Typography sx={styles.title} component="h3">
-          {InstructionData.titleServise}
+          {InstructionData.titleSubscribe}
         </Typography>
       </Link>
     </Box>

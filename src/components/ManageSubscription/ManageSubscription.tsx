@@ -4,9 +4,12 @@ import ManageSubscriptionChooseBtn from './ManageSubscriptionChooseBtns/ManageSu
 import { ManageSubscriptionCardData } from '../../utils/constants';
 import ManageSubscriptionAbout from './ManageSubscriptionAbout/ManageSubscriptionAbout';
 
+import PartnerSite from '../Instructions/PartnerSite/PartnerSite';
+import SubscribtionInstruction from '../Instructions/SubscribtionInstruction/SubscribtionInstruction';
+
 const styles = {
   container: {
-    margin: '38px 20px 0'
+    margin: '38px 20px 78px'
   }
 };
 
@@ -18,6 +21,8 @@ export default function ManageSubscription() {
       ))}
       <ManageSubscriptionChooseBtn />
       <ManageSubscriptionAbout />
+      <PartnerSite />
+      <SubscribtionInstruction marginTop="32px" />
     </Box>
   );
 }
