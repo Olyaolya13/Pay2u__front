@@ -731,7 +731,7 @@ export const SubscribeContentData = {
     cashback: '5',
     cards: [
       {
-        title: 'на 1 месяц',
+        title: 'На 1 месяц',
         sum: 399,
         description: 'ежемесячно',
         image: OneMonthImg,
@@ -741,7 +741,7 @@ export const SubscribeContentData = {
         imageSize: { width: '49px', height: '89px' }
       },
       {
-        title: 'на 3 месяца',
+        title: 'На 3 месяца',
         sum: 299,
         description: '899 ₽',
         image: ThreeMonthImg,
@@ -752,7 +752,7 @@ export const SubscribeContentData = {
         imageSize: { width: '54px', height: '89px' }
       },
       {
-        title: 'на 12 месяцев',
+        title: 'На 12 месяцев',
         sum: 199,
         description: '2390 ₽',
         image: TwelveMonthImg,
@@ -770,8 +770,8 @@ export const SubscribeContentData = {
     cashback: '5',
     cards: [
       {
-        title: 'на 1 месяц',
-        sum: 399,
+        title: 'На 1 месяц',
+        sum: 199,
         description: 'ежемесячно',
         image: OneMonthImg,
         alt: '1 месяц',
@@ -780,18 +780,18 @@ export const SubscribeContentData = {
         imageSize: { width: '49px', height: '89px' }
       },
       {
-        title: 'на 3 месяца',
-        sum: 299,
-        description: '899 ₽',
+        title: 'На 3 месяца',
+        sum: 149,
+        description: '447 ₽',
         image: ThreeMonthImg,
         alt: '3 месяца',
-        about: 899,
+        about: 447,
         month: '3 месяца',
         payAbout: 'раз в 3 месяца',
         imageSize: { width: '54px', height: '89px' }
       },
       {
-        title: 'на 12 месяцев',
+        title: 'На 12 месяцев',
         sum: 199,
         description: '2390 ₽',
         image: TwelveMonthImg,
@@ -809,8 +809,8 @@ export const SubscribeContentData = {
     cashback: '5',
     cards: [
       {
-        title: 'на 1 месяц',
-        sum: 399,
+        title: 'На 1 месяц',
+        sum: 999,
         description: 'ежемесячно',
         image: OneMonthImg,
         alt: '1 месяц',
@@ -819,18 +819,18 @@ export const SubscribeContentData = {
         imageSize: { width: '49px', height: '89px' }
       },
       {
-        title: 'на 3 месяца',
-        sum: 299,
-        description: '899 ₽',
+        title: 'На 3 месяца',
+        sum: 899,
+        description: '2697 ₽',
         image: ThreeMonthImg,
         alt: '3 месяца',
-        about: 899,
+        about: 2697,
         month: '3 месяца',
         payAbout: 'раз в 3 месяца',
         imageSize: { width: '54px', height: '89px' }
       },
       {
-        title: 'на 12 месяцев',
+        title: 'На 12 месяцев',
         sum: 199,
         description: '2390 ₽',
         image: TwelveMonthImg,

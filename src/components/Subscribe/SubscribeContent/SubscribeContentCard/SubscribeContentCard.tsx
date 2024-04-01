@@ -1,6 +1,8 @@
 import { Box, CardMedia, Typography } from '@mui/material';
 import SubmitButton from '../../../SubmitBtn/SubmitBtn';
 import { useNavigate } from 'react-router-dom';
+import Benefit30 from '../../../../assets/Benefit30.svg';
+import Benefit50 from '../../../../assets/Benefit50.svg';
 
 interface SubscribeContentCardProps {
   title: string;
@@ -26,7 +28,8 @@ export default function SubscribeContentCard({ data }: { data: SubscribeContentC
       backgroundColor: '#fff',
       boxShadow: '2px 2px 6px 2px rgba(0, 0, 0, 0.08)',
       borderRadius: '12px',
-      padding: '28px  0 28px 16px'
+      padding: '28px  20px 28px 16px',
+      margin: '20px 0 32px 20px '
     },
     text: { textAlign: 'start' },
 
@@ -42,14 +45,12 @@ export default function SubscribeContentCard({ data }: { data: SubscribeContentC
       fontWeight: '700'
     },
     description: {
-      paddingTop: '4px',
       fontSize: '12px',
       fontFamily: 'Inter',
       fontWeight: '400',
       color: '#676879'
     },
     descriptionOneMnth: {
-      paddingTop: '4px',
       fontSize: '12px',
       fontFamily: 'Inter',
       fontWeight: '400',
@@ -57,11 +58,11 @@ export default function SubscribeContentCard({ data }: { data: SubscribeContentC
       paddingBottom: '30px'
     },
     about: {
-      paddingTop: '8px',
       fontSize: '12px',
       fontFamily: 'Inter',
       fontWeight: '400',
-      color: '#676879'
+      color: '#676879',
+      marginTop: '4px'
     },
     month: {
       fontSize: '12px',
@@ -70,9 +71,15 @@ export default function SubscribeContentCard({ data }: { data: SubscribeContentC
       color: '#676879',
       paddingBottom: '16px'
     },
-
     image: { position: 'absolute', top: '16px', right: '0' },
-    btn: { display: 'flex', flexDirection: 'column', alignItems: 'start' }
+    btn: { display: 'flex', flexDirection: 'column', alignItems: 'center' },
+    benefit: {
+      position: 'absolute',
+      top: '-10px',
+      left: '28%',
+      width: '88px',
+      height: '24px'
+    }
   };
 
   const handleOpen = () => {
@@ -89,7 +96,7 @@ export default function SubscribeContentCard({ data }: { data: SubscribeContentC
         <Typography component="p" sx={styles.title}>
           <span style={styles.sum}>{data.sum} ₽</span> в месяц
         </Typography>
-        {data.title === 'на 1 месяц' ? (
+        {data.title === 'На 1 месяц' ? (
           <Typography component="p" sx={styles.descriptionOneMnth}>
             при оплате {data.description}
           </Typography>
@@ -101,6 +108,14 @@ export default function SubscribeContentCard({ data }: { data: SubscribeContentC
             <Typography component="p" sx={styles.month}>
               1 раз в {data.month}
             </Typography>
+            {data.title !== 'На 1 месяц' && (
+              <CardMedia
+                component="img"
+                image={data.title === 'на 3 месяца' ? Benefit30 : Benefit50}
+                alt={data.title === 'на 3 месяца' ? 'Выгода 30%' : 'Выгода 50%'}
+                sx={styles.benefit}
+              />
+            )}
           </>
         )}
       </Box>
@@ -112,7 +127,7 @@ export default function SubscribeContentCard({ data }: { data: SubscribeContentC
       />
       <Box sx={styles.btn}>
         <SubmitButton
-          title={`Подключить за ${data.sum} ₽`}
+          title={`Подключить за 1 ₽`}
           width="196px"
           height="26px"
           borderRadius="8px"
@@ -121,7 +136,7 @@ export default function SubscribeContentCard({ data }: { data: SubscribeContentC
           onClick={handleOpen}
         />
         <Typography component="p" sx={styles.about}>
-          далее {data.about} ₽ {data.payAbout}
+          Далее {data.about} ₽ {data.payAbout}
         </Typography>
       </Box>
     </Box>

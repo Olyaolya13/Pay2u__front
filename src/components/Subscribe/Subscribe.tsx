@@ -6,7 +6,7 @@ import SubscribeContent from './SubscribeContent/SubscribeContent';
 
 export default function Subscribe() {
   const styles = {
-    container: { margin: '0 20px 40px' }
+    container: { margin: '0 0 40px' }
   };
   return (
     <Box sx={styles.container}>

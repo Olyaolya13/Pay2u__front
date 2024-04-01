@@ -8,7 +8,7 @@ export default function SubscribtionInstruction() {
     container: {
       display: 'flex',
       alignItems: 'center',
-      margin: '16px 0 20px'
+      margin: '14px 20px 20px'
     },
     title: {
       color: '#489865',
@@ -19,7 +19,7 @@ export default function SubscribtionInstruction() {
     icon: {
       width: '24px',
       height: '24px',
-      marginRight: '9px'
+      marginRight: '6px'
     },
     link: {
       textDecoration: 'none'

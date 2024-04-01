@@ -5,7 +5,8 @@ import { SubscribeContentData } from '../../../utils/constants';
 
 export default function SubscribeContent() {
   const styles = {
-    container: {}
+    container: {},
+    card: { display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap' }
   };
   return (
     <Box sx={styles.container}>
@@ -18,9 +19,11 @@ export default function SubscribeContent() {
               cashback: data.cashback
             }}
           />
-          {data.cards.map((cardData, cardIndex) => (
-            <SubscribeContentCard key={cardIndex} data={cardData} />
-          ))}
+          <Box sx={styles.card}>
+            {data.cards.map((cardData, cardIndex) => (
+              <SubscribeContentCard key={cardIndex} data={cardData} />
+            ))}
+          </Box>
         </Box>
       ))}
     </Box>
