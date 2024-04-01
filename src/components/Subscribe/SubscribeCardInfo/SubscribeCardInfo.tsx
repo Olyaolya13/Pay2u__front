@@ -7,12 +7,12 @@ export default function SubscribeCardInfo() {
   const navigate = useNavigate();
   const styles = {
     container: {
-      marginTop: '32px',
+      margin: '28px 20px',
       position: 'relative',
       background: 'linear-gradient(to right, #F9F5A7 0%, #FAED00 100%)',
       boxShadow: '2px 2px 6px 2px rgba(0, 0, 0, 0.08)',
       borderRadius: '16px',
-      padding: '16px'
+      padding: '18px'
     },
     title: {
       width: '270px',

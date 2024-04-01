@@ -7,6 +7,7 @@ export default function SubscribeCard() {
   const navigate = useNavigate();
   const styles = {
     container: {
+      margin: '10px 25px 0 20px  ',
       padding: '16px 0 ',
       display: 'flex',
       justifyContent: 'space-between',
@@ -33,9 +34,15 @@ export default function SubscribeCard() {
   };
 
   const handleOpen = () => {
-    navigate('/subscribe_about');
+    const stateData = {
+      image: SubscribeCardData.image,
+      title: SubscribeCardData.title
+    };
+
+    navigate('/subscribe/id', { state: stateData });
     window.scroll(0, 0);
   };
+
   return (
     <Box sx={styles.container} onClick={handleOpen}>
       <Box sx={styles.card}>

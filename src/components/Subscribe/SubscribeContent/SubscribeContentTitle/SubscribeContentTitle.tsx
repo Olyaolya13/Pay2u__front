@@ -2,7 +2,6 @@ import { Box, Typography } from '@mui/material';
 import KIcon from '../../../../assets/KIcon.svg?react';
 
 interface SubscribeContentTitleProps {
-  marginTop?: string;
   title: string;
   data: {
     description: string;
@@ -10,17 +9,13 @@ interface SubscribeContentTitleProps {
   };
 }
 
-export default function SubscribeContentTitle({
-  marginTop,
-  title,
-  data
-}: SubscribeContentTitleProps) {
+export default function SubscribeContentTitle({ title, data }: SubscribeContentTitleProps) {
   const styles = {
     container: {
+      margin: '0 20px',
       display: 'flex',
       justifyContent: 'space-between',
-      alignItems: 'Start',
-      marginTop: '28px'
+      alignItems: 'Start'
     },
     card: { display: 'flex', alignItems: 'end' },
     text: {
@@ -57,7 +52,7 @@ export default function SubscribeContentTitle({
     }
   };
   return (
-    <Box sx={{ ...styles.container, marginTop: marginTop ? marginTop : '28px' }}>
+    <Box sx={styles.container}>
       <Box sx={styles.text}>
         <Typography component="p" sx={styles.title}>
           {title}

@@ -21,6 +21,9 @@ import RejectIcon from '../assets/RejectIcon.svg';
 import SBPPay from '../assets/SBPPay.svg';
 import MirPay from '../assets/MIRPay.svg';
 import SBPAutopay from '../assets/SBPAutopay.svg';
+import OneMonthImg from '../assets/OneMonthImg.svg';
+import ThreeMonthImg from '../assets/ThreeMonthImg.svg';
+import TwelveMonthImg from '../assets/TwelveMonthImg.svg';
 
 export const HeaderData = {
   services: 'Развлекательные сервисы',
@@ -671,17 +674,159 @@ export const SubscribeCardInfoData = {
   text: 'Как это работает'
 };
 
-export const SubscribeContentTitleData = {
+export const SubscribeContentData = {
   'Подписка Иви': {
+    title: 'Подписка Иви',
     description: 'Все фильмы и сериалы основного каталога + ТВ-каналы.',
-    cashback: '5'
+    cashback: '5',
+    cards: [
+      {
+        title: 'На 1 месяц',
+        sum: 399,
+        description: 'ежемесячно',
+        image: OneMonthImg,
+        alt: '1 месяц',
+        about: 399,
+        payAbout: 'каждый месяц',
+        imageSize: { width: '49px', height: '89px' }
+      },
+      {
+        title: 'На 3 месяца',
+        sum: 299,
+        description: '899 ₽',
+        image: ThreeMonthImg,
+        alt: '3 месяца',
+        about: 899,
+        month: '3 месяца',
+        payAbout: 'раз в 3 месяца',
+        imageSize: { width: '54px', height: '89px' }
+      },
+      {
+        title: 'На 12 месяцев',
+        sum: 199,
+        description: '2390 ₽',
+        image: TwelveMonthImg,
+        alt: '12 месяцев',
+        about: 899,
+        month: '12 месяцев',
+        payAbout: 'раз в 12 месяцев',
+        imageSize: { width: '80px', height: '89px' }
+      }
+    ]
   },
   'Изи Иви': {
+    title: 'Изи Иви',
     description: 'Наполнение такое же, но смотреть можно только со смартфона.',
-    cashback: '5'
+    cashback: '5',
+    cards: [
+      {
+        title: 'На 1 месяц',
+        sum: 199,
+        description: 'ежемесячно',
+        image: OneMonthImg,
+        alt: '1 месяц',
+        about: 399,
+        payAbout: 'каждый месяц',
+        imageSize: { width: '49px', height: '89px' }
+      },
+      {
+        title: 'На 3 месяца',
+        sum: 149,
+        description: '447 ₽',
+        image: ThreeMonthImg,
+        alt: '3 месяца',
+        about: 447,
+        month: '3 месяца',
+        payAbout: 'раз в 3 месяца',
+        imageSize: { width: '54px', height: '89px' }
+      },
+      {
+        title: 'На 12 месяцев',
+        sum: 199,
+        description: '2390 ₽',
+        image: TwelveMonthImg,
+        alt: '12 месяцев',
+        about: 899,
+        month: '12 месяцев',
+        payAbout: 'раз в 12 месяцев',
+        imageSize: { width: '80px', height: '89px' }
+      }
+    ]
   },
   'Иви + Amediateka': {
+    title: 'Иви + Amediateka',
     description: 'К основному каталогу добавляется кино от Амедиатеки― кинотеатра-партнёра.',
-    cashback: '5'
+    cashback: '5',
+    cards: [
+      {
+        title: 'На 1 месяц',
+        sum: 999,
+        description: 'ежемесячно',
+        image: OneMonthImg,
+        alt: '1 месяц',
+        about: 399,
+        payAbout: 'каждый месяц',
+        imageSize: { width: '49px', height: '89px' }
+      },
+      {
+        title: 'На 3 месяца',
+        sum: 899,
+        description: '2697 ₽',
+        image: ThreeMonthImg,
+        alt: '3 месяца',
+        about: 2697,
+        month: '3 месяца',
+        payAbout: 'раз в 3 месяца',
+        imageSize: { width: '54px', height: '89px' }
+      },
+      {
+        title: 'На 12 месяцев',
+        sum: 199,
+        description: '2390 ₽',
+        image: TwelveMonthImg,
+        alt: '12 месяцев',
+        about: 899,
+        month: '12 месяцев',
+        payAbout: 'раз в 12 месяцев',
+        imageSize: { width: '80px', height: '89px' }
+      }
+    ]
   }
 };
+
+export const AboutSubscribeCardData = [
+  {
+    title: '5 профилей, одна подписка',
+    subtitle: 'Одна подписка для всей семьи или друзей'
+  },
+  {
+    title: 'Максимальное качество',
+    subtitle: 'Более 10 000 фильмов, сериалов и мультфильмов в 4K'
+  },
+  {
+    title: 'Просмотр офлайн',
+    subtitle: 'Смотрите кино даже там, где нет интернета'
+  },
+  {
+    title: 'Никакой рекламы',
+    subtitle: 'Ни один рекламный ролик не прервёт просмотр'
+  }
+];
+export const AboutSubscribeCardTitleData = {
+  title: 'Новые фильмы и сериалы со всего мира с кешбэком'
+};
+
+export const AboutSubscribeСonditionsData = [
+  {
+    text: 'Кешбэк будет начисляться за первую и все последующие оплаты купленной подписки'
+  },
+  {
+    text: 'Подписка включается по коду доступа. Вы получите его после оплаты.'
+  },
+  {
+    text: 'Для автоматической генерации кода доступа на следующий период подписки, активируйте   функцию «Привязать счёт» на экране оплаты (только для устройств на Android).'
+  },
+  {
+    text: 'Кешбэк будет начислен до 25 числа следующего за оплатой месяца'
+  }
+];

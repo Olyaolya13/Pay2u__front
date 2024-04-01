@@ -3,7 +3,13 @@ import PartnerSiteIcon from '../../../assets/PartnerSiteIcon.svg?react';
 import { InstructionData } from '../../../utils/constants';
 import { Link } from 'react-router-dom';
 
-export default function PartnerSite() {
+interface PartnerSiteProps {
+  width?: string;
+  height?: string;
+  marginTop?: string;
+}
+
+export default function PartnerSite({ width, height, marginTop }: PartnerSiteProps) {
   const styles = {
     container: {
       margin: '16px 0 0',
@@ -18,8 +24,6 @@ export default function PartnerSite() {
       fontWeight: '500'
     },
     icon: {
-      width: '15px',
-      height: '20px',
       marginRight: '9px'
     },
     link: {
@@ -27,8 +31,10 @@ export default function PartnerSite() {
     }
   };
   return (
-    <Box sx={styles.container}>
-      <PartnerSiteIcon style={styles.icon} />
+    <Box sx={{ ...styles.container, marginTop: marginTop ? marginTop : '24px' }}>
+      <PartnerSiteIcon
+        style={{ ...styles.icon, width: width ? width : '15px', height: height ? height : '20px' }}
+      />
       <Link to="" style={styles.link}>
         <Typography sx={styles.title} component="h3">
           {InstructionData.titleParnter}

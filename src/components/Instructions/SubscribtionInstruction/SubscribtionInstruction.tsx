@@ -3,12 +3,15 @@ import InstructionIcon from '../../../assets/InstructionIcon.svg?react';
 import { InstructionData } from '../../../utils/constants';
 import { Link } from 'react-router-dom';
 
-export default function SubscribtionInstruction() {
+interface SubscribtionInstructionProps {
+  marginTop?: string;
+}
+
+export default function SubscribtionInstruction({ marginTop }: SubscribtionInstructionProps) {
   const styles = {
     container: {
       display: 'flex',
-      alignItems: 'center',
-      marginTop: '32px'
+      alignItems: 'center'
     },
     title: {
       color: '#489865',
@@ -26,7 +29,7 @@ export default function SubscribtionInstruction() {
     }
   };
   return (
-    <Box sx={styles.container}>
+    <Box sx={{ ...styles.container, marginTop: marginTop ? marginTop : '32px' }}>
       <InstructionIcon style={styles.icon} />
       <Link to="" style={styles.link}>
         <Typography sx={styles.title} component="h3">

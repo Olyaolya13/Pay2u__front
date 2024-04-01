@@ -22,7 +22,8 @@ export default function ManageSubscriptionBtn({ card, onClick }: ManageSubscript
         backgroundColor: '#fff'
       },
       '&:focus': {
-        backgroundColor: '#fff'
+        backgroundColor: '#fff',
+        boxShadow: 'none'
       }
     },
     title: {

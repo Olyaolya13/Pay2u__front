@@ -1,25 +1,31 @@
 import { Box } from '@mui/material';
 import SubscribeContentTitle from './SubscribeContentTitle/SubscribeContentTitle';
 import SubscribeContentCard from './SubscribeContentCard/SubscribeContentCard';
-import { SubscribeContentTitleData } from '../../../utils/constants';
+import { SubscribeContentData } from '../../../utils/constants';
 
 export default function SubscribeContent() {
   const styles = {
-    container: {}
+    container: {},
+    card: { display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap' }
   };
   return (
     <Box sx={styles.container}>
-      <Box sx={styles.container}>
-        {Object.keys(SubscribeContentTitleData).map((title, index) => (
+      {Object.values(SubscribeContentData).map((data, index) => (
+        <Box key={index}>
           <SubscribeContentTitle
-            key={index}
-            title={title}
-            data={SubscribeContentTitleData[title as keyof typeof SubscribeContentTitleData]}
+            title={data.title}
+            data={{
+              description: data.description,
+              cashback: data.cashback
+            }}
           />
-        ))}
-      </Box>
-
-      <SubscribeContentCard />
+          <Box sx={styles.card}>
+            {data.cards.map((cardData, cardIndex) => (
+              <SubscribeContentCard key={cardIndex} data={cardData} />
+            ))}
+          </Box>
+        </Box>
+      ))}
     </Box>
   );
 }
