@@ -38,9 +38,7 @@ export default function Title({ title, all, link, padding, fontSize, onClick }: 
     <Box
       sx={{
         ...styles.container,
-        padding: padding ? padding : '0',
-        overflowX: 'auto',
-        whiteSpace: 'nowrap'
+        padding: padding ? padding : '0'
       }}
       onClick={onClick}
     >

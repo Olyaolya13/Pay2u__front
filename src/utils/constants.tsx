@@ -674,56 +674,6 @@ export const SubscribeCardInfoData = {
   text: 'Как это работает'
 };
 
-export const SubscribeContentTitleData = {
-  'Подписка Иви': {
-    description: 'Все фильмы и сериалы основного каталога + ТВ-каналы.',
-    cashback: '5'
-  },
-  'Изи Иви': {
-    description: 'Наполнение такое же, но смотреть можно только со смартфона.',
-    cashback: '5'
-  },
-  'Иви + Amediateka': {
-    description: 'К основному каталогу добавляется кино от Амедиатеки― кинотеатра-партнёра.',
-    cashback: '5'
-  }
-};
-
-// export const SubscribeContentCardData = [
-//   {
-//     title: 'на 1 месяц',
-//     sum: 399,
-//     description: 'ежемесячно',
-//     image: OneMonthImg,
-//     alt: '1 месяц',
-//     about: 399,
-//     payAbout: 'каждый месяц',
-//     imageSize: { width: '49px', height: '89px' }
-//   },
-//   {
-//     title: 'на 3 месяц',
-//     sum: 299,
-//     description: '899 ₽',
-//     image: ThreeMonthImg,
-//     alt: '3 месяц',
-//     about: 899,
-//     month: '3 месяца',
-//     payAbout: 'раз в 3 месяца',
-//     imageSize: { width: '54px', height: '89px' }
-//   },
-//   {
-//     title: 'на 12 месяц',
-//     sum: 199,
-//     description: '2390 ₽',
-//     image: TwelveMonthImg,
-//     alt: '12 месяц',
-//     about: 899,
-//     month: '12 месяцев',
-//     payAbout: 'раз в 12 месяцев',
-//     imageSize: { width: '80px', height: '89px' }
-//   }
-// ];
-
 export const SubscribeContentData = {
   'Подписка Иви': {
     title: 'Подписка Иви',
@@ -843,3 +793,40 @@ export const SubscribeContentData = {
     ]
   }
 };
+
+export const AboutSubscribeCardData = [
+  {
+    title: '5 профилей, одна подписка',
+    subtitle: 'Одна подписка для всей семьи или друзей'
+  },
+  {
+    title: 'Максимальное качество',
+    subtitle: 'Более 10 000 фильмов, сериалов и мультфильмов в 4K'
+  },
+  {
+    title: 'Просмотр офлайн',
+    subtitle: 'Смотрите кино даже там, где нет интернета'
+  },
+  {
+    title: 'Никакой рекламы',
+    subtitle: 'Ни один рекламный ролик не прервёт просмотр'
+  }
+];
+export const AboutSubscribeCardTitleData = {
+  title: 'Новые фильмы и сериалы со всего мира с кешбэком'
+};
+
+export const AboutSubscribeСonditionsData = [
+  {
+    text: 'Кешбэк будет начисляться за первую и все последующие оплаты купленной подписки'
+  },
+  {
+    text: 'Подписка включается по коду доступа. Вы получите его после оплаты.'
+  },
+  {
+    text: 'Для автоматической генерации кода доступа на следующий период подписки, активируйте   функцию «Привязать счёт» на экране оплаты (только для устройств на Android).'
+  },
+  {
+    text: 'Кешбэк будет начислен до 25 числа следующего за оплатой месяца'
+  }
+];

@@ -2,6 +2,7 @@ import './Header.css';
 import { useLocation, Link, useNavigate } from 'react-router-dom';
 import TimeIcon from '../../assets/HeaderIcon.svg?react';
 import Arrow from '../../assets/HeaderArrow.svg?react';
+import ArrowWhite from '../../assets/ArrowWhite.svg?react';
 import { Box, Typography } from '@mui/material';
 
 import { HeaderData } from '../../utils/constants';
@@ -15,7 +16,7 @@ export default function Header() {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      margin: '58px 22px 0'
+      padding: '58px 22px 0'
     },
     title: {
       fontFamily: 'Inter',
@@ -54,8 +55,17 @@ export default function Header() {
   };
 
   return (
-    <Box sx={styles.container}>
-      <Arrow className="header__arrow" onClick={handleBackClick} />
+    <Box
+      sx={{
+        ...styles.container,
+        backgroundColor: location.pathname === '/subscribe/id' ? '#2B2D32' : 'transparent'
+      }}
+    >
+      {location.pathname === '/subscribe/id' ? (
+        <ArrowWhite className="header__arrow" onClick={handleBackClick} />
+      ) : (
+        <Arrow className="header__arrow" onClick={handleBackClick} />
+      )}
       <Typography component="h2" sx={styles.title}>
         {title}
       </Typography>

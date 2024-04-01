@@ -13,6 +13,7 @@ import { useEffect, useState } from 'react';
 import * as Api from '../../utils/utils';
 import Autopayment from '../Autopayment/Autopayment';
 import Subscribe from '../Subscribe/Subscribe';
+import AboutSubscribe from '../AboutSubscribe/AboutSubscribe';
 
 const AppRouter: React.FC = () => {
   const location = useLocation();
@@ -46,6 +47,7 @@ const AppRouter: React.FC = () => {
         <Route path="/manage_subcription" element={<ManageSubscription />} />
         <Route path="/autopayment" element={<Autopayment />} />
         <Route path="/subscribe" element={<Subscribe />} />
+        <Route path="/subscribe/id" element={<AboutSubscribe />} />
       </Routes>
     </main>
   );

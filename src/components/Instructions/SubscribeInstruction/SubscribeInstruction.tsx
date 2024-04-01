@@ -3,12 +3,16 @@ import QuestionIcon from '../../../assets/QuestionIcon.svg?react';
 import { InstructionData } from '../../../utils/constants';
 import { Link } from 'react-router-dom';
 
-export default function SubscribtionInstruction() {
+interface SubscribeInstructionProps {
+  margin?: string;
+  title?: string;
+}
+
+export default function SubscribtionInstruction({ margin, title }: SubscribeInstructionProps) {
   const styles = {
     container: {
       display: 'flex',
-      alignItems: 'center',
-      margin: '14px 20px 20px'
+      alignItems: 'center'
     },
     title: {
       color: '#489865',
@@ -17,8 +21,8 @@ export default function SubscribtionInstruction() {
       fontWeight: '500'
     },
     icon: {
-      width: '24px',
-      height: '24px',
+      width: '20px',
+      height: '20px',
       marginRight: '6px'
     },
     link: {
@@ -26,11 +30,11 @@ export default function SubscribtionInstruction() {
     }
   };
   return (
-    <Box sx={styles.container}>
+    <Box sx={{ ...styles.container, margin: margin ? margin : '14px 20px 20px' }}>
       <QuestionIcon style={styles.icon} />
       <Link to="" style={styles.link}>
         <Typography sx={styles.title} component="h3">
-          {InstructionData.titleSubscribe}
+          {title ? title : InstructionData.titleSubscribe}
         </Typography>
       </Link>
     </Box>
