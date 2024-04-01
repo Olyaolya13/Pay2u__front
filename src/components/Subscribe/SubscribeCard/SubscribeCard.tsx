@@ -34,6 +34,7 @@ export default function SubscribeCard() {
 
   const handleOpen = () => {
     navigate('/subscribe_about');
+    // navigate(`/subscribe/${id}`);
     window.scroll(0, 0);
   };
   return (

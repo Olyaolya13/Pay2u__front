@@ -21,6 +21,9 @@ import RejectIcon from '../assets/RejectIcon.svg';
 import SBPPay from '../assets/SBPPay.svg';
 import MirPay from '../assets/MIRPay.svg';
 import SBPAutopay from '../assets/SBPAutopay.svg';
+import OneMonthImg from '../assets/OneMonthImg.svg';
+import ThreeMonthImg from '../assets/ThreeMonthImg.svg';
+import TwelveMonthImg from '../assets/TwelveMonthImg.svg';
 
 export const HeaderData = {
   services: 'Развлекательные сервисы',
@@ -683,5 +686,160 @@ export const SubscribeContentTitleData = {
   'Иви + Amediateka': {
     description: 'К основному каталогу добавляется кино от Амедиатеки― кинотеатра-партнёра.',
     cashback: '5'
+  }
+};
+
+// export const SubscribeContentCardData = [
+//   {
+//     title: 'на 1 месяц',
+//     sum: 399,
+//     description: 'ежемесячно',
+//     image: OneMonthImg,
+//     alt: '1 месяц',
+//     about: 399,
+//     payAbout: 'каждый месяц',
+//     imageSize: { width: '49px', height: '89px' }
+//   },
+//   {
+//     title: 'на 3 месяц',
+//     sum: 299,
+//     description: '899 ₽',
+//     image: ThreeMonthImg,
+//     alt: '3 месяц',
+//     about: 899,
+//     month: '3 месяца',
+//     payAbout: 'раз в 3 месяца',
+//     imageSize: { width: '54px', height: '89px' }
+//   },
+//   {
+//     title: 'на 12 месяц',
+//     sum: 199,
+//     description: '2390 ₽',
+//     image: TwelveMonthImg,
+//     alt: '12 месяц',
+//     about: 899,
+//     month: '12 месяцев',
+//     payAbout: 'раз в 12 месяцев',
+//     imageSize: { width: '80px', height: '89px' }
+//   }
+// ];
+
+export const SubscribeContentData = {
+  'Подписка Иви': {
+    title: 'Подписка Иви',
+    description: 'Все фильмы и сериалы основного каталога + ТВ-каналы.',
+    cashback: '5',
+    cards: [
+      {
+        title: 'на 1 месяц',
+        sum: 399,
+        description: 'ежемесячно',
+        image: OneMonthImg,
+        alt: '1 месяц',
+        about: 399,
+        payAbout: 'каждый месяц',
+        imageSize: { width: '49px', height: '89px' }
+      },
+      {
+        title: 'на 3 месяца',
+        sum: 299,
+        description: '899 ₽',
+        image: ThreeMonthImg,
+        alt: '3 месяца',
+        about: 899,
+        month: '3 месяца',
+        payAbout: 'раз в 3 месяца',
+        imageSize: { width: '54px', height: '89px' }
+      },
+      {
+        title: 'на 12 месяцев',
+        sum: 199,
+        description: '2390 ₽',
+        image: TwelveMonthImg,
+        alt: '12 месяцев',
+        about: 899,
+        month: '12 месяцев',
+        payAbout: 'раз в 12 месяцев',
+        imageSize: { width: '80px', height: '89px' }
+      }
+    ]
+  },
+  'Изи Иви': {
+    title: 'Изи Иви',
+    description: 'Наполнение такое же, но смотреть можно только со смартфона.',
+    cashback: '5',
+    cards: [
+      {
+        title: 'на 1 месяц',
+        sum: 399,
+        description: 'ежемесячно',
+        image: OneMonthImg,
+        alt: '1 месяц',
+        about: 399,
+        payAbout: 'каждый месяц',
+        imageSize: { width: '49px', height: '89px' }
+      },
+      {
+        title: 'на 3 месяца',
+        sum: 299,
+        description: '899 ₽',
+        image: ThreeMonthImg,
+        alt: '3 месяца',
+        about: 899,
+        month: '3 месяца',
+        payAbout: 'раз в 3 месяца',
+        imageSize: { width: '54px', height: '89px' }
+      },
+      {
+        title: 'на 12 месяцев',
+        sum: 199,
+        description: '2390 ₽',
+        image: TwelveMonthImg,
+        alt: '12 месяцев',
+        about: 899,
+        month: '12 месяцев',
+        payAbout: 'раз в 12 месяцев',
+        imageSize: { width: '80px', height: '89px' }
+      }
+    ]
+  },
+  'Иви + Amediateka': {
+    title: 'Иви + Amediateka',
+    description: 'К основному каталогу добавляется кино от Амедиатеки― кинотеатра-партнёра.',
+    cashback: '5',
+    cards: [
+      {
+        title: 'на 1 месяц',
+        sum: 399,
+        description: 'ежемесячно',
+        image: OneMonthImg,
+        alt: '1 месяц',
+        about: 399,
+        payAbout: 'каждый месяц',
+        imageSize: { width: '49px', height: '89px' }
+      },
+      {
+        title: 'на 3 месяца',
+        sum: 299,
+        description: '899 ₽',
+        image: ThreeMonthImg,
+        alt: '3 месяца',
+        about: 899,
+        month: '3 месяца',
+        payAbout: 'раз в 3 месяца',
+        imageSize: { width: '54px', height: '89px' }
+      },
+      {
+        title: 'на 12 месяцев',
+        sum: 199,
+        description: '2390 ₽',
+        image: TwelveMonthImg,
+        alt: '12 месяцев',
+        about: 899,
+        month: '12 месяцев',
+        payAbout: 'раз в 12 месяцев',
+        imageSize: { width: '80px', height: '89px' }
+      }
+    ]
   }
 };
