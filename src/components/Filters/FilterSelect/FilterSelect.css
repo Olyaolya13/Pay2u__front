@@ -1,0 +1,9 @@
+.filter__icon {
+  width: 14px;
+  height: 7px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 17px;
+  transform: translateY(-50%);
+}
