@@ -1,4 +1,4 @@
-import './AutopaymentContent.css';
+import './AutopaymentContent.module.scss';
 import { Box, FormControlLabel, Switch, SwitchProps, Typography, styled } from '@mui/material';
 import SubmitButton from '../../SubmitBtn/SubmitBtn';
 import { AutopaymentContentData } from '../../../utils/constants';
@@ -44,6 +44,8 @@ const IOSSwitch = styled((props: SwitchProps) => (
   }
 }));
 
+const font = { fontFamily: 'Inter', fontSize: '16px', fontWeight: '400' };
+
 const styles = {
   container: { margin: '25px 0 0' },
   text: {
@@ -64,17 +66,13 @@ const styles = {
     paddingBottom: '16px'
   },
   title: {
+    ...font,
     paddingBottom: '4px',
-    fontFamily: 'Inter',
-    fontSize: '16px',
-    fontWeight: '400',
     color: '#676879'
   },
-  subtitle: { fontFamily: 'Inter', fontSize: '16px', fontWeight: '400' },
   subtitlePush: {
-    fontFamily: 'Inter',
+    ...font,
     fontSize: '14px',
-    fontWeight: '400',
     color: '#676879',
     width: '175px',
     paddingTop: '4px',
@@ -99,7 +97,7 @@ export default function AutopaymentContent() {
         <Typography component="p" sx={styles.title}>
           Подписка
         </Typography>
-        <Typography component="p" sx={styles.subtitle}>
+        <Typography component="p" sx={{ ...font }}>
           {AutopaymentContentData.title}
         </Typography>
       </Box>
@@ -107,7 +105,7 @@ export default function AutopaymentContent() {
         <Typography component="p" sx={styles.title}>
           Сумма
         </Typography>
-        <Typography component="p" sx={styles.subtitle}>
+        <Typography component="p" sx={{ ...font }}>
           {AutopaymentContentData.sum} &#8381;
         </Typography>
       </Box>
@@ -115,7 +113,7 @@ export default function AutopaymentContent() {
         <Typography component="p" sx={styles.title}>
           Дата начала
         </Typography>
-        <Typography component="p" sx={styles.subtitle}>
+        <Typography component="p" sx={{ ...font }}>
           {AutopaymentContentData.date}
         </Typography>
       </Box>
@@ -123,13 +121,13 @@ export default function AutopaymentContent() {
         <Typography component="p" sx={styles.title}>
           Периодичность
         </Typography>
-        <Typography component="p" sx={styles.subtitle}>
+        <Typography component="p" sx={{ ...font }}>
           {AutopaymentContentData.long}
         </Typography>
       </Box>
       <Box sx={styles.push}>
         <Box sx={styles.textPush}>
-          <Typography component="p" sx={styles.subtitle}>
+          <Typography component="p" sx={{ ...font }}>
             Уведомление об автоплатеже
           </Typography>
           <Typography component="p" sx={styles.subtitlePush}>

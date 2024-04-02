@@ -6,20 +6,25 @@ import {
   MySubscriptionsInvalidData
 } from '../../../utils/constants';
 
+const font = {
+  fontFamily: 'Inter',
+  fontSize: '14px',
+  fontWeight: '400',
+  lineHeight: '1.25'
+};
+
+const styles = {
+  container: { margin: '16px 0  0  ' },
+  text: { display: 'flex', margin: '0 20px' },
+  subtitle: {
+    ...font,
+    color: '#E86513',
+    textAlign: 'start',
+    marginTop: '24px'
+  }
+};
+
 export default function MySubscriptionsInvalid() {
-  const styles = {
-    container: { margin: '16px 0  0  ' },
-    text: { display: 'flex', margin: '0 20px' },
-    subtitle: {
-      color: '#E86513',
-      fontFamily: 'Inter',
-      fontSize: '14px',
-      fontWeight: '400',
-      textAlign: 'start',
-      lineHeight: '1.25',
-      marginTop: '24px'
-    }
-  };
   return (
     <>
       <Box sx={styles.container}>

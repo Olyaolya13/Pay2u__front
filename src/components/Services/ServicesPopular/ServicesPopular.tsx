@@ -4,22 +4,23 @@ import Title from '../../Titile/Titile';
 import { ServicesPopularData } from '../../../utils/constants';
 import { ServicesPopularCardData } from '../../../utils/constants';
 
+const styles = {
+  container: {
+    margin: '32px 0 0'
+  },
+  card: {
+    display: 'grid',
+    gridTemplateRows: 'repeat(1, 140px)',
+    gridTemplateColumns: 'repeat(3, 140px)',
+    columnGap: '20px',
+    marginTop: '24px',
+    overflowX: 'auto',
+    whiteSpace: 'nowrap',
+    scrollbarWidth: 'none'
+  }
+};
+
 export default function ServicesPopular() {
-  const styles = {
-    container: {
-      margin: '32px 0 0'
-    },
-    card: {
-      display: 'grid',
-      gridTemplateRows: 'repeat(1, 140px)',
-      gridTemplateColumns: 'repeat(3, 140px)',
-      columnGap: '20px',
-      marginTop: '24px',
-      overflowX: 'auto',
-      whiteSpace: 'nowrap',
-      scrollbarWidth: 'none'
-    }
-  };
   return (
     <Box sx={styles.container}>
       <Title title={ServicesPopularData.title} all={ServicesPopularData.all} />

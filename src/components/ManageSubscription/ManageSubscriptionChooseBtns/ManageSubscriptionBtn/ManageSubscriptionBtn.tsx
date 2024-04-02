@@ -6,40 +6,39 @@ interface ManageSubscriptionBtnProps {
   onClick?: () => void;
 }
 
-export default function ManageSubscriptionBtn({ card, onClick }: ManageSubscriptionBtnProps) {
-  const styles = {
-    container: {
-      display: 'flex',
-      flexDirection: 'column',
-      textTransform: 'none',
-      backgroundColor: '#fff',
-      width: '101px',
-      height: '74px',
-      boxShadow: '2px 2px 6px 2px rgba(0, 0, 0, 0.08)',
-      border: '.2px solid',
-      borderRadius: '16px',
-      '&:hover': {
-        backgroundColor: '#fff'
-      },
-      '&:focus': {
-        backgroundColor: '#fff',
-        boxShadow: 'none'
-      }
-    },
-    title: {
-      marginTop: '4px',
-      color: '#131313',
-      fontSize: '10px',
-      fontFamily: 'Inter',
-      fontWeight: '400',
-      width: '100px'
-    },
-    image: {
-      width: '24px',
-      height: '24px'
-    }
-  };
+const font = { color: '#131313', fontSize: '10px', fontFamily: 'Inter', fontWeight: '400' };
 
+const styles = {
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+    textTransform: 'none',
+    backgroundColor: '#fff',
+    width: '101px',
+    height: '74px',
+    boxShadow: '2px 2px 6px 2px rgba(0, 0, 0, 0.08)',
+    border: '.2px solid',
+    borderRadius: '16px',
+    '&:hover': {
+      backgroundColor: '#fff'
+    },
+    '&:focus': {
+      backgroundColor: '#fff',
+      boxShadow: 'none'
+    }
+  },
+  title: {
+    ...font,
+    marginTop: '4px',
+    width: '100px'
+  },
+  image: {
+    width: '24px',
+    height: '24px'
+  }
+};
+
+export default function ManageSubscriptionBtn({ card, onClick }: ManageSubscriptionBtnProps) {
   return (
     <Button
       onClick={onClick}

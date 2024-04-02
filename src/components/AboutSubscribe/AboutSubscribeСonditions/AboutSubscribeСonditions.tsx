@@ -4,14 +4,10 @@ interface AboutSubscribeСonditionsProps {
   text: string;
 }
 
+const font = { lineHeight: '1.25', fontFamily: 'Inter', fontSize: '14px', textAlign: 'start' };
+
 const styles = {
-  subtitle: {
-    fontFamily: 'Inter',
-    fontSize: '14px',
-    textAlign: 'start',
-    marginTop: '12px',
-    lineHeight: '1.25'
-  }
+  subtitle: { ...font, marginTop: '12px' }
 };
 
 export default function AboutSubscribeСonditions({ text }: AboutSubscribeСonditionsProps) {

@@ -1,4 +1,4 @@
-import './App.css';
+import style from './App.module.scss';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import Header from '../Header/Header';
@@ -36,7 +36,7 @@ export default function App() {
   // }, []);
 
   return (
-    <main>
+    <main className={style.app}>
       {location.pathname !== '/history' && <Header />}
       <Routes>
         <Route path="/services" element={<Services />} />

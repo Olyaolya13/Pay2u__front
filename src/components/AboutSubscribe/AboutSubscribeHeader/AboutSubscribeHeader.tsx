@@ -1,6 +1,8 @@
 import { Box, CardMedia, Typography } from '@mui/material';
 import { useLocation } from 'react-router-dom';
 
+const font = { color: '#F9F9F9', fontFamily: 'Inter', fontWeight: '400', fontSize: '16px' };
+
 const styles = {
   container: {
     backgroundColor: '#2B2D32',
@@ -12,11 +14,8 @@ const styles = {
   },
   icon: { width: '49px', height: '49px' },
   title: {
-    paddingTop: '12px',
-    color: '#F9F9F9',
-    fontFamily: 'Inter',
-    fontWeight: '400',
-    fontSize: '16px'
+    ...font,
+    paddingTop: '12px'
   }
 };
 

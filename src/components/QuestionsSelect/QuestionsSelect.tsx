@@ -9,37 +9,39 @@ interface QuestionsSelectProps {
   fontSize?: string;
 }
 
+const font = { fontWeight: '400', fontFamily: 'Inter', fontSize: '14px' };
+
+const styles = {
+  container: {
+    boxShadow: 'none',
+    borderBottom: '.4px solid #E2E2E2'
+  },
+  title: {
+    ...font,
+    display: 'flex',
+    alignItems: 'center',
+    textAlign: 'start',
+    height: '50px'
+  },
+  subtitle: {
+    ...font,
+    width: '287px',
+    fontSize: '12px',
+    textAlign: 'start',
+    color: '#676879'
+  },
+  text: {
+    paddingTop: '0',
+    margin: '0'
+  }
+};
+
 export default function QuestionsSelect({
   select,
   backgroundColor,
   fontWeight,
   fontSize
 }: QuestionsSelectProps) {
-  const styles = {
-    container: {
-      boxShadow: 'none',
-      borderBottom: '.4px solid #E2E2E2'
-    },
-    title: {
-      display: 'flex',
-      alignItems: 'center',
-      fontFamily: 'Inter',
-      textAlign: 'start',
-      height: '50px'
-    },
-    subtitle: {
-      width: '287px',
-      fontWeight: '400',
-      fontFamily: 'Inter',
-      fontSize: '12px',
-      textAlign: 'start',
-      color: '#676879'
-    },
-    text: {
-      paddingTop: '0',
-      margin: '0'
-    }
-  };
   return (
     <Box>
       <Accordion

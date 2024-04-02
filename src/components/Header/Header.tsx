@@ -1,31 +1,29 @@
-import './Header.css';
+import style from './Header.module.scss';
 import { useLocation, Link, useNavigate } from 'react-router-dom';
 import TimeIcon from '../../assets/HeaderIcon.svg?react';
 import Arrow from '../../assets/HeaderArrow.svg?react';
 import ArrowWhite from '../../assets/ArrowWhite.svg?react';
 import { Box, Typography } from '@mui/material';
-
 import { HeaderData } from '../../utils/constants';
+
+const font = { fontFamily: 'Inter', fontWeight: '700', fontSize: '16px', lineHeight: '1.25' };
+
+const styles = {
+  container: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: '58px 22px 0'
+  },
+  title: {
+    ...font,
+    width: '311px'
+  }
+};
 
 export default function Header() {
   const location = useLocation();
   const navigate = useNavigate();
-
-  const styles = {
-    container: {
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      padding: '58px 22px 0'
-    },
-    title: {
-      fontFamily: 'Inter',
-      fontWeight: '700',
-      fontSize: '16px',
-      width: '311px',
-      lineHeight: '1.25'
-    }
-  };
 
   let title = '';
 
@@ -62,16 +60,16 @@ export default function Header() {
       }}
     >
       {location.pathname === '/subscribe/id' ? (
-        <ArrowWhite className="header__arrow" onClick={handleBackClick} />
+        <ArrowWhite className={style.header__arrow} onClick={handleBackClick} />
       ) : (
-        <Arrow className="header__arrow" onClick={handleBackClick} />
+        <Arrow className={style.header__arrow} onClick={handleBackClick} />
       )}
       <Typography component="h2" sx={styles.title}>
         {title}
       </Typography>
       {location.pathname === '/services' && (
-        <Link to="/sell_history" className="header__link">
-          <TimeIcon className="header__icon" />
+        <Link to="/sell_history" className={style.header__link}>
+          <TimeIcon className={style.header__icon} />
         </Link>
       )}
     </Box>

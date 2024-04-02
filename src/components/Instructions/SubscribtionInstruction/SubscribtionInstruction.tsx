@@ -6,33 +6,29 @@ import { Link } from 'react-router-dom';
 interface SubscribtionInstructionProps {
   marginTop?: string;
 }
+const font = { color: '#489865', fontSize: '14px', fontFamily: 'Inter', fontWeight: '500' };
+
+const styles = {
+  container: {
+    display: 'flex',
+    alignItems: 'center'
+  },
+  icon: {
+    width: '15px',
+    height: '20px',
+    marginRight: '9px'
+  },
+  link: {
+    textDecoration: 'none'
+  }
+};
 
 export default function SubscribtionInstruction({ marginTop }: SubscribtionInstructionProps) {
-  const styles = {
-    container: {
-      display: 'flex',
-      alignItems: 'center'
-    },
-    title: {
-      color: '#489865',
-      fontSize: '14px',
-      fontFamily: 'Inter',
-      fontWeight: '500'
-    },
-    icon: {
-      width: '15px',
-      height: '20px',
-      marginRight: '9px'
-    },
-    link: {
-      textDecoration: 'none'
-    }
-  };
   return (
     <Box sx={{ ...styles.container, marginTop: marginTop ? marginTop : '32px' }}>
       <InstructionIcon style={styles.icon} />
       <Link to="" style={styles.link}>
-        <Typography sx={styles.title} component="h3">
+        <Typography sx={{ ...font }} component="h3">
           {InstructionData.titleSubscribtion}
         </Typography>
       </Link>

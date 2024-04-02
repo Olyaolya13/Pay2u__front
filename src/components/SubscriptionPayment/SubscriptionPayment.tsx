@@ -16,13 +16,6 @@ const styles = {
     overflowX: 'auto',
     whiteSpace: 'nowrap',
     scrollbarWidth: 'none'
-  },
-  payText: {
-    fontFamily: 'Inter',
-    fontSize: '16px',
-    fontWeight: '400',
-    color: '#676879',
-    textAlign: 'start'
   }
 };
 

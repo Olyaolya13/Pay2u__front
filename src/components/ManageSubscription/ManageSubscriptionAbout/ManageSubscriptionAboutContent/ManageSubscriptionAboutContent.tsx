@@ -2,6 +2,8 @@ import { Box, CardMedia, Typography } from '@mui/material';
 import InfoIcon from '../../../../assets/InfoIcon.svg?react';
 import { ManageSubscriptionAboutContentData } from '../../../../utils/constants';
 
+const font = { fontSize: '14px', fontWeight: '400', fontFamily: 'Inter' };
+
 const styles = {
   container: { marginTop: '8px' },
   text: {
@@ -11,15 +13,9 @@ const styles = {
     padding: '13px 0'
   },
   title: {
-    fontSize: '14px',
+    ...font,
     color: '#676879',
-    fontWeight: '500',
-    fontFamily: 'Inter'
-  },
-  subtitle: {
-    fontSize: '14px',
-    fontWeight: '400',
-    fontFamily: 'Inter'
+    fontWeight: '500'
   },
   info: {
     display: 'flex',
@@ -40,7 +36,7 @@ export default function ManageSubscriptionAboutContent() {
         <Typography sx={styles.title}>Автоплатеж</Typography>
         <Typography
           sx={{
-            ...styles.subtitle,
+            ...font,
             color: ManageSubscriptionAboutContentData.isConeccted ? '#2A9B67' : '#C2C2C2'
           }}
         >
@@ -50,14 +46,12 @@ export default function ManageSubscriptionAboutContent() {
       {ManageSubscriptionAboutContentData.isConeccted === true && (
         <Box sx={styles.text}>
           <Typography sx={styles.title}>Следующее списание</Typography>
-          <Typography sx={styles.subtitle}>{ManageSubscriptionAboutContentData.date}</Typography>
+          <Typography sx={{ ...font }}>{ManageSubscriptionAboutContentData.date}</Typography>
         </Box>
       )}
       <Box sx={styles.text}>
         <Typography sx={styles.title}>Стоимость</Typography>
-        <Typography sx={styles.subtitle}>
-          {ManageSubscriptionAboutContentData.sum} &#8381;
-        </Typography>
+        <Typography sx={{ ...font }}>{ManageSubscriptionAboutContentData.sum} &#8381;</Typography>
       </Box>
       <Box sx={styles.text}>
         <Typography sx={styles.title}>Счет списания</Typography>
@@ -70,20 +64,18 @@ export default function ManageSubscriptionAboutContent() {
       </Box>
       <Box sx={styles.text}>
         <Typography sx={styles.title}>Номер телефона</Typography>
-        <Typography sx={styles.subtitle}>
-          {ManageSubscriptionAboutContentData.phoneNumber}
-        </Typography>
+        <Typography sx={{ ...font }}>{ManageSubscriptionAboutContentData.phoneNumber}</Typography>
       </Box>
       <Box sx={styles.text}>
         <Typography sx={styles.title}>Кешбэк </Typography>
-        <Typography sx={styles.subtitle}>{ManageSubscriptionAboutContentData.cashback}</Typography>
+        <Typography sx={{ ...font }}>{ManageSubscriptionAboutContentData.cashback}</Typography>
       </Box>
       <Box sx={styles.text}>
         <Box sx={styles.info}>
           <Typography sx={{ ...styles.title, color: '#489865' }}>Ваша выгода</Typography>
           <InfoIcon style={styles.icon} />
         </Box>
-        <Typography sx={{ ...styles.subtitle, color: '#489865' }}>
+        <Typography sx={{ ...font, color: '#489865' }}>
           ~ {ManageSubscriptionAboutContentData.profit}&#8381;
         </Typography>
       </Box>

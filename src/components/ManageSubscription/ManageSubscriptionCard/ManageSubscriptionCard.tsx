@@ -4,38 +4,36 @@ import { CardManageSubscriptionData } from '../../../types/types';
 interface ManageSubscriptionCardProps {
   card: CardManageSubscriptionData;
 }
+const font = { fontFamily: 'Inter', fontSize: '14px', fontWeight: '400' };
+
+const styles = {
+  container: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'start'
+  },
+  icon: { display: 'flex' },
+  text: {
+    textAlign: 'end'
+  },
+  title: {
+    ...font,
+    fontSize: '22px',
+    fontWeight: '700',
+    paddingLeft: '12px'
+  },
+  description: {
+    ...font,
+    fontWeight: '500'
+  },
+  period: {
+    ...font,
+    color: '#489865'
+  },
+  image: { width: '40px', height: '40px' }
+};
 
 export default function ManageSubscriptionCard({ card }: ManageSubscriptionCardProps) {
-  const styles = {
-    container: {
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'start'
-    },
-    icon: { display: 'flex' },
-    text: {
-      textAlign: 'end'
-    },
-    title: {
-      fontFamily: 'Inter',
-      fontSize: '22px',
-      fontWeight: '700',
-      paddingLeft: '12px'
-    },
-    description: {
-      fontFamily: 'Inter',
-      fontSize: '14px',
-      fontWeight: '500'
-    },
-    period: {
-      color: '#489865',
-      fontFamily: 'Inter',
-      fontSize: '14px',
-      fontWeight: '400'
-    },
-
-    image: { width: '40px', height: '40px' }
-  };
   return (
     <Box sx={styles.container}>
       <Box sx={styles.icon}>

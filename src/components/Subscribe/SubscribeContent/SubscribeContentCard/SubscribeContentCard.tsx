@@ -19,68 +19,61 @@ interface SubscribeContentCardProps {
   };
 }
 
+const font = { fontSize: '14px', fontFamily: 'Inter', fontWeight: '500' };
+
+const styles = {
+  container: {
+    width: '212px',
+    position: 'relative',
+    backgroundColor: '#fff',
+    boxShadow: '2px 2px 6px 2px rgba(0, 0, 0, 0.08)',
+    borderRadius: '12px',
+    padding: '28px  20px 28px 16px',
+    margin: '20px 0 32px 20px '
+  },
+  text: { textAlign: 'start' },
+  sum: {
+    ...font,
+    paddingTop: '8px',
+    fontSize: '18px',
+    fontWeight: '700'
+  },
+  description: {
+    ...font,
+    fontSize: '12px',
+    color: '#676879'
+  },
+  descriptionOneMnth: {
+    ...font,
+    fontSize: '12px',
+    color: '#676879',
+    paddingBottom: '30px'
+  },
+  about: {
+    ...font,
+    fontSize: '12px',
+    color: '#676879',
+    marginTop: '4px'
+  },
+  month: {
+    ...font,
+    fontSize: '12px',
+    color: '#676879',
+    paddingBottom: '16px'
+  },
+  image: { position: 'absolute', top: '16px', right: '0' },
+  btn: { display: 'flex', flexDirection: 'column', alignItems: 'center' },
+  benefit: {
+    position: 'absolute',
+    top: '-10px',
+    left: '28%',
+    width: '88px',
+    height: '24px'
+  }
+};
+
 export default function SubscribeContentCard({ data }: { data: SubscribeContentCardProps }) {
   const navigate = useNavigate();
-  const styles = {
-    container: {
-      width: '212px',
-      position: 'relative',
-      backgroundColor: '#fff',
-      boxShadow: '2px 2px 6px 2px rgba(0, 0, 0, 0.08)',
-      borderRadius: '12px',
-      padding: '28px  20px 28px 16px',
-      margin: '20px 0 32px 20px '
-    },
-    text: { textAlign: 'start' },
-
-    title: {
-      fontSize: '14px',
-      fontFamily: 'Inter',
-      fontWeight: '500'
-    },
-    sum: {
-      paddingTop: '8px',
-      fontSize: '18px',
-      fontFamily: 'Inter',
-      fontWeight: '700'
-    },
-    description: {
-      fontSize: '12px',
-      fontFamily: 'Inter',
-      fontWeight: '400',
-      color: '#676879'
-    },
-    descriptionOneMnth: {
-      fontSize: '12px',
-      fontFamily: 'Inter',
-      fontWeight: '400',
-      color: '#676879',
-      paddingBottom: '30px'
-    },
-    about: {
-      fontSize: '12px',
-      fontFamily: 'Inter',
-      fontWeight: '400',
-      color: '#676879',
-      marginTop: '4px'
-    },
-    month: {
-      fontSize: '12px',
-      fontFamily: 'Inter',
-      fontWeight: '400',
-      color: '#676879',
-      paddingBottom: '16px'
-    },
-    image: { position: 'absolute', top: '16px', right: '0' },
-    btn: { display: 'flex', flexDirection: 'column', alignItems: 'center' },
-    benefit: {
-      position: 'absolute',
-      top: '-10px',
-      left: '28%',
-      width: '88px',
-      height: '24px'
-    }
-  };
 
   const handleOpen = () => {
     navigate('/subscription_payment');
@@ -90,10 +83,10 @@ export default function SubscribeContentCard({ data }: { data: SubscribeContentC
   return (
     <Box sx={styles.container}>
       <Box sx={styles.text}>
-        <Typography component="p" sx={styles.title}>
+        <Typography component="p" sx={{ ...font }}>
           {data.title}
         </Typography>
-        <Typography component="p" sx={styles.title}>
+        <Typography component="p" sx={{ ...font }}>
           <span style={styles.sum}>{data.sum} ₽</span> в месяц
         </Typography>
         {data.title === 'На 1 месяц' ? (

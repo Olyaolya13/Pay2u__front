@@ -3,18 +3,18 @@ import SellHistoryDelalization from './SellHistoryDelalization/SellHistoryDelali
 import SellHistoryInfo from './SellHistoryInfo/SellHistoryInfo';
 import SellHistoryContent from './SellHistoryContent/SellHistoryContent';
 
+const styles = {
+  container: {
+    margin: '38px 0 78px'
+  }
+};
 
 export default function SellHistory() {
-  const styles = {
-    container: {
-      margin: '38px 0 78px'
-    }
-  };
   return (
     <Box sx={styles.container}>
-        <SellHistoryDelalization/>
-        <SellHistoryInfo/>
-        <SellHistoryContent/>
+      <SellHistoryDelalization />
+      <SellHistoryInfo />
+      <SellHistoryContent />
     </Box>
   );
 }

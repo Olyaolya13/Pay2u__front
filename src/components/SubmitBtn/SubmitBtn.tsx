@@ -16,6 +16,16 @@ interface SubmitButtonProps {
   onClick?: () => void;
 }
 
+const styles = {
+  container: {
+    textTransform: 'none'
+  },
+  title: {
+    fontFamily: 'Inter',
+    lineHeight: '1.25'
+  }
+};
+
 export default function SubmitButton({
   title,
   width,
@@ -30,39 +40,35 @@ export default function SubmitButton({
   focusBackgroundColor,
   onClick
 }: SubmitButtonProps) {
-  const styles = {
-    container: {
-      textTransform: 'none',
-      backgroundColor: backgroundColor ? backgroundColor : '#168E2C',
-      width: width ? width : '299px',
-      height: height ? height : '44px',
-      borderRadius: borderRadius ? borderRadius : '16px',
-      '&:hover': {
-        backgroundColor: hoverBackgroundColor ? hoverBackgroundColor : '#0A771E'
-      },
-      '&:focus': {
-        backgroundColor: focusBackgroundColor ? focusBackgroundColor : '#0A771E'
-      }
-    },
-    title: {
-      fontFamily: 'Inter',
-      fontSize: fontSize ? fontSize : '16px',
-      fontWeight: fontWeigth ? fontWeigth : '500',
-      color: color ? color : '#fff'
-    },
-    h2: {
-      lineHeight: '1.25'
-    }
-  };
   return (
     <Button
       variant="contained"
       disableElevation
-      sx={styles.container}
+      sx={{
+        ...styles.container,
+        backgroundColor: backgroundColor ? backgroundColor : '#168E2C',
+        width: width ? width : '299px',
+        height: height ? height : '44px',
+        borderRadius: borderRadius ? borderRadius : '16px',
+        '&:hover': {
+          backgroundColor: hoverBackgroundColor ? hoverBackgroundColor : '#0A771E'
+        },
+        '&:focus': {
+          backgroundColor: focusBackgroundColor ? focusBackgroundColor : '#0A771E'
+        }
+      }}
       disabled={disabled}
       onClick={onClick}
     >
-      <Typography component="h2" sx={styles.title}>
+      <Typography
+        component="h2"
+        sx={{
+          ...styles.title,
+          fontSize: fontSize ? fontSize : '16px',
+          fontWeight: fontWeigth ? fontWeigth : '500',
+          color: color ? color : '#fff'
+        }}
+      >
         {title}
       </Typography>
     </Button>

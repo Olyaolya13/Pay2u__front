@@ -5,40 +5,37 @@ interface ServicesNewCardProps {
   card: CardNewData;
 }
 
-export default function ServicesNewCard({ card }: ServicesNewCardProps) {
-  const styles = {
-    container: {
-      display: 'flex',
-      flexDirection: 'column',
-      borderRadius: '16px',
-      boxShadow: '2px 2px 6px 2px rgba(0, 0, 0, 0.08)',
-      width: '140px',
-      height: '140px'
-    },
+const font = { fontFamily: 'Inter', fontSize: '14px', fontWeight: '500', color: '#F5F5F5' };
 
-    card: { display: 'flex', flexDirection: 'column', alignItems: 'start' },
-    text: {
-      textAlign: 'start',
-      marginLeft: '16px'
-    },
-    title: {
-      fontFamily: 'Inter',
-      fontSize: '14px',
-      fontWeight: '700',
-      lineHeight: '1.28',
-      color: '#F5F5F5',
-      marginTop: '12px'
-    },
-    subtitle: {
-      marginTop: '5px',
-      fontFamily: 'Inter',
-      fontSize: '14px',
-      fontWeight: '500',
-      lineHeight: '1.28',
-      color: '#F5F5F5'
-    },
-    image: { width: '40px', height: '40px', marginLeft: '16px', marginTop: '16px' }
-  };
+const styles = {
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+    borderRadius: '16px',
+    boxShadow: '2px 2px 6px 2px rgba(0, 0, 0, 0.08)',
+    width: '140px',
+    height: '140px'
+  },
+  card: { display: 'flex', flexDirection: 'column', alignItems: 'start' },
+  text: {
+    textAlign: 'start',
+    marginLeft: '16px'
+  },
+  title: {
+    ...font,
+    fontWeight: '700',
+    lineHeight: '1.28',
+    marginTop: '12px'
+  },
+  subtitle: {
+    ...font,
+    marginTop: '5px',
+    lineHeight: '1.28'
+  },
+  image: { width: '40px', height: '40px', marginLeft: '16px', marginTop: '16px' }
+};
+
+export default function ServicesCard({ card }: ServicesNewCardProps) {
   return (
     <Box sx={{ ...styles.container, backgroundImage: card.background }}>
       <Box sx={styles.card}>

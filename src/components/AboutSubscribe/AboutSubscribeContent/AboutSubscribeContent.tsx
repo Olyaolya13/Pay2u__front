@@ -2,16 +2,20 @@ import { Box, Typography } from '@mui/material';
 import AboutSubscribeCard from './AboutSubscribeCard/AboutSubscribeCard';
 import { AboutSubscribeCardData, AboutSubscribeCardTitleData } from '../../../utils/constants';
 
+const font = {
+  fontFamily: 'Inter',
+  fontSize: '22px',
+  fontWeight: '700',
+  lineHeight: '1.27',
+  textAlign: 'start'
+};
+
 const styles = {
   container: {
     margin: '32px 20px 0'
   },
   title: {
-    fontFamily: 'Inter',
-    fontSize: '22px',
-    fontWeight: '700',
-    lineHeight: '1.27',
-    textAlign: 'start',
+    ...font,
     width: '302px',
     marginBottom: '4px'
   }

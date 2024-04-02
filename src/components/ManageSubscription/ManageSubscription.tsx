@@ -3,7 +3,6 @@ import ManageSubscriptionCard from './ManageSubscriptionCard/ManageSubscriptionC
 import ManageSubscriptionChooseBtn from './ManageSubscriptionChooseBtns/ManageSubscriptionChooseBtns';
 import { ManageSubscriptionCardData } from '../../utils/constants';
 import ManageSubscriptionAbout from './ManageSubscriptionAbout/ManageSubscriptionAbout';
-
 import PartnerSite from '../Instructions/PartnerSite/PartnerSite';
 import SubscribtionInstruction from '../Instructions/SubscribtionInstruction/SubscribtionInstruction';
 

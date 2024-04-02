@@ -8,63 +8,55 @@ interface CardCatalogSubscriptionsProps {
   onClick?: () => void;
 }
 
+const font = { fontFamily: 'Inter', fontSize: '14px', fontWeight: '400', lineHeight: '1.25' };
+
+const styles = {
+  container: {
+    marginTop: '19px',
+    display: 'flex',
+    justifyContent: 'space-between',
+    padding: '16px 16px 16px 20px',
+    border: '.4px solid #E2E2E2',
+    borderRadius: '16px',
+    boxShadow: '2px 2px 6px 2px rgba(0, 0, 0, 0.08)'
+  },
+  containerIcon: { display: 'flex', flexDirection: 'column', alignItems: 'start' },
+  containerRaiting: { display: 'flex', alignItems: 'center', marginTop: '6px' },
+  containerCard: { display: 'flex', flexDirection: 'column' },
+  containerTitle: { display: 'flex', justifyContent: 'space-between' },
+  image: { width: '49px', height: '49px' },
+  title: {
+    ...font,
+    fontSize: '18px'
+  },
+  raiting: {
+    ...font,
+    lineHeight: '1.3',
+    paddingRight: '4px'
+  },
+  subtitle: {
+    ...font,
+    textAlign: 'start',
+    margin: '4px 0 8px',
+    color: '#676879',
+    width: '238px',
+    whiteSpace: 'nowrap',
+    textOverflow: 'ellipsis',
+    overflow: 'hidden'
+  },
+  sum: {
+    ...font,
+    fontWeight: '700',
+    textAlign: 'start'
+  },
+  cashback: {
+    fontSize: '16px',
+    fontWeight: '500',
+    marginLeft: '4px'
+  }
+};
+
 export default function CardCatalogSubscriptions({ card, onClick }: CardCatalogSubscriptionsProps) {
-  const styles = {
-    container: {
-      marginTop: '19px',
-      display: 'flex',
-      justifyContent: 'space-between',
-      padding: '16px 16px 16px 20px',
-      border: '.4px solid #E2E2E2',
-      borderRadius: '16px',
-      boxShadow: '2px 2px 6px 2px rgba(0, 0, 0, 0.08)'
-    },
-    containerIcon: { display: 'flex', flexDirection: 'column', alignItems: 'start' },
-    containerRaiting: { display: 'flex', alignItems: 'center', marginTop: '6px' },
-    containerCard: { display: 'flex', flexDirection: 'column' },
-    containerTitle: { display: 'flex', justifyContent: 'space-between' },
-    image: { width: '49px', height: '49px' },
-    title: {
-      fontFamily: 'Inter',
-      fontSize: '18px',
-      fontWeight: '400',
-      lineHeight: '1.25'
-    },
-    raiting: {
-      fontFamily: 'Inter',
-      fontSize: '14px',
-      fontWeight: '400',
-      lineHeight: '1.3',
-      paddingRight: '4px'
-    },
-    subtitle: {
-      textAlign: 'start',
-      margin: '4px 0 8px',
-      fontFamily: 'Inter',
-      fontSize: '14px',
-      fontWeight: '400',
-      lineHeight: '1.25',
-      color: '#676879',
-      width: '238px',
-      whiteSpace: 'nowrap',
-      textOverflow: 'ellipsis',
-      overflow: 'hidden'
-    },
-    sum: {
-      fontFamily: 'Inter',
-      fontSize: '14px',
-      fontWeight: '700',
-      lineHeight: '1.25',
-      textAlign: 'start'
-    },
-    cashback: {
-      fontFamily: 'Inter',
-      fontSize: '16px',
-      fontWeight: '500',
-      lineHeight: '1.25',
-      marginLeft: '4px'
-    }
-  };
   return (
     <Card sx={styles.container} onClick={onClick}>
       <Box sx={styles.containerIcon}>
