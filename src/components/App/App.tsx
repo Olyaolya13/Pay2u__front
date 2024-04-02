@@ -14,8 +14,9 @@ import * as Api from '../../utils/utils';
 import Autopayment from '../Autopayment/Autopayment';
 import Subscribe from '../Subscribe/Subscribe';
 import AboutSubscribe from '../AboutSubscribe/AboutSubscribe';
+import SubscriptionPayment from '../SubscriptionPayment/SubscriptionPayment';
 
-const AppRouter: React.FC = () => {
+export default function App() {
   const location = useLocation();
   const [service, setService] = useState('');
 
@@ -48,9 +49,8 @@ const AppRouter: React.FC = () => {
         <Route path="/autopayment" element={<Autopayment />} />
         <Route path="/subscribe" element={<Subscribe />} />
         <Route path="/subscribe/id" element={<AboutSubscribe />} />
+        <Route path="/subscription_payment" element={<SubscriptionPayment />} />
       </Routes>
     </main>
   );
-};
-
-export default AppRouter;
+}

@@ -43,8 +43,8 @@ export default function Header() {
     title = HeaderData.categories;
   } else if (location.pathname === '/subscribe') {
     title = HeaderData.subscribe;
-  } else if (location.pathname === '/payment') {
-    title = HeaderData.payment;
+  } else if (location.pathname === '/subscription_payment') {
+    title = HeaderData.subscriptionPayment;
   } else if (location.pathname === '/autopayment') {
     title = HeaderData.autopayment;
   }

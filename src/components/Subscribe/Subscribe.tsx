@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import SubscribeCard from './SubscribeCard/SubscribeCard';
+import SubscribeCard from '../SubscribeCard/SubscribeCard';
 import SubscribeCardInfo from './SubscribeCardInfo/SubscribeCardInfo';
 import SubscribeInstruction from '../Instructions/SubscribeInstruction/SubscribeInstruction';
 import SubscribeContent from './SubscribeContent/SubscribeContent';

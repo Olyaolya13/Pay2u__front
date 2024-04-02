@@ -33,7 +33,7 @@ export const HeaderData = {
   catalog: 'Каталог подписок',
   categories: 'Кино',
   subscribe: 'Подключение подписки',
-  payment: 'Оплата подписки',
+  subscriptionPayment: 'Оплата подписки',
   autopayment: 'Подключение автоплатежа'
 };
 
@@ -812,6 +812,7 @@ export const AboutSubscribeCardData = [
     subtitle: 'Ни один рекламный ролик не прервёт просмотр'
   }
 ];
+
 export const AboutSubscribeCardTitleData = {
   title: 'Новые фильмы и сериалы со всего мира с кешбэком'
 };
@@ -830,3 +831,45 @@ export const AboutSubscribeСonditionsData = [
     text: 'Кешбэк будет начислен до 25 числа следующего за оплатой месяца'
   }
 ];
+
+export const SubscriptionPaymentContentData = {
+  sum: 1,
+  subtile: 'оплачиваете сейчас',
+  sumMonth: 399,
+  text: '- с 14 марта каждый месяц',
+  textNumber: 'Номер телефона',
+  phone: '+7 (915) 290 83 04'
+};
+
+export const SubscriptionPaymentMethodTitleData = {
+  title: 'Способ оплаты'
+};
+
+export const SubscriptionPaymentMethodCardData = {
+  card: [
+    {
+      image: MirPay,
+      alt: 'Мир',
+      title: 'Мир',
+      number: '**3345'
+    },
+    {
+      image: MirPay,
+      alt: 'Мир',
+      title: 'Мир',
+      number: '**5545'
+    },
+    {
+      image: SBPAutopay,
+      alt: 'СБП',
+      title: 'СБП'
+    }
+  ]
+};
+
+export const SubscriptionPaymentInfoData = {
+  agreeText: 'Согласен с',
+  rulesText: 'правилами партнера',
+  sum: 599,
+  perMonth: 'в месяц'
+};

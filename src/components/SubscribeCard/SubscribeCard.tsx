@@ -1,6 +1,6 @@
 import { Box, CardMedia, Typography } from '@mui/material';
-import SubscribeCardIcon from '../../../assets/SubscribeCardIcon.svg?react';
-import { SubscribeCardData } from '../../../utils/constants';
+import SubscribeCardIcon from '../../assets/SubscribeCardIcon.svg?react';
+import { SubscribeCardData } from '../../utils/constants';
 import { useNavigate } from 'react-router-dom';
 
 export default function SubscribeCard() {
