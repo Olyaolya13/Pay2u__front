@@ -11,11 +11,12 @@ import {
   SubscriptionsCardCatalogComboData
 } from '../../../utils/constants.tsx';
 
+const styles = {
+  container: { margin: '24px 0 0' }
+};
+
 export default function ContentCatalogSubscriptions() {
   const navigate = useNavigate();
-  const styles = {
-    container: { margin: '24px 0 0' }
-  };
 
   const handleClick = () => {
     navigate('/categories');

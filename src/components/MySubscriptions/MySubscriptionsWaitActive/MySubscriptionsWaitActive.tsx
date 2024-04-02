@@ -8,21 +8,21 @@ import {
   InfoTooltipData
 } from '../../../utils/constants';
 
+const font = { fontFamily: 'Inter', fontSize: '14px', fontWeight: '400', lineHeight: '1.25' };
+
+const styles = {
+  container: { margin: ' 0 20px ' },
+  text: { display: 'flex' },
+  subtitle: {
+    ...font,
+    color: '#E86513',
+    textAlign: 'start',
+    marginTop: '22px',
+    marginBottom: '8px'
+  }
+};
+
 export default function MySubscriptionsWaitActive() {
-  const styles = {
-    container: { margin: ' 0 20px ' },
-    text: { display: 'flex' },
-    subtitle: {
-      color: '#E86513',
-      fontFamily: 'Inter',
-      fontSize: '14px',
-      fontWeight: '400',
-      textAlign: 'start',
-      lineHeight: '1.25',
-      marginTop: '22px',
-      marginBottom: '8px'
-    }
-  };
   return (
     <>
       <Box sx={styles.container}>

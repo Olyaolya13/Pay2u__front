@@ -3,11 +3,12 @@ import SubscribeContentTitle from './SubscribeContentTitle/SubscribeContentTitle
 import SubscribeContentCard from './SubscribeContentCard/SubscribeContentCard';
 import { SubscribeContentData } from '../../../utils/constants';
 
+const styles = {
+  container: {},
+  card: { display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', scrollbarWidth: 'none' }
+};
+
 export default function SubscribeContent() {
-  const styles = {
-    container: {},
-    card: { display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap' }
-  };
   return (
     <Box sx={styles.container}>
       {Object.values(SubscribeContentData).map((data, index) => (

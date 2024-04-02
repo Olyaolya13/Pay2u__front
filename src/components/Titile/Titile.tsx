@@ -10,6 +10,8 @@ interface TitleProps {
   onClick?: () => void;
 }
 
+const font = { fontFamily: 'Inter', fontWeight: '400', fontSize: '18px' };
+
 const styles = {
   container: {
     width: '335px',
@@ -18,14 +20,11 @@ const styles = {
     alignItems: 'center'
   },
   title: {
-    fontFamily: 'Inter',
-    fontWeight: '700',
-    fontSize: '18px'
+    ...font,
+    fontWeight: '700'
   },
   subtitle: {
-    fontFamily: 'Inter',
-    fontWeight: '400',
-    fontSize: '18px',
+    ...font,
     color: '#489865'
   },
   link: {

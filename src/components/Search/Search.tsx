@@ -16,19 +16,19 @@ const Icon = styled('img')({
   height: '18px'
 });
 
-export default function Search({ margin }: SearchProps) {
-  const styles = {
-    container: {
-      display: 'flex',
-      backgroundColor: '#F9F9F9',
-      borderRadius: '16px',
-      alignItems: 'center'
-    },
-    iconButton: {
-      padding: '11px 11px 11px 15px'
-    }
-  };
+const styles = {
+  container: {
+    display: 'flex',
+    backgroundColor: '#F9F9F9',
+    borderRadius: '16px',
+    alignItems: 'center'
+  },
+  iconButton: {
+    padding: '11px 11px 11px 15px'
+  }
+};
 
+export default function Search({ margin }: SearchProps) {
   const handleIconClick = () => {
     console.log('search');
   };

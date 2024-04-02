@@ -1,4 +1,4 @@
-import './HistoryProgress.css';
+import style from './HistoryProgress.module.scss';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { MobileStepper, Box } from '@mui/material';
@@ -7,24 +7,24 @@ import HistoryContent from '../HistoryContent/HistoryContent';
 import { HistoryContentData, HistoryProgressData } from '../../../utils/constants';
 import CloseIcon from '../../../assets/CloseIcon.svg?react';
 
+const styles = {
+  container: {
+    position: 'relative',
+    textAlign: 'center',
+    backgroundColor: '#2B2D32'
+  },
+  stepper: {
+    backgroundColor: '#2B2D32',
+    padding: '104px 150px 0'
+  }
+};
+
 export default function HistoryProgress() {
   const [activeStep, setActiveStep] = useState(0);
   const navigate = useNavigate();
 
   const handleClose = () => {
     navigate('/services');
-  };
-
-  const styles = {
-    container: {
-      position: 'relative',
-      textAlign: 'center',
-      backgroundColor: '#2B2D32'
-    },
-    stepper: {
-      backgroundColor: '#2B2D32',
-      padding: '104px 150px 0'
-    }
   };
 
   const handleNext = () => {
@@ -40,7 +40,7 @@ export default function HistoryProgress() {
 
   return (
     <Box sx={styles.container}>
-      <CloseIcon className="history__close-icon" onClick={handleClose} />
+      <CloseIcon className={style.close_icon} onClick={handleClose} />
       <MobileStepper
         sx={{
           ...styles.stepper,

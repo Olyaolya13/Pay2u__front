@@ -5,12 +5,12 @@ import CardCatalog from '../CardCatalog/CardCatalog.tsx';
 import Filters from '../Filters/Filters.tsx';
 import { useNavigate } from 'react-router-dom';
 
+const styles = {
+  container: { margin: '24px 20px 0', position: 'relative' }
+};
+
 export default function CategoriesMovie() {
   const navigate = useNavigate();
-
-  const styles = {
-    container: { margin: '24px 20px 0', position: 'relative' }
-  };
 
   const handleOpen = () => {
     navigate('/subscribe');

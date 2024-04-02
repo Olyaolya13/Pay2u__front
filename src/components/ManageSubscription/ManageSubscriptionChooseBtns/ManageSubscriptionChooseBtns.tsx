@@ -3,11 +3,12 @@ import ManageSubscriptionBtn from './ManageSubscriptionBtn/ManageSubscriptionBtn
 import { useNavigate } from 'react-router-dom';
 import { ManageSubscriptionBtnData } from '../../../utils/constants';
 
+const styles = {
+  container: { display: 'flex', justifyContent: 'space-between', marginTop: '40px' }
+};
+
 export default function ManageSubscriptionChooseBtn() {
   const navigate = useNavigate();
-  const styles = {
-    container: { display: 'flex', justifyContent: 'space-between', marginTop: '40px' }
-  };
 
   const handleClick = () => {
     navigate('/autopayment');

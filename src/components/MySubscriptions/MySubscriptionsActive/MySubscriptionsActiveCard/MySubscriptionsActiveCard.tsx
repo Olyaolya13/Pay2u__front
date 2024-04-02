@@ -6,66 +6,62 @@ interface MySubscriptionsActiveCardProps {
   onClick?: () => void;
 }
 
+const font = { fontFamily: 'Inter', fontSize: '14px', fontWeight: '400' };
+
+const styles = {
+  main: {
+    padding: '19px 19px 13px 20px',
+    borderBottom: '.4px solid #E2E2E2'
+  },
+  container: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'start'
+  },
+  icon: {
+    display: 'flex',
+    justifyContent: 'space-between'
+  },
+  card: { display: 'flex', alignItems: 'end' },
+  text: {
+    textAlign: 'start'
+  },
+  count: {
+    textAlign: 'end',
+    width: '138x'
+  },
+  title: {
+    ...font,
+    fontSize: '16px',
+    fontWeight: '500',
+    lineHeight: '1.28'
+  },
+
+  sum: {
+    ...font,
+    fontSize: '16px',
+    fontWeight: '700',
+    color: '#2A9B67'
+  },
+  description: {
+    ...font,
+    fontWeight: '500',
+    color: '#676879'
+  },
+  period: {
+    ...font,
+    textAlign: 'start',
+    color: '#2A9B67',
+    marginLeft: '52px'
+  },
+
+  image: { width: '40px', height: '40px', marginRight: '12px' }
+};
+
 export default function MySubscriptionsActiveCard({
   card,
   onClick
 }: MySubscriptionsActiveCardProps) {
-  const styles = {
-    main: {
-      padding: '19px 19px 13px 20px',
-      borderBottom: '.4px solid #E2E2E2'
-    },
-    container: {
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'start'
-    },
-    icon: {
-      display: 'flex',
-      justifyContent: 'space-between'
-    },
-    card: { display: 'flex', alignItems: 'end' },
-    text: {
-      textAlign: 'start'
-    },
-    count: {
-      textAlign: 'end',
-      width: '138x'
-    },
-    title: {
-      fontFamily: 'Inter',
-      fontSize: '16px',
-      fontWeight: '500',
-      lineHeight: '1.28'
-    },
-    subtitle: {
-      fontFamily: 'Inter',
-      fontSize: '14px',
-      fontWeight: '400'
-    },
-    sum: {
-      fontFamily: 'Inter',
-      fontSize: '16px',
-      fontWeight: '700',
-      color: '#2A9B67'
-    },
-    description: {
-      fontFamily: 'Inter',
-      fontSize: '14px',
-      fontWeight: '500',
-      color: '#676879'
-    },
-    period: {
-      textAlign: 'start',
-      fontFamily: 'Inter',
-      fontSize: '14px',
-      fontWeight: '400',
-      color: '#2A9B67',
-      marginLeft: '52px'
-    },
-
-    image: { width: '40px', height: '40px', marginRight: '12px' }
-  };
   return (
     <>
       {card.isActive && (
@@ -77,7 +73,7 @@ export default function MySubscriptionsActiveCard({
                 <Typography component="p" sx={styles.title}>
                   {card.title}
                 </Typography>
-                <Typography component="p" sx={styles.subtitle}>
+                <Typography component="p" sx={{ ...font }}>
                   {card.period}
                 </Typography>
               </Box>
