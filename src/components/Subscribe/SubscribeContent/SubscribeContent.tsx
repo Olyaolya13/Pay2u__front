@@ -5,7 +5,7 @@ import { SubscribeContentData } from '../../../utils/constants';
 
 const styles = {
   container: {},
-  card: { display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap' }
+  card: { display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', scrollbarWidth: 'none' }
 };
 
 export default function SubscribeContent() {
