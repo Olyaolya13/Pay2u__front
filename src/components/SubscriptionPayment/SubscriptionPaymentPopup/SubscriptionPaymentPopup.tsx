@@ -5,7 +5,7 @@ import SubmitButton from '../../SubmitBtn/SubmitBtn';
 import { useNavigate } from 'react-router-dom';
 import { AutopaymentPopupData } from '../../../utils/constants';
 
-interface AutopaymentPopupProps {
+interface SubscriptionPaymentPopupProps {
   open: boolean;
   onClose: () => void;
 }
@@ -30,7 +30,8 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
     position: 'fixed',
-    top: '400px',
+    top: '116px',
+    bottom: '0',
     left: 0,
     width: '335px'
   },
@@ -38,7 +39,7 @@ const styles = {
   text: { margin: '30px 0 ', textAlign: 'center' }
 };
 
-export default function AutopaymentPopup({ open, onClose }: AutopaymentPopupProps) {
+export default function SubscriptionPaymentPopup({ open, onClose }: SubscriptionPaymentPopupProps) {
   const navigate = useNavigate();
 
   const handleApplyClick = () => {
@@ -52,17 +53,23 @@ export default function AutopaymentPopup({ open, onClose }: AutopaymentPopupProp
       <Box sx={styles.popover}>
         <Box sx={styles.done}>
           <FilterPopupBtn />
+          <Typography sx={styles.title}>Подписка оплачена</Typography>
           <AutopayConnectIcon style={styles.icon} />
-          <Typography sx={styles.title}>{AutopaymentPopupData.title}</Typography>
         </Box>
         <Box sx={styles.text}>
-          <Typography sx={styles.sum}>{AutopaymentPopupData.sum} &#8381;</Typography>
+          <Typography sx={styles.sum}>299 &#8381;</Typography>
+          <Typography sx={styles.sum}>FDJ264999SHK0</Typography>
           <Typography sx={styles.subtitle}>
-            {AutopaymentPopupData.nextPay}
+            Активировать до
             <span style={styles.date}>{AutopaymentPopupData.date}.</span>
           </Typography>
-          <Typography sx={styles.subtitle}>{AutopaymentPopupData.text}</Typography>
         </Box>
+        <SubmitButton
+          title="Скопировать и перейти на сайт"
+          width="335px"
+          height="56px"
+          onClick={handleApplyClick}
+        />
         <SubmitButton
           title="Вернуться на главную"
           width="335px"

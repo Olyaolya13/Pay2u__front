@@ -4,6 +4,8 @@ import SubscriptionPaymentContent from './SubscriptionPaymentContent/Subscriptio
 import SubscriptionPaymentInfo from './SubscriptionPaymentInfo/SubscriptionPaymentInfo';
 import SubscriptionPaymentMethod from './SubscriptionPaymentMethod/SubscriptionPaymentMethod';
 import SubmitButton from '../SubmitBtn/SubmitBtn';
+import SubscriptionPaymentPopup from './SubscriptionPaymentPopup/SubscriptionPaymentPopup';
+import { useState } from 'react';
 
 const styles = {
   container: { margin: '14px 0 70px' },
@@ -20,13 +22,23 @@ const styles = {
 };
 
 export default function SubscriptionPayment() {
+  const [open, setOpen] = useState(false);
+
+  const handleOpenPopup = () => {
+    setOpen(true);
+  };
+
+  const handleClosePopup = () => {
+    setOpen(false);
+  };
   return (
     <Box sx={styles.container}>
       <SubscribeCard />
       <SubscriptionPaymentContent />
       <SubscriptionPaymentMethod />
       <SubscriptionPaymentInfo />
-      <SubmitButton title="Оплатить" width="335px" height="56px" />
+      <SubmitButton title="Оплатить" width="335px" height="56px" onClick={handleOpenPopup} />
+      <SubscriptionPaymentPopup open={open} onClose={handleClosePopup} />
     </Box>
   );
 }
