@@ -9,7 +9,7 @@ const font = {
 };
 
 const styles = {
-  container: { marginTop: '20px', borderBottom: '.4px solid #E2E2E2', textAlign: 'start' },
+  container: { marginTop: '15px', borderBottom: '.4px solid #E2E2E2', textAlign: 'start' },
   aboutContainer: { margin: '0 20px' },
   sum: { ...font, fontWeight: '700', paddingRight: '4px' },
   about: { ...font, fontSize: '14px', color: '#676879' },
@@ -18,12 +18,12 @@ const styles = {
     display: 'flex'
   },
   textContainer: {
-    marginTop: '32px'
+    marginTop: '28px'
   },
   numberContainer: {
     display: 'flex',
     flexDirection: 'column',
-    margin: '32px 0 16px'
+    margin: '28px 0 16px'
   }
 };
 

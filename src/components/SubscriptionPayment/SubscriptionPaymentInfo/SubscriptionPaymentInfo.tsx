@@ -10,7 +10,7 @@ const font = {
 };
 
 const styles = {
-  container: { margin: '43px 20px 24px' },
+  container: { margin: '38px 20px 29px' },
   containerCheck: { display: 'flex', alignItems: 'center' },
   link: {
     textDecoration: 'none'

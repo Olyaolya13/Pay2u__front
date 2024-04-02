@@ -22,7 +22,7 @@ const styles = {
     overflowX: 'auto',
     whiteSpace: 'nowrap',
     scrollbarWidth: 'none',
-    margin: '8px  0 16px 20px'
+    margin: '8px  0 10px 20px'
   },
   payText: {
     ...font,
