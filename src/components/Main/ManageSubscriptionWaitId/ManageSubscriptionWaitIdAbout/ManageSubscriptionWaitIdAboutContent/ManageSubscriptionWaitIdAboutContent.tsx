@@ -1,7 +1,7 @@
 import { Box, CardMedia, Typography } from '@mui/material';
 import InfoIcon from '../../../../../assets/InfoIcon.svg?react';
 import {
-  ManageSubscriptionAboutContentData,
+  ManageSubscriptionWaitIdAboutData,
   ManageSubscriptionAboutData
 } from '../../../../../utils/constants';
 import Title from '../../../../Titile/Titile';
@@ -33,47 +33,34 @@ const styles = {
   pay: { width: '32px', height: '18px' }
 };
 
-export default function ManageSubscriptionAboutContent() {
+export default function ManageSubscriptionWaitIdAboutContent() {
   return (
     <Box sx={styles.container}>
       <Title title={ManageSubscriptionAboutData.titleSubscription} />
-      <Box sx={styles.text}>
-        <Typography sx={styles.title}>Автоплатеж</Typography>
-        <Typography
-          sx={{
-            ...font,
-            color: ManageSubscriptionAboutContentData.isConeccted ? '#2A9B67' : '#C2C2C2'
-          }}
-        >
-          {ManageSubscriptionAboutContentData.isConeccted ? 'Подключен' : 'Не подключено'}
-        </Typography>
+      <Box sx={{ ...styles.text, paddingTop: '24px' }}>
+        <Typography sx={styles.title}>Следующее списание</Typography>
+        <Typography sx={{ ...font }}>{ManageSubscriptionWaitIdAboutData.date}</Typography>
       </Box>
-      {ManageSubscriptionAboutContentData.isConeccted === true && (
-        <Box sx={styles.text}>
-          <Typography sx={styles.title}>Следующее списание</Typography>
-          <Typography sx={{ ...font }}>{ManageSubscriptionAboutContentData.date}</Typography>
-        </Box>
-      )}
       <Box sx={styles.text}>
         <Typography sx={styles.title}>Стоимость</Typography>
-        <Typography sx={{ ...font }}>{ManageSubscriptionAboutContentData.sum} &#8381;</Typography>
+        <Typography sx={{ ...font }}>{ManageSubscriptionWaitIdAboutData.sum} &#8381;</Typography>
       </Box>
       <Box sx={styles.text}>
         <Typography sx={styles.title}>Счет списания</Typography>
         <CardMedia
           sx={styles.pay}
           component="img"
-          image={ManageSubscriptionAboutContentData.paySystem}
-          alt={ManageSubscriptionAboutContentData.alt}
+          image={ManageSubscriptionWaitIdAboutData.paySystem}
+          alt={ManageSubscriptionWaitIdAboutData.alt}
         />
       </Box>
       <Box sx={styles.text}>
         <Typography sx={styles.title}>Номер телефона</Typography>
-        <Typography sx={{ ...font }}>{ManageSubscriptionAboutContentData.phoneNumber}</Typography>
+        <Typography sx={{ ...font }}>{ManageSubscriptionWaitIdAboutData.phoneNumber}</Typography>
       </Box>
       <Box sx={styles.text}>
         <Typography sx={styles.title}>Кешбэк </Typography>
-        <Typography sx={{ ...font }}>{ManageSubscriptionAboutContentData.cashback}</Typography>
+        <Typography sx={{ ...font }}>{ManageSubscriptionWaitIdAboutData.cashback}%</Typography>
       </Box>
       <Box sx={styles.text}>
         <Box sx={styles.info}>
@@ -81,7 +68,7 @@ export default function ManageSubscriptionAboutContent() {
           <InfoIcon style={styles.icon} />
         </Box>
         <Typography sx={{ ...font, color: '#489865' }}>
-          ~ {ManageSubscriptionAboutContentData.profit}&#8381;
+          ~ {ManageSubscriptionWaitIdAboutData.profit}&#8381;
         </Typography>
       </Box>
     </Box>

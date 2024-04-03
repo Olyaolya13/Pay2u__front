@@ -34,7 +34,7 @@ export default function MySubscriptionsWaitActiveCard({
   const navigate = useNavigate();
 
   const handleOpen = () => {
-    navigate('/subscriptions/id');
+    navigate('/manage_subcription/id');
     window.scrollTo(0, 0);
   };
 

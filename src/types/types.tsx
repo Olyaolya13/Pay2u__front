@@ -70,6 +70,14 @@ export interface CardMySubscriptionsWaitActiveyData {
   period: string;
 }
 
+export interface CardManageSubscriptionWaitIdCardData {
+  image: string;
+  alt: string;
+  title: string;
+  period: string;
+  description: string;
+}
+
 export interface CardMySubscriptionsActiveData {
   image: string;
   alt: string;

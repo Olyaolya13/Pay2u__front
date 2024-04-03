@@ -15,6 +15,7 @@ import Autopayment from '../Main/Autopayment/Autopayment';
 import Subscribe from '../Main/Subscribe/Subscribe';
 import AboutSubscribe from '../Main/AboutSubscribe/AboutSubscribe';
 import SubscriptionPayment from '../Main/SubscriptionPayment/SubscriptionPayment';
+import ManageSubscriptionWaitId from '../Main/ManageSubscriptionWaitId/ManageSubscriptionWaitId';
 
 export default function App() {
   const location = useLocation();
@@ -50,6 +51,7 @@ export default function App() {
         <Route path="/subscribe" element={<Subscribe />} />
         <Route path="/subscribe/id" element={<AboutSubscribe />} />
         <Route path="/subscription_payment" element={<SubscriptionPayment />} />
+        <Route path="/manage_subcription/id" element={<ManageSubscriptionWaitId />} />
       </Routes>
     </main>
   );

@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material';
 import {
   ManageSubscriptionAboutData,
-  ManageSubscriptionAboutPartnerData
+  ManageSubscriptionWaitIdAboutPartnerData
 } from '../../../../../utils/constants';
 import Title from '../../../../Titile/Titile';
 
@@ -17,11 +17,11 @@ const styles = {
   }
 };
 
-export default function ManageSubscriptionAboutPartner() {
+export default function ManageSubscriptionWaitIdAboutPartner() {
   return (
     <Box sx={styles.container}>
       <Title title={ManageSubscriptionAboutData.titlePartner} />
-      <Typography sx={styles.text}>{ManageSubscriptionAboutPartnerData.text}</Typography>
+      <Typography sx={styles.text}>{ManageSubscriptionWaitIdAboutPartnerData.text}</Typography>
     </Box>
   );
 }

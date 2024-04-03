@@ -904,3 +904,39 @@ export const SubscriptionPaymentPopupData = {
   CopyBtn: 'Скопировать и перейти на сайт',
   returnBtn: 'Вернуться на главную'
 };
+
+export const ManageSubscriptionWaitIdAboutData = {
+  sum: '597',
+  paySystem: SBPPay,
+  alt: 'СБП',
+  phoneNumber: '+ 7 (900) 000-07-07',
+  cashback: 5,
+  profit: 309,
+  date: '-'
+};
+
+export const ManageSubscriptionWaitIdContentData = {
+  title: 'Промокод необходимо активировать на сайте партнера до окончания действия подписки – ',
+  period: '18.05.2024'
+};
+
+export const ManageSubscriptionWaitIdCardData = {
+  card: [
+    {
+      image: LikeeIcon,
+      alt: 'Likee',
+      title: 'Likee',
+      description: 'Подписка на 3 месяца',
+      period: ' 18.05.2024'
+    }
+  ]
+};
+
+export const ManageSubscriptionWaitIdPromoData = {
+  title: 'Промокод',
+  promo: 'FDJ264999SHK0'
+};
+
+export const ManageSubscriptionWaitIdAboutPartnerData = {
+  text: 'Likee – онлайн-кинотеатр для просмотра кино, сериалов, мультфильмов, лекций, концертов, спектаклей и ТВ-каналов. Каждую неделю появляются новинки. Для детей есть профиль с фильтрами по возрастам. '
+};
