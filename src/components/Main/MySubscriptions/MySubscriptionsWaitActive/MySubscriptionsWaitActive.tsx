@@ -1,6 +1,7 @@
 import { Box, Typography } from '@mui/material';
 import Title from '../../../Titile/Titile';
 import InfoTooltip from '../../../InfoTooltip/InfoTooltip';
+import InfoIcon from '../../../../assets/InfoIcon.svg';
 import MySubscriptionsWaitActiveCard from './MySubscriptionsWaitActiveCard/MySubscriptionsWaitActiveCard';
 import {
   MySubscriptionsWaitActiveCardData,
@@ -28,7 +29,7 @@ export default function MySubscriptionsWaitActive() {
       <Box sx={styles.container}>
         <Box sx={styles.text}>
           <Title title={MySubscriptionsWaitActiveData.title}></Title>
-          <InfoTooltip tooltip={InfoTooltipData.titleSubscription} />
+          <InfoTooltip tooltip={InfoTooltipData.titleSubscription} icon={InfoIcon} />
         </Box>
         <Typography component="p" sx={styles.subtitle}>
           {MySubscriptionsWaitActiveData.subtitle} {MySubscriptionsWaitActiveData.period}г.

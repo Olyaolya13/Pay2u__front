@@ -14,6 +14,7 @@ interface SubmitButtonProps {
   disabled?: boolean;
   onClick?: () => void;
   icon?: ReactNode;
+  margin?: string;
 }
 
 const styles = {
@@ -42,7 +43,8 @@ export default function SubmitButtonWithIcon({
   borderRadius,
   color,
   onClick,
-  icon
+  icon,
+  margin
 }: SubmitButtonProps) {
   return (
     <Button
@@ -60,7 +62,8 @@ export default function SubmitButtonWithIcon({
         },
         '&:focus': {
           backgroundColor: '#0A771E'
-        }
+        },
+        margin: margin ? margin : '0'
       }}
       disabled={disabled}
       onClick={onClick}

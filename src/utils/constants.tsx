@@ -24,6 +24,8 @@ import SBPAutopay from '../assets/SBPAutopay.svg';
 import OneMonthImg from '../assets/OneMonthImg.svg';
 import ThreeMonthImg from '../assets/ThreeMonthImg.svg';
 import TwelveMonthImg from '../assets/TwelveMonthImg.svg';
+import DownloadCheckIcon from '../assets/DownloadCheckIcon.svg';
+import InstructionIcon from '../assets/InstructionIcon.svg';
 
 export const HeaderData = {
   services: 'Развлекательные сервисы',
@@ -872,4 +874,33 @@ export const SubscriptionPaymentInfoData = {
   rulesText: 'правилами партнера',
   sum: 599,
   perMonth: 'в месяц'
+};
+
+export const SubscriptionPaymentPopupInfoData = [
+  {
+    image: DownloadCheckIcon,
+    alt: 'Чек',
+    title: 'Скачать чек'
+  },
+  {
+    image: AutoPayIcon,
+    alt: 'Меняющиеся стрелочки по кругу',
+    title: 'Создать автоплатеж'
+  },
+  {
+    image: InstructionIcon,
+    alt: 'Лист',
+    title: 'Узнать, как работать с сервисом'
+  }
+];
+
+export const SubscriptionPaymentPopupData = {
+  title: 'Подписка оплачена',
+  sum: 299,
+  promo: 'FDJ264999SHK0',
+  activUntil: 'Активировать до',
+  tooltip:
+    'Вы не можете пользоваться сервисом, пока не завершите активацию подписки. Скопируйте код и перейдите на сайт партнера. Это можно сделать позже, в разделе управления подпиской.',
+  CopyBtn: 'Скопировать и перейти на сайт',
+  returnBtn: 'Вернуться на главную'
 };

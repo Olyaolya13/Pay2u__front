@@ -8,11 +8,11 @@ import {
   styled,
   CardMedia
 } from '@mui/material';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 interface InfoTooltipProps {
   tooltip?: string;
-  icon?: string;
+  icon: string;
 }
 
 const TextTooltip = styled(({ className, ...props }: TooltipProps) => (
@@ -23,7 +23,7 @@ const TextTooltip = styled(({ className, ...props }: TooltipProps) => (
     color: '#F5F5F5',
     maxWidth: 311,
     fontSize: theme.typography.pxToRem(12),
-    margin: '20px'
+    margin: '10px 20px'
   },
   [`& .${tooltipClasses.arrow}`]: {
     color: '#E86513'
@@ -48,6 +48,13 @@ export default function InfoTooltip({ tooltip, icon }: InfoTooltipProps) {
   const handleTooltipClose = () => {
     setOpen(false);
   };
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setOpen(true);
+    }, 2000);
+    return () => clearTimeout(timeout);
+  }, []);
 
   return (
     <ClickAwayListener onClickAway={handleTooltipClose}>
