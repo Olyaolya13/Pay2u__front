@@ -2,19 +2,20 @@ import style from './App.module.scss';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import Header from '../Header/Header';
-import Services from '../Services/Services';
-import History from '../History/History';
-import SellHistory from '../SellHistory/SellHistory';
-import CatalogSubscriptions from '../CatalogSubscriptions/CatalogSubscriptions';
-import CategoriesMovie from '../CategoriesMovie/CategoriesMovie';
-import MySubscriptions from '../MySubscriptions/MySubscriptions';
-import ManageSubscription from '../ManageSubscription/ManageSubscription';
+import Services from '../Main/Services/Services';
+import History from '../Main/History/History';
+import SellHistory from '../Main/SellHistory/SellHistory';
+import CatalogSubscriptions from '../Main/CatalogSubscriptions/CatalogSubscriptions';
+import CategoriesMovie from '../Main/CategoriesMovie/CategoriesMovie';
+import MySubscriptions from '../Main/MySubscriptions/MySubscriptions';
+import ManageSubscription from '../Main/ManageSubscription/ManageSubscription';
 import { useEffect, useState } from 'react';
 import * as Api from '../../utils/utils';
-import Autopayment from '../Autopayment/Autopayment';
-import Subscribe from '../Subscribe/Subscribe';
-import AboutSubscribe from '../AboutSubscribe/AboutSubscribe';
-import SubscriptionPayment from '../SubscriptionPayment/SubscriptionPayment';
+import Autopayment from '../Main/Autopayment/Autopayment';
+import Subscribe from '../Main/Subscribe/Subscribe';
+import AboutSubscribe from '../Main/AboutSubscribe/AboutSubscribe';
+import SubscriptionPayment from '../Main/SubscriptionPayment/SubscriptionPayment';
+import ManageSubscriptionWaitId from '../Main/ManageSubscriptionWaitId/ManageSubscriptionWaitId';
 
 export default function App() {
   const location = useLocation();
@@ -50,6 +51,7 @@ export default function App() {
         <Route path="/subscribe" element={<Subscribe />} />
         <Route path="/subscribe/id" element={<AboutSubscribe />} />
         <Route path="/subscription_payment" element={<SubscriptionPayment />} />
+        <Route path="/manage_subcription/id" element={<ManageSubscriptionWaitId />} />
       </Routes>
     </main>
   );

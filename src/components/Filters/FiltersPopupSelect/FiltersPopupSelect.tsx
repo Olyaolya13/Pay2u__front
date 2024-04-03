@@ -2,7 +2,7 @@ import './FiltersPopupSelect.css';
 import { Box, List, ListItemText, MenuItem, Modal, Typography } from '@mui/material';
 import FilterPopupBtn from '../../../assets/FilterPopupBtn.svg?react';
 import CloseIcon from '../../../assets/CloseIconGreen.svg?react';
-import SubmitButton from '../../SubmitBtn/SubmitBtn';
+import SubmitButton from '../../Btns/SubmitBtn';
 import { useState } from 'react';
 
 interface FiltersPopupSelectProps {

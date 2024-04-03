@@ -8,6 +8,7 @@
 
 - ⚛️[React](https://ru.reactjs.org/)
 - ⚙️[Material-UI](https://material-ui.com/)
+- TS [Sass](https://sass-lang.com/)
 - TS [TypeScript](https://www.typescriptlang.org/)
 
 ## Инструкции по установке и запуску

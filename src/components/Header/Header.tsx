@@ -37,6 +37,8 @@ export default function Header() {
     title = HeaderData.catalog;
   } else if (location.pathname === '/manage_subcription') {
     title = HeaderData.manageSubcription;
+  } else if (location.pathname === '/manage_subcription/id') {
+    title = HeaderData.manageSubcription;
   } else if (location.pathname === '/categories') {
     title = HeaderData.categories;
   } else if (location.pathname === '/subscribe') {
