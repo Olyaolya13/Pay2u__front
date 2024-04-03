@@ -1,6 +1,6 @@
 import style from './HistoryContent.module.scss';
 import { Box, CardMedia, Typography } from '@mui/material';
-import { HistoryContentPage } from '../../../types/types';
+import { HistoryContentPage } from '../../../../types/types';
 
 interface HistoryContentProps {
   activeStep?: number;

@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material';
-import SubmitButton from '../../Btns/SubmitBtn/SubmitBtn';
-import { ServicesData } from '../../../utils/constants';
+import SubmitButton from '../../../Btns/SubmitBtn';
+import { ServicesData } from '../../../../utils/constants';
 import { useNavigate } from 'react-router-dom';
 
 const font = {
