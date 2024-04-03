@@ -19,28 +19,28 @@ import ManageSubscriptionWaitId from '../Main/ManageSubscriptionWaitId/ManageSub
 
 export default function App() {
   const location = useLocation();
-  const [service, setService] = useState('');
+  const [services, setServices] = useState('');
 
   if (location.pathname === '/') {
     return <Navigate to="/history" replace />;
   }
 
-  // useEffect(() => {
-  //   Api.getServices()
-  //     .then(data => {
-  //       setService(data);
-  //       console.log('Services', data);
-  //     })
-  //     .catch(err => {
-  //       console.log(err);
-  //     });
-  // }, []);
+  useEffect(() => {
+    Api.getServices()
+      .then(data => {
+        setServices(data);
+        console.log('Services', data);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }, []);
 
   return (
     <main className={style.app}>
       {location.pathname !== '/history' && <Header />}
       <Routes>
-        <Route path="/services" element={<Services />} />
+        <Route path="/services" element={<Services services={services} />} />
         <Route path="/history" element={<History />} />
         <Route path="/sell_history" element={<SellHistory />} />
         <Route path="/catalog" element={<CatalogSubscriptions />} />

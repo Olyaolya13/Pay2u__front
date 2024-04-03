@@ -52,7 +52,7 @@ export default function InfoTooltip({ tooltip, icon }: InfoTooltipProps) {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setOpen(true);
-    }, 2000);
+    }, 3000);
     return () => clearTimeout(timeout);
   }, []);
 

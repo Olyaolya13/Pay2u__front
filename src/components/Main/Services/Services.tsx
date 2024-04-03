@@ -6,8 +6,13 @@ import ServicesPopular from './ServicesPopular/ServicesPopular';
 import ServisesQuestions from './ServisesQuestions/ServisesQuestions';
 import ServicesInstruction from '../../Instructions/ServiseInstructions/ServicesInstruction';
 import ServicesSubscription from './ServicesSubscription/ServicesSubscription';
+import { ServiceSubscribeIcon } from '../../../types/types';
 
-export default function Services() {
+interface ServicesProps {
+  services: ServiceSubscribeIcon[];
+}
+
+export default function Services({ services }: ServicesProps) {
   const styles = {
     container: {
       margin: '38px 20px 78px'
@@ -16,7 +21,7 @@ export default function Services() {
   return (
     <Box sx={styles.container}>
       {/* <ServicesInfo /> */}
-      <ServicesSubscription />
+      <ServicesSubscription services={services} />
       <ServicesCatalog />
       <ServicesNew />
       <ServicesPopular />
