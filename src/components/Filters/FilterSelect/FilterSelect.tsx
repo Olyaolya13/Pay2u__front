@@ -27,7 +27,6 @@ const styles = {
 export default function FilterSelect() {
   const [open, setOpen] = useState<boolean>(false);
   const [selectedOption, setSelectedOption] = useState('По популярности');
-  console.log(selectedOption);
 
   const handleSelectOption = (option: string) => {
     setSelectedOption(option);

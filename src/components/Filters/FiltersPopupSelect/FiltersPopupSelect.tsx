@@ -43,7 +43,6 @@ export default function FiltersPopupSelect({
 }: FiltersPopupSelectProps) {
   const handleMenuItemClick = (option: string) => {
     setSelectedOption(option);
-    console.log('Selected option:', option);
   };
 
   function handleClose() {
@@ -53,11 +52,9 @@ export default function FiltersPopupSelect({
   const handleApplyClick = () => {
     onSelectOption(selectedOption);
     onClose();
-    console.log('btn');
   };
 
   const [selectedOption, setSelectedOption] = useState<string>('');
-  console.log(selectedOption);
 
   return (
     <Modal sx={styles.container} open={open} onClose={onClose}>
