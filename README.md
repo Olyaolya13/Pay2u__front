@@ -26,30 +26,51 @@ Pay2u - это веб-приложение, разработанное для о
 
 ![Структура проекта](./src/assets/ScrinshotReadme/ProjectStructure.png)
 
+## End points
+
+- /history ( компонент History) истории подписок
+- /services (компонент Services) главная страница развлекательные сервисы
+- /sell_history (компонент SellHistory) история покупок
+- /catalog (компонент CatalogSubscriptions) каталог подписок
+- /categories (компонент CategoriesMovie) категории(Кино)
+- /subscriptions (компонент MySubscriptions) мои подписки
+- /manage_subcription (компонент ManageSubscription) упарвление подпиской по id
+- /manage_subcription/id (компонент ManageSubscriptionWaitId) упарвление подписками
+- /autopayment (компонент Autopayment) подключение автоплатежа
+- /subscribe (компонент Subscribe) подключение подписки
+- /subscribe/id (компонент AboutSubscribe) подключение подписки по id
+- /subscription_payment (компонент SubscriptionPayment) оплата подписки
+
 ## Скриншоты
 
-### При первом заходе на сайт по маршруту /history (в компоненте History) появляются 4 истории, которые объясняют преимущества оформления подписок.
+### При первом заходе на сайт появляются истории, которые объясняют преимущества оформления подписок
 
 ![History](./src/assets/ScrinshotReadme/History.png)
 
-## /services (компонент Services)
+### С главной страницы попадаем в Истории подписок по клику на иконку часы или по одноименному компоненту, где показана деталицация покупок подписок
 
-## /sell_history (компонент SellHistory)
+![History](./src/assets/ScrinshotReadme/Sell_history.png)
 
-## /catalog (компонент CatalogSubscriptions)
+### С главной страницы попадаем в Каталог подписок на title 'Все', где отображены карточки подпискок, рассортированные по категориям с поиском
 
-## /categories (компонент CategoriesMovie)
+![History](./src/assets/ScrinshotReadme/Catalog.png)
 
-## /subscriptions (компонент MySubscriptions)
+### В Категориях (в данном случае Кино) есть фильтрация, где можно сортировать по цене и рейтингу
 
-## /manage_subcription (компонент ManageSubscription)
+![History](./src/assets/ScrinshotReadme/Filter.png)
 
-## /autopayment (компонент Autopayment)
+### В Управлении подпиской мы попадаем из Мои подписки, есть возможность подключения автоплатежа,отключение подписки и смены тарица
 
-## /subscribe (компонент Subscribe)
+![History](./src/assets/ScrinshotReadme/Manage_subscription.png)
 
-## /subscribe/id (компонент AboutSubscribe)
+### При подключении автоплатежа, появляется попап с информацией об успешном подключении, сумме и дальнейшем списании
 
-## /subscription_payment (компонент SubscriptionPayment)
+![History](./src/assets/ScrinshotReadme/Autopayment.png)
 
-## /manage_subcription/id ManageSubscriptionWaitId
+### В Подключение подписок попадаем из Каталога подписок, кликнув по карточке подписки, представлена информация о тарифах
+
+![History](./src/assets/ScrinshotReadme/Subscribe.png)
+
+### При оплате подписки, появляется попап с промокодом и информацией о платеже, кнопка скопировать и перейти на сайт сервиса, кнопка вернуться в главное меню(Развлекательные сервисы), так же реализован тултип и возможность подключить автоплатеж, скачать чек
+
+![History](./src/assets/ScrinshotReadme/Subscription_payment.png)
