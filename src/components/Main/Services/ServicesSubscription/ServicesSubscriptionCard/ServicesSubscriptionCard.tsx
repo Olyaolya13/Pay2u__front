@@ -3,9 +3,16 @@ import { Box, Card, CardMedia, Typography } from '@mui/material';
 import TransitionIcon from '../../../../../assets/TransitionIcon.svg?react';
 import { useNavigate } from 'react-router-dom';
 import {
-  ServicesSubscriptionData,
-  ServicesSubscriptionImageData
+  ServicesSubscriptionData
+  // ServicesSubscriptionImageData
 } from '../../../../../utils/constants';
+import BlackSquareWithCounter from '../../../../BlackSquareWithCounter/BlackSquareWithCounterю';
+import { ServiceSubscribeIcon } from '../../../../../types/types';
+import React from 'react';
+
+interface ServicesSubscriptionCardProps {
+  services: ServiceSubscribeIcon[];
+}
 
 const font = {
   fontFamily: 'Inter',
@@ -44,8 +51,10 @@ const styles = {
   }
 };
 
-export default function ServicesSubscriptionCard() {
+export default function ServicesSubscriptionCard({ services }: ServicesSubscriptionCardProps) {
   const navigate = useNavigate();
+  const visibleImages = services.slice(0, 5);
+  const hiddenCount = services.length - 5;
 
   const handleClick = () => {
     navigate('/subscriptions');
@@ -60,25 +69,39 @@ export default function ServicesSubscriptionCard() {
         <TransitionIcon onClick={handleClick} className={style.subscription__icon} />{' '}
       </Box>
       <Box sx={styles.containerImage}>
-        {ServicesSubscriptionImageData.card.map((data, index) => (
-          <CardMedia
-            key={index}
-            component="img"
-            sx={{
-              ...styles.image,
-              marginLeft: index === 0 ? '0' : '-8px'
-            }}
-            image={data.image}
-            alt={data.alt}
-          />
-        ))}
+        {Array.isArray(services) &&
+          visibleImages.map((data, index) => (
+            <>
+              <React.Fragment key={index}>
+                {/* {data.activation_status && ( */}
+                <CardMedia
+                  key={data.image}
+                  component="img"
+                  sx={{
+                    ...styles.image,
+                    marginLeft: index === 0 ? '0' : '-8px'
+                  }}
+                  image={data.image}
+                  alt="Картинка подписка"
+                />
+                {/* )} */}
+              </React.Fragment>
+              {/* {visibleImages.filter(data => data.activation_status).length >= 5 && hiddenCount && (
+    <BlackSquareWithCounter count={hiddenCount} />
+  )} */}
+              {index === 4 && visibleImages && hiddenCount && (
+                <BlackSquareWithCounter count={hiddenCount} />
+              )}
+            </>
+          ))}
       </Box>
       <Box sx={styles.containerSum}>
         <Typography component="p" sx={styles.subtitle}>
           {ServicesSubscriptionData.writeOff}
         </Typography>
         <Typography component="p" sx={styles.sum}>
-          &nbsp;{ServicesSubscriptionData.sum}&#8381;
+          &nbsp;{ServicesSubscriptionData.sum} &#8381;
+          {/* &nbsp;{services[services.length - 1]?.next_payment_amount}&#8381; */}
         </Typography>
       </Box>
     </Card>

@@ -1,5 +1,5 @@
 import { Box, CardMedia, Typography } from '@mui/material';
-import { CardManageSubscriptionData } from '../../../types/types';
+import { CardManageSubscriptionData } from '../../../../types/types';
 
 interface ManageSubscriptionCardProps {
   card: CardManageSubscriptionData;

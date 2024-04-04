@@ -940,3 +940,11 @@ export const ManageSubscriptionWaitIdPromoData = {
 export const ManageSubscriptionWaitIdAboutPartnerData = {
   text: 'Likee – онлайн-кинотеатр для просмотра кино, сериалов, мультфильмов, лекций, концертов, спектаклей и ТВ-каналов. Каждую неделю появляются новинки. Для детей есть профиль с фильтрами по возрастам. '
 };
+
+export const RatingData = [
+  { value: 3, label: 'Нормально' },
+  { value: 4, label: 'Хорошо' },
+  { value: 5, label: 'Отлично' }
+];
+
+export const FiltersPopupSlideData = ['от 1 до 199', 'от 199 до 399 ', 'от 399 до 699'];

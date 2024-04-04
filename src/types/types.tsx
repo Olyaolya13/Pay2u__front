@@ -111,3 +111,10 @@ export interface CardAutopaymentData {
   number?: string;
   title: string;
 }
+
+export interface ServiceSubscribeIcon {
+  activation_status: boolean;
+  image: string;
+  nearest_payment_date: string | null;
+  next_payment_amount: number | null;
+}

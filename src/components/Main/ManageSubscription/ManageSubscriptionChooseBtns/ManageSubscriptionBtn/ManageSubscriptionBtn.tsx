@@ -1,5 +1,5 @@
 import { Button, CardMedia, Typography } from '@mui/material';
-import { BtnManageSubscriptionData } from '../../../../types/types';
+import { BtnManageSubscriptionData } from '../../../../../types/types';
 
 interface ManageSubscriptionBtnProps {
   card: BtnManageSubscriptionData;

@@ -1,10 +1,11 @@
 import { Box, CardMedia, Typography } from '@mui/material';
-import InfoIcon from '../../../../../assets/InfoIcon.svg?react';
+import InfoIcon from '../../../../../assets/InfoIcon.svg';
 import {
   ManageSubscriptionAboutContentData,
   ManageSubscriptionAboutData
 } from '../../../../../utils/constants';
 import Title from '../../../../Titile/Titile';
+import InfoTooltip from '../../../../InfoTooltip/InfoTooltip';
 
 const font = { fontSize: '14px', fontWeight: '400', fontFamily: 'Inter' };
 
@@ -19,16 +20,12 @@ const styles = {
   title: {
     ...font,
     color: '#676879',
-    fontWeight: '500'
+    fontWeight: '500',
+    marginRight: '7px'
   },
   info: {
     display: 'flex',
     alignItems: 'center'
-  },
-  icon: {
-    width: '18px',
-    height: '18px',
-    marginLeft: '7px'
   },
   pay: { width: '32px', height: '18px' }
 };
@@ -78,7 +75,10 @@ export default function ManageSubscriptionAboutContent() {
       <Box sx={styles.text}>
         <Box sx={styles.info}>
           <Typography sx={{ ...styles.title, color: '#489865' }}>Ваша выгода</Typography>
-          <InfoIcon style={styles.icon} />
+          <InfoTooltip
+            icon={InfoIcon}
+            tooltip="Расчет выгоды может меняться в зависимости от региона и условий использования каждого предложенияю Расчет носит информационный характер и не является публичной офертой. Подробнее - в карточке каждого предложения или в разделе «Часто задаваемые вопросы»"
+          />
         </Box>
         <Typography sx={{ ...font, color: '#489865' }}>
           ~ {ManageSubscriptionAboutContentData.profit}&#8381;

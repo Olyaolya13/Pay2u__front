@@ -1,9 +1,19 @@
 import Button from '@mui/material/Button';
 import FilterSlideIcon from '../../../assets/FilterSlideIcon.svg?react';
-import Stack from '@mui/material/Stack';
 import { Typography } from '@mui/material';
+import FiltersPopupSlide from '../FilterPopupSlide/FilterPopupSlide';
+import { useState } from 'react';
 
 export default function FilterSlide() {
+  const [open, setOpen] = useState<boolean>(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
   const styles = {
     button: { backgroundColor: '#F9F9F9', borderRadius: '16px', width: '107px', height: '36px' },
     title: {
@@ -14,13 +24,13 @@ export default function FilterSlide() {
       color: '#131313',
       textTransform: 'none'
     },
-    image: {
+    icon: {
       width: '18px',
       height: '18px'
     }
   };
   return (
-    <Stack>
+    <>
       <Button
         disableElevation
         sx={{
@@ -30,10 +40,12 @@ export default function FilterSlide() {
           }
         }}
         variant="contained"
-        endIcon={<FilterSlideIcon style={styles.image} />}
+        endIcon={<FilterSlideIcon style={styles.icon} />}
+        onClick={handleOpen}
       >
         <Typography sx={styles.title}>Фильтр</Typography>
       </Button>
-    </Stack>
+      <FiltersPopupSlide open={open} onClose={handleClose} />
+    </>
   );
 }

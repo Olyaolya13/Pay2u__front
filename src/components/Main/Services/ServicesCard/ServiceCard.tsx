@@ -1,5 +1,5 @@
 import { Box, CardMedia, Typography } from '@mui/material';
-import { CardNewData } from '../../../types/types';
+import { CardNewData } from '../../../../types/types';
 
 interface ServicesNewCardProps {
   card: CardNewData;

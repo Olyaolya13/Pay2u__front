@@ -1,10 +1,11 @@
-import { Box, Typography, Checkbox } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 import SubscriptionPaymentInstruction from '../../../Instructions/SubscriptionPaymentInstruction/SubscriptionPaymentInstruction';
 import { SubscriptionPaymentInfoData } from '../../../../utils/constants';
 import { useState } from 'react';
 import SubmitButton from '../../../Btns/SubmitBtn';
 import SubscriptionPaymentPopup from '../SubscriptionPaymentPopup/SubscriptionPaymentPopup';
+import Checkbox from '../../../Checkbox/Checkbox';
 
 const font = {
   fontFamily: 'Inter',
@@ -47,18 +48,7 @@ export default function SubscriptionPaymentInfo() {
   return (
     <Box sx={styles.container}>
       <Box sx={styles.containerCheck}>
-        <Checkbox
-          disableRipple
-          onChange={handleCheckboxChange}
-          color="success"
-          sx={{
-            color: '#168E2C',
-            padding: '0 7px 0  0',
-            '& .MuiButtonBase-root .MuiCheckbox-root.Mui-checked': {
-              color: '#168E2C'
-            }
-          }}
-        />
+        <Checkbox onChange={handleCheckboxChange} />
         <Typography component="p" sx={{ ...font }}>
           {SubscriptionPaymentInfoData.agreeText}
         </Typography>
