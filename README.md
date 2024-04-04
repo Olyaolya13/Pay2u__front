@@ -13,6 +13,8 @@ Pay2u - это веб-приложение, разработанное для о
   <img src="https://github.com/devicons/devicon/blob/master/icons/sass/sass-original.svg" title="Sass" alt="Sass" width="40" height="40"/>&nbsp;
 </div>
 
+## Основные точки max,min width 375px
+
 ## Инструкции по установке и запуску
 
 1. Клонируйте репозиторий: `git clone git@github.com:Olyaolya13/Pay2u__front.git`
@@ -22,24 +24,32 @@ Pay2u - это веб-приложение, разработанное для о
 
 ## Структура проекта
 
-Pay2u/
-├── src/
-│ ├── assets/ ### Картинки и иконки
-│ ├── components/ ### Компоненты React
-│ ├── types/ ### Типы данных TypeScript
-│ ├── utils/ ### Утилиты и вспомогательные функции
-│ ├── vendor/ ### Внешние зависимости, если есть
-│ ├── index.module.scss ### Глобальные стили
-│ ├── main.tsx ### Основной файл приложения
-│ ├── vite-env/ ### Переменные окружения для Vite  
-├── .eslintrc ### Конфигурация ESLint
-├── .gitignore ### Список игнорируемых файлов Git
-├── .index ### Индекс или список файлов проекта
-├── .package-lock ### Файл package-lock.json для NPM
-├── .package ### Файл package.json для NPM
-├── .tsconfig ### Конфигурация TypeScript
-├── .tsconfig.node ### Конфигурация TypeScript для Node.js
-├── vite.config ### Конфигурация Vite
-└── README.md ### Документация проекта
+![Структура проекта](./src/assets/ScrinshotReadme/ProjectStructure.png)
 
 ## Скриншоты
+
+### При первом заходе на сайт по маршруту /history (в компоненте History) появляются 4 истории, которые объясняют преимущества оформления подписок.
+
+![History](./src/assets/ScrinshotReadme/History.png)
+
+## /services (компонент Services)
+
+## /sell_history (компонент SellHistory)
+
+## /catalog (компонент CatalogSubscriptions)
+
+## /categories (компонент CategoriesMovie)
+
+## /subscriptions (компонент MySubscriptions)
+
+## /manage_subcription (компонент ManageSubscription)
+
+## /autopayment (компонент Autopayment)
+
+## /subscribe (компонент Subscribe)
+
+## /subscribe/id (компонент AboutSubscribe)
+
+## /subscription_payment (компонент SubscriptionPayment)
+
+## /manage_subcription/id ManageSubscriptionWaitId
