@@ -16,14 +16,11 @@ import Subscribe from '../Main/Subscribe/Subscribe';
 import AboutSubscribe from '../Main/AboutSubscribe/AboutSubscribe';
 import SubscriptionPayment from '../Main/SubscriptionPayment/SubscriptionPayment';
 import ManageSubscriptionWaitId from '../Main/ManageSubscriptionWaitId/ManageSubscriptionWaitId';
+import { ServiceSubscribeIcon } from '../../types/types';
 
 export default function App() {
   const location = useLocation();
-  const [services, setServices] = useState('');
-
-  if (location.pathname === '/') {
-    return <Navigate to="/history" replace />;
-  }
+  const [services, setServices] = useState<ServiceSubscribeIcon[]>([]);
 
   useEffect(() => {
     Api.getServices()
@@ -35,6 +32,10 @@ export default function App() {
         console.log(err);
       });
   }, []);
+
+  if (location.pathname === '/') {
+    return <Navigate to="/history" replace />;
+  }
 
   return (
     <main className={style.app}>
