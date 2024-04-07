@@ -9,29 +9,14 @@ import CatalogSubscriptions from '../Main/CatalogSubscriptions/CatalogSubscripti
 import CategoriesMovie from '../Main/CategoriesMovie/CategoriesMovie';
 import MySubscriptions from '../Main/MySubscriptions/MySubscriptions';
 import ManageSubscription from '../Main/ManageSubscription/ManageSubscription';
-import { useEffect, useState } from 'react';
-import * as Api from '../../utils/utils';
 import Autopayment from '../Main/Autopayment/Autopayment';
 import Subscribe from '../Main/Subscribe/Subscribe';
 import AboutSubscribe from '../Main/AboutSubscribe/AboutSubscribe';
 import SubscriptionPayment from '../Main/SubscriptionPayment/SubscriptionPayment';
 import ManageSubscriptionWaitId from '../Main/ManageSubscriptionWaitId/ManageSubscriptionWaitId';
-import { ServiceSubscribeIcon } from '../../types/types';
 
 export default function App() {
   const location = useLocation();
-  const [services, setServices] = useState<ServiceSubscribeIcon[]>([]);
-
-  useEffect(() => {
-    Api.getServices()
-      .then(data => {
-        setServices(data);
-        console.log('Services', data);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  }, []);
 
   if (location.pathname === '/') {
     return <Navigate to="/history" replace />;
@@ -41,7 +26,7 @@ export default function App() {
     <main className={style.app}>
       {location.pathname !== '/history' && <Header />}
       <Routes>
-        <Route path="/services" element={<Services services={services} />} />
+        <Route path="/services" element={<Services />} />
         <Route path="/history" element={<History />} />
         <Route path="/sell_history" element={<SellHistory />} />
         <Route path="/catalog" element={<CatalogSubscriptions />} />
