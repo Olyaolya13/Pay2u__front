@@ -4,6 +4,8 @@
 
 Pay2u - это веб-приложение, разработанное для облегчения отслеживания подписок и возможности оформления новых подписок прямо в приложении. Оно предназначено для помощи пользователям в управлении и контроле за различными услугами и подписками, такими как стриминговые сервисы, музыка, кино и т. д..
 
+## Адрес сайта https://pay2u.myddns.me
+
 ## Используемые технологии
 
 <div>
@@ -25,7 +27,6 @@ Pay2u - это веб-приложение, разработанное для о
 ## Структура проекта
 
 <img src="./src/assets/ScrinshotReadme/ProjectStructure.png" alt="Project Structure" width="550" height="400">
-
 
 ## End points
 
@@ -57,16 +58,21 @@ Pay2u - это веб-приложение, разработанное для о
 <img src="./src/assets/ScrinshotReadme/Catalog.png" alt="Catalog" width="250" height="550">
 
 ### В Категориях (в данном случае Кино) есть фильтрация, где можно сортировать по цене и рейтингу
+
 <img src="./src/assets/ScrinshotReadme/Filter.png" alt="Filter" width="250" height="550">
 
 ### В Управлении подпиской мы попадаем из Мои подписки, есть возможность подключения автоплатежа,отключение подписки и смены тарица
+
 <img src="./src/assets/ScrinshotReadme/Manage_subscription.png" alt="Manage subscription" width="250" height="550">
 
 ### При подключении автоплатежа, появляется попап с информацией об успешном подключении, сумме и дальнейшем списании
+
 <img src="./src/assets/ScrinshotReadme/Autopayment.png" alt="Autopayment" width="250" height="550">
 
 ### В Подключение подписок попадаем из Каталога подписок, кликнув по карточке подписки, представлена информация о тарифах
+
 <img src="./src/assets/ScrinshotReadme/Subscribe.png" alt="Subscribe" width="250" height="550">
 
 ### При оплате подписки, появляется попап с промокодом и информацией о платеже, кнопка скопировать и перейти на сайт сервиса, кнопка вернуться в главное меню(Развлекательные сервисы), так же реализован тултип и возможность подключить автоплатеж, скачать чек
+
 <img src="./src/assets/ScrinshotReadme/Subscription_payment.png" alt="Subscription payment" width="250" height="550">
