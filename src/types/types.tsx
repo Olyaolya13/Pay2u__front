@@ -70,6 +70,14 @@ export interface CardMySubscriptionsWaitActiveyData {
   period: string;
 }
 
+export interface CardManageSubscriptionWaitIdCardData {
+  image: string;
+  alt: string;
+  title: string;
+  period: string;
+  description: string;
+}
+
 export interface CardMySubscriptionsActiveData {
   image: string;
   alt: string;
@@ -102,4 +110,11 @@ export interface CardAutopaymentData {
   alt: string;
   number?: string;
   title: string;
+}
+
+export interface ServiceSubscribeIcon {
+  activation_status: boolean;
+  image: string;
+  nearest_payment_date: string | null;
+  next_payment_amount: number | null;
 }

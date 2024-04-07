@@ -24,6 +24,8 @@ import SBPAutopay from '../assets/SBPAutopay.svg';
 import OneMonthImg from '../assets/OneMonthImg.svg';
 import ThreeMonthImg from '../assets/ThreeMonthImg.svg';
 import TwelveMonthImg from '../assets/TwelveMonthImg.svg';
+import DownloadCheckIcon from '../assets/DownloadCheckIcon.svg';
+import InstructionIcon from '../assets/InstructionIcon.svg';
 
 export const HeaderData = {
   services: 'Развлекательные сервисы',
@@ -873,3 +875,76 @@ export const SubscriptionPaymentInfoData = {
   sum: 599,
   perMonth: 'в месяц'
 };
+
+export const SubscriptionPaymentPopupInfoData = [
+  {
+    image: DownloadCheckIcon,
+    alt: 'Чек',
+    title: 'Скачать чек'
+  },
+  {
+    image: AutoPayIcon,
+    alt: 'Меняющиеся стрелочки по кругу',
+    title: 'Создать автоплатеж'
+  },
+  {
+    image: InstructionIcon,
+    alt: 'Лист',
+    title: 'Узнать, как работать с сервисом'
+  }
+];
+
+export const SubscriptionPaymentPopupData = {
+  title: 'Подписка оплачена',
+  sum: 299,
+  promo: 'FDJ264999SHK0',
+  activUntil: 'Активировать до',
+  tooltip:
+    'Вы не можете пользоваться сервисом, пока не завершите активацию подписки. Скопируйте код и перейдите на сайт партнера. Это можно сделать позже, в разделе управления подпиской.',
+  CopyBtn: 'Скопировать и перейти на сайт',
+  returnBtn: 'Вернуться на главную'
+};
+
+export const ManageSubscriptionWaitIdAboutData = {
+  sum: '597',
+  paySystem: SBPPay,
+  alt: 'СБП',
+  phoneNumber: '+ 7 (900) 000-07-07',
+  cashback: 5,
+  profit: 309,
+  date: '-'
+};
+
+export const ManageSubscriptionWaitIdContentData = {
+  title: 'Промокод необходимо активировать на сайте партнера до окончания действия подписки – ',
+  period: '18.05.2024'
+};
+
+export const ManageSubscriptionWaitIdCardData = {
+  card: [
+    {
+      image: LikeeIcon,
+      alt: 'Likee',
+      title: 'Likee',
+      description: 'Подписка на 3 месяца',
+      period: ' 18.05.2024'
+    }
+  ]
+};
+
+export const ManageSubscriptionWaitIdPromoData = {
+  title: 'Промокод',
+  promo: 'FDJ264999SHK0'
+};
+
+export const ManageSubscriptionWaitIdAboutPartnerData = {
+  text: 'Likee – онлайн-кинотеатр для просмотра кино, сериалов, мультфильмов, лекций, концертов, спектаклей и ТВ-каналов. Каждую неделю появляются новинки. Для детей есть профиль с фильтрами по возрастам. '
+};
+
+export const RatingData = [
+  { value: 3, label: 'Нормально' },
+  { value: 4, label: 'Хорошо' },
+  { value: 5, label: 'Отлично' }
+];
+
+export const FiltersPopupSlideData = ['от 1 до 199', 'от 199 до 399 ', 'от 399 до 699'];

@@ -5,13 +5,14 @@ import {
   Typography,
   TooltipProps,
   tooltipClasses,
-  styled
+  styled,
+  CardMedia
 } from '@mui/material';
-import InfoIcon from '../../assets/InfoIcon.svg?react';
 import React, { useState } from 'react';
 
 interface InfoTooltipProps {
   tooltip?: string;
+  icon?: string;
 }
 
 const TextTooltip = styled(({ className, ...props }: TooltipProps) => (
@@ -37,7 +38,7 @@ const styles = {
   }
 };
 
-export default function InfoTooltip({ tooltip }: InfoTooltipProps) {
+export default function InfoTooltip({ tooltip, icon }: InfoTooltipProps) {
   const [open, setOpen] = useState(false);
 
   const handleClick = () => {
@@ -68,7 +69,7 @@ export default function InfoTooltip({ tooltip }: InfoTooltipProps) {
           }
         >
           <Box sx={{ display: 'flex', alignItems: 'start' }}>
-            <InfoIcon />
+            {icon && <CardMedia component="img" image={icon} />}
           </Box>
         </TextTooltip>
       </Box>
