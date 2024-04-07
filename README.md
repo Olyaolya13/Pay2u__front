@@ -24,7 +24,8 @@ Pay2u - это веб-приложение, разработанное для о
 
 ## Структура проекта
 
-![Структура проекта](./src/assets/ScrinshotReadme/ProjectStructure.png)
+<img src="./src/assets/ScrinshotReadme/ProjectStructure.png" alt="Project Structure" width="550" height="400">
+
 
 ## End points
 
@@ -45,32 +46,27 @@ Pay2u - это веб-приложение, разработанное для о
 
 ### При первом заходе на сайт появляются истории, которые объясняют преимущества оформления подписок
 
-![History](./src/assets/ScrinshotReadme/History.png)
+<img src="./src/assets/ScrinshotReadme/History.png" alt="History" width="250" height="550">
 
 ### С главной страницы попадаем в Истории подписок по клику на иконку часы или по одноименному компоненту, где показана деталицация покупок подписок
 
-![History](./src/assets/ScrinshotReadme/Sell_history.png)
+<img src="./src/assets/ScrinshotReadme/Sell_history.png" alt="Sell History" width="250" height="550">
 
 ### С главной страницы попадаем в Каталог подписок на title 'Все', где отображены карточки подпискок, рассортированные по категориям с поиском
 
-![History](./src/assets/ScrinshotReadme/Catalog.png)
+<img src="./src/assets/ScrinshotReadme/Catalog.png" alt="Catalog" width="250" height="550">
 
 ### В Категориях (в данном случае Кино) есть фильтрация, где можно сортировать по цене и рейтингу
-
-![History](./src/assets/ScrinshotReadme/Filter.png)
+<img src="./src/assets/ScrinshotReadme/Filter.png" alt="Filter" width="250" height="550">
 
 ### В Управлении подпиской мы попадаем из Мои подписки, есть возможность подключения автоплатежа,отключение подписки и смены тарица
-
-![History](./src/assets/ScrinshotReadme/Manage_subscription.png)
+<img src="./src/assets/ScrinshotReadme/Manage_subscription.png" alt="Manage subscription" width="250" height="550">
 
 ### При подключении автоплатежа, появляется попап с информацией об успешном подключении, сумме и дальнейшем списании
-
-![History](./src/assets/ScrinshotReadme/Autopayment.png)
+<img src="./src/assets/ScrinshotReadme/Autopayment.png" alt="Autopayment" width="250" height="550">
 
 ### В Подключение подписок попадаем из Каталога подписок, кликнув по карточке подписки, представлена информация о тарифах
-
-![History](./src/assets/ScrinshotReadme/Subscribe.png)
+<img src="./src/assets/ScrinshotReadme/Subscribe.png" alt="Subscribe" width="250" height="550">
 
 ### При оплате подписки, появляется попап с промокодом и информацией о платеже, кнопка скопировать и перейти на сайт сервиса, кнопка вернуться в главное меню(Развлекательные сервисы), так же реализован тултип и возможность подключить автоплатеж, скачать чек
-
-![History](./src/assets/ScrinshotReadme/Subscription_payment.png)
+<img src="./src/assets/ScrinshotReadme/Subscription_payment.png" alt="Subscription payment" width="250" height="550">
